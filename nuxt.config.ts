@@ -18,7 +18,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugin/$axios.ts'],
+  plugins: ['~/plugin/$axios.ts', '~/plugin/$cookies.ts'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -33,11 +33,16 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+
+    // https://github.com/microcipcip/cookie-universal/tree/master/packages/cookie-universal-nuxt/
+    'cookie-universal-nuxt'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+
+  serverMiddleware: [{ path: '/auth', handler: '~/server/auth.ts' }],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {}
