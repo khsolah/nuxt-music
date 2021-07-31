@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 5000",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "generate:icon": "svgo assets/icons/*.svg & gulp",
     "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore . --cache",
     "prepare": "husky install",
     "test": "jest"
@@ -19,8 +20,14 @@
     "cookie-universal-nuxt": "^2.1.5",
     "core-js": "^3.15.1",
     "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgo": "^2.2.1",
     "nuxt": "^2.15.7",
-    "qs": "^6.10.1"
+    "qs": "^6.10.1",
+    "svgo": "^2.3.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
