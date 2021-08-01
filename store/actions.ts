@@ -25,15 +25,19 @@ export interface Actions {
 
 const actions: ActionTree<State, RootState> & Actions = {
   [ActionTypes.NUXT_SERVER_INIT]: ({ commit }, { query, $cookies }) => {
-    console.log('[server init]')
     if (
       typeof query.access_token === 'string' &&
-      typeof query.refresh_token === 'string'
+      typeof query.refresh_token === 'string' &&
+      typeof query.expires_in === 'string'
     ) {
       // find code on route.query
       // store this code in both cookies and vuex
-      $cookies.set('accessToken', query.access_token)
-      $cookies.set('refreshToken', query.refresh_token)
+      $cookies.set('accessToken', query.access_token, {
+        expires: new Date(Date.now() + +query.expires_in * 1000)
+      })
+      $cookies.set('refreshToken', query.refresh_token, {
+        expires: new Date(Date.now() + +query.expires_in * 1000)
+      })
       commit(MutationTypes.SET_TOKEN, {
         accessToken: query.access_token,
         refreshToken: query.refresh_token
