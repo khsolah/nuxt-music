@@ -17,7 +17,8 @@ export default defineConfig({
         md: '615px',
         lg: '936px',
         xl: '1150px',
-        '2xl': '1536px'
+        '2xl': '1363px',
+        '3xl': '1578px'
       },
       colors: {
         transparent: 'transparent',
