@@ -1,8 +1,14 @@
 import { Plugin } from '@nuxt/types'
+import { Store } from '~/store'
 import { initializeAxios } from '~/utilities/$axios'
 
-const plugin: Plugin = ({ $axios }) => {
-  $axios.setBaseURL('https://api.spotify.com')
+const plugin: Plugin = ({ $axios, store }) => {
+  $axios.setBaseURL('https://www.googleapis.com')
+  $axios.setHeader(
+    'Authorization',
+    `Bearer ${(store as Store).getters.GET_TOKEN.accessToken}`
+  )
+
   initializeAxios($axios)
 }
 
