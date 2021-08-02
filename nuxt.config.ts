@@ -18,7 +18,11 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugin/$axios.ts', '~/plugin/$cookies.ts'],
+  plugins: [
+    '~/plugin/$axios.ts',
+    '~/plugin/$cookies.ts',
+    { src: '~/plugin/lazy-loading.ts', mode: 'client' }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
