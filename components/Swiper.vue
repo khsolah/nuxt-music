@@ -11,8 +11,8 @@
       <!-- swiper slides -->
       <slot name="default">
         <li
-          v-for="item in 10"
-          :key="item"
+          v-for="item in data"
+          :key="item.id"
           class="
             cursor-pointer
             flex-col
@@ -20,6 +20,7 @@
             flex-shrink-0
             mr-4
             w-40
+            relative
             inline-flex
             justify-center
             lg:w-45
@@ -29,20 +30,38 @@
           "
         >
           <nuxt-link
+            v-lazy="item.snippet.thumbnails.high.url"
             :to="{ name: 'index' }"
             class="
               bg-white
               rounded-3px
               pb-40
               w-40
+              relative
+              thumbnail
+              select-none
               lg:w-45 lg:pb-45
               xl:w-190px xl:pb-190px
-              select-none
               3xl:w-226px
             "
-          />
+          >
+            <Icon
+              name="play"
+              class="
+                h-12
+                fill-white
+                transform
+                top-1/2
+                left-1/2
+                w-12
+                -translate-x-1/2 -translate-y-1/2
+                absolute
+              "
+            />
+          </nuxt-link>
           <div class="mt-4">
             <div
+              v-if="item.snippet"
               class="
                 font-medium
                 text-sm text-white
@@ -51,17 +70,21 @@
                 line-clamp-2
               "
             >
-              Different
+              {{ item.snippet.title.split('-')[1].trim() }}
             </div>
             <span
+              v-if="item.snippet && item.statistics"
               class="
                 flex flex-wrap
                 mt-3px
                 text-xs text-white text-opacity-70
                 line-clamp-2
               "
-              ><span>Maggie</span><span> &nbsp;&bull;&nbsp; </span
-              ><span>觀看次數：62萬次</span></span
+              ><span>{{ item.snippet.title.split('-')[0].trim() }}</span
+              ><span> &nbsp;&bull;&nbsp; </span
+              ><span
+                >觀看次數：{{ transformCount(item.statistics.viewCount) }}</span
+              ></span
             >
           </div>
         </li>
@@ -72,6 +95,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
+import { Video } from '~/@types'
 
 export default Vue.extend({
   name: 'Swiper',
@@ -82,7 +106,7 @@ export default Vue.extend({
     } as PropOptions<number>,
     data: {
       type: Array
-    } as PropOptions<{ id: string; player: string }[]>
+    } as PropOptions<Video[]>
   },
   data() {
     return {
@@ -94,18 +118,34 @@ export default Vue.extend({
       sliding: false
     }
   },
-  mounted() {
-    const slideStyle = getComputedStyle(
-      (this.$refs.wrapper as Element).firstElementChild as HTMLDivElement
-    )
-    const slideGap = +slideStyle.marginRight.replace('px', '')
-    this.slideWidth = +slideStyle.width.replace('px', '') + slideGap
-    this.maxTranslateX =
-      +getComputedStyle(this.$refs.wrapper as Element).width.replace('px', '') -
-      +getComputedStyle(this.$refs.swiper as Element).width.replace('px', '') -
-      slideGap
+  watch: {
+    data: {
+      immediate: true,
+      handler() {
+        console.log('[watch]', this.data)
+        if (this.data.length > 0) this.$nextTick(() => this.initialize())
+      }
+    }
   },
   methods: {
+    initialize() {
+      console.log('[initialize]')
+      const slideStyle = getComputedStyle(
+        (this.$refs.wrapper as Element).firstElementChild as HTMLDivElement
+      )
+      const slideGap = +slideStyle.marginRight.replace('px', '')
+      this.slideWidth = +slideStyle.width.replace('px', '') + slideGap
+      this.maxTranslateX =
+        +getComputedStyle(this.$refs.wrapper as Element).width.replace(
+          'px',
+          ''
+        ) -
+        +getComputedStyle(this.$refs.swiper as Element).width.replace(
+          'px',
+          ''
+        ) -
+        slideGap
+    },
     slideInit(event: MouseEvent) {
       this.startX = event.clientX
       this.translateX = -this.index * this.slideWidth
@@ -141,7 +181,22 @@ export default Vue.extend({
 
       document.removeEventListener('mousemove', this.slideStart)
       document.removeEventListener('mouseup', this.slideEnd)
+    },
+    transformCount(count: string): string {
+      if (count.length <= 4) return count
+      if (count.length <= 8) return `${(+count / 10000).toFixed(0)}萬`
+      else return `${(+count / 100000000).toFixed(0)}億`
     }
   }
 })
 </script>
+
+<style lang="postcss" scoped>
+.thumbnail::before {
+  @apply content absolute top-0 left-0 right-0 bottom-0 bg-transparent;
+}
+
+.thumbnail:hover::before {
+  @apply bg-black bg-opacity-[0.4];
+}
+</style>
