@@ -1,0 +1,551 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "0aTvoTvPa03vi_XB-m10eRRS95c",
+  "nextPageToken": "CAoQAA",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "DPuj69fjXfYueVCMF4ZDBj2MSB8",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC41NkI0NEY2RDEwNTU3Q0M2",
+      "snippet": {
+        "publishedAt": "2019-12-17T05:56:00Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "[MV] IU(아이유) _ Blueming(블루밍)",
+        "description": "[MV] IU(아이유) _ Blueming\n\n\n🔈1theK가 제작한 '1theK Originals-원더케이 오리지널' 채널이 오픈되었습니다:) 많은 관심과 구독 부탁드려요😉\nNEW YouTube Channel '1theK Originals' has been launched! Please take a lot of interest and SUBSCRIBE!\nSubscribe👉 https://www.youtube.com/1theKOriginals?sub_confirmation=1\n\n*English subtitles are now available. :D\n(Please click on 'CC' button or activate 'Interactive Transcript' function)\n\n[Notice] 1theK YouTube is also an official channel for the MV, and music shows will count the views from this channel too.\n[공지] 1theK YouTube는 MV를 유통하는 공식 채널로, 1theK에 업로드된 MV 조회수 또한 음악방송 순위에 반영됩니다.\n\n#IU#아이유#Blueming#NEWRELEASE#MV#1theK#원더케이\n\n▶1theK Originals : http://www.youtube.com/1theKOriginals\n▶1theK YT : https://www.youtube.com/1theK\n▶1theK FB  : http://www.facebook.com/1theK\n▶1theK TW : https://twitter.com/1theK\n▶1theK Kakao : https://goo.gl/otRpZc",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/D1PvIWdJ8xo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/D1PvIWdJ8xo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/D1PvIWdJ8xo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/D1PvIWdJ8xo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/D1PvIWdJ8xo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "D1PvIWdJ8xo"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "D1PvIWdJ8xo",
+        "videoPublishedAt": "2019-11-18T09:00:02Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "haa3V9gPSEIyxflIEGt1H0nhMHg",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC4yODlGNEE0NkRGMEEzMEQy",
+      "snippet": {
+        "publishedAt": "2019-12-17T05:56:15Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "[MV] IU(아이유) _ BBIBBI(삐삐)",
+        "description": "[MV] IU(아이유) _ BBIBBI(삐삐)\n\n\n*English subtitles are now available. :D\n(Please click on 'CC' button or activate 'Interactive Transcript' function)\n\n[Notice] 1theK YouTube is also an official channel for the MV, and music shows will count the views from this channel too.\n[공지] 1theK YouTube는 MV를 유통하는 공식 채널로, 1theK에 업로드된 MV 조회수 또한 음악방송 순위에 반영됩니다.\n\n:: iTunes : https://itunes.apple.com/album/bbibbi-single/1438614238?l=ko&ls=1&app=itunes\n\nCelebrating the 10th anniversary of her debut this year, IU releases the digital single “BBIBBI”. \n \nThe digital single “BBIBBI” released on October 10 for her 10th anniversary is an alternative R&B style song that she tried for the first time since her debut. The song gives the pleasant and simple warning messages to those who disrespectfully crossed the line in relationships. The healthy relationships with individuals are so important in modern days that we do not control and define others by our own standards, and are equal and independent. In this situation, this song can be about everyone in the modern times. \n\n▶1theK Originals : https://www.youtube.com/channel/UCqq-ovGE01ErlXakPihhKDA\n▶1theK FB  : http://www.facebook.com/1theK\n▶1theK TW : https://twitter.com/1theK\n▶1theK Kakao : https://goo.gl/otRpZc\n\n#IU#아이유#BBIBBI#삐삐#NEWRELEASE#MV#1theK#원더케이",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nM0xDI5R50E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nM0xDI5R50E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nM0xDI5R50E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nM0xDI5R50E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nM0xDI5R50E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "nM0xDI5R50E"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "nM0xDI5R50E",
+        "videoPublishedAt": "2018-10-10T09:00:06Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "rrRwqMJ-lE2fHG29Su0sSWiul8U",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC4wMTcyMDhGQUE4NTIzM0Y5",
+      "snippet": {
+        "publishedAt": "2019-12-17T05:56:30Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "[MV] IU(아이유) _ above the time(시간의 바깥)",
+        "description": "[MV] IU(아이유) _ above the time(시간의 바깥)\n\n\n🔈1theK가 제작한 '1theK Originals-원더케이 오리지널' 채널이 오픈되었습니다:) 많은 관심과 구독 부탁드려요😉\nNEW YouTube Channel '1theK Originals' has been launched! Please take a lot of interest and SUBSCRIBE!\nSubscribe👉 https://www.youtube.com/1theKOriginals?sub_confirmation=1\n\n*English subtitles are now available. :D\n(Please click on 'CC' button or activate 'Interactive Transcript' function)\n\n[Notice] 1theK YouTube is also an official channel for the MV, and music shows will count the views from this channel too.\n[공지] 1theK YouTube는 MV를 유통하는 공식 채널로, 1theK에 업로드된 MV 조회수 또한 음악방송 순위에 반영됩니다.\n\n#IU#아이유#abovethetime#시간의바깥#NEWRELEASE#MV#1theK#원더케이\n\n▶1theK Originals : http://www.youtube.com/1theKOriginals\n▶1theK YT : https://www.youtube.com/1theK\n▶1theK FB  : http://www.facebook.com/1theK\n▶1theK TW : https://twitter.com/1theK\n▶1theK Kakao : https://goo.gl/otRpZc",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/R3Fwdnij49o/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/R3Fwdnij49o/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/R3Fwdnij49o/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/R3Fwdnij49o/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/R3Fwdnij49o/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "R3Fwdnij49o"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "R3Fwdnij49o",
+        "videoPublishedAt": "2019-11-18T03:00:02Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "-9w1sx6YWjGTEK-wmeA3u9x9Xvc",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC41MjE1MkI0OTQ2QzJGNzNG",
+      "snippet": {
+        "publishedAt": "2019-12-17T05:56:37Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "【韓繁中字】IU (李知恩/아이유) - Love poem (러브 포엠)  [Chinese Sub]",
+        "description": "+++ 關注IamJerryC賬號，此賬號會及時上傳中字視頻+++ \n\n製作: IamJerryC\n翻譯來源：onIyU-IU中国首站\n\n#IU#李知恩#아이유\n#ChineseSub\n#中字\n#kpop\n#JerryC\n#IamJerryC\n\n\n禁止二次上傳，THX. .",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kzUCS9lLHYE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kzUCS9lLHYE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kzUCS9lLHYE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kzUCS9lLHYE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kzUCS9lLHYE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "kzUCS9lLHYE"
+        },
+        "videoOwnerChannelTitle": "IamJerryC",
+        "videoOwnerChannelId": "UC5eu4bFwN7YRa4T7g8tic8A"
+      },
+      "contentDetails": {
+        "videoId": "kzUCS9lLHYE",
+        "videoPublishedAt": "2019-11-01T09:55:55Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "qbkFdqXVKPdWpH35PpQImkKaHGI",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC4wOTA3OTZBNzVEMTUzOTMy",
+      "snippet": {
+        "publishedAt": "2019-12-17T05:57:31Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "IU - Good Day好日子（華納official HD 高畫質官方中字版）",
+        "description": "唱作女神\nIU\n首張完美精選《SMASH HITS》\n台灣獨占限定盤\n(16首精選曲+9首中文字幕MV+台灣獨占贈品! 2016 IU桌上型可立式相框年曆卡片組X6張)\n12.25開始搶購／2016.01.08正式發行\n\n[ ♬ 實體搶購]\n華納購物網 https://goo.gl/D1py1k\n博客來 http://goo.gl/bshNn1\n五大唱片 http://goo.gl/O7vuZT\n佳佳唱片 https://goo.gl/Aoxa0Y\n玫瑰大眾購物網 http://goo.gl/qgD9dy\n光南大批發 http://goo.gl/8biMCp\n\n[ ♬ 數位音樂平台] 持續好評熱播中！\nKKBOX http://kkbox.fm/na0lpt\nmyMusic http://goo.gl/HsvP4S\nOmusic http://goo.gl/WH83X6\n\n2016 IU IN TAIPEI\n01.10 TICC台北國際會議中心\n詳情請洽 主辦單位 就是娛樂 J'S ENTERTAINMENT INC.\n\n更多日韓音樂消息，請加入\n華納音樂台灣韓語發行facebook專頁：http://goo.gl/MHdJTg\n華納音樂台灣JPOP發行facebook專頁：http://goo.gl/DJNdpM",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yUKP0Rht2o4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yUKP0Rht2o4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yUKP0Rht2o4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yUKP0Rht2o4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yUKP0Rht2o4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "yUKP0Rht2o4"
+        },
+        "videoOwnerChannelTitle": "台灣華納日韓官方頻道",
+        "videoOwnerChannelId": "UCWHlzo1HmN2McgpEuAORDzw"
+      },
+      "contentDetails": {
+        "videoId": "yUKP0Rht2o4",
+        "videoPublishedAt": "2015-12-29T12:23:25Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Yzvy8SP5PV0MrH2rp0sk7TXV-rc",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC4xMkVGQjNCMUM1N0RFNEUx",
+      "snippet": {
+        "publishedAt": "2019-12-17T05:58:07Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "[MV] IU(아이유) _ Palette(팔레트) (Feat. G-DRAGON)",
+        "description": "[MV] IU(아이유) _ Palette(팔레트) (Feat. G-DRAGON)\n\n*English subtitles are now available. :D\n(Please click on 'CC' button or activate 'Interactive Transcript' function)\n\n:: Get the new album on : http://smarturl.it/iupalette\n\n▶1theK Originals : https://www.youtube.com/channel/UCqq-ovGE01ErlXakPihhKDA\n▶1theK FB  : http://www.facebook.com/1theK\n▶1theK TW : https://twitter.com/1theK\n▶1theK Kakao : https://goo.gl/otRpZc",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/d9IxdwEFk1c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/d9IxdwEFk1c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/d9IxdwEFk1c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/d9IxdwEFk1c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/d9IxdwEFk1c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "d9IxdwEFk1c"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "d9IxdwEFk1c",
+        "videoPublishedAt": "2017-04-21T09:00:05Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "0dlRdgO2jchzR4lmguBIglEtiEo",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC41MzJCQjBCNDIyRkJDN0VD",
+      "snippet": {
+        "publishedAt": "2019-12-17T06:02:33Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "[MV] IU(아이유) _ Through the Night(밤편지)",
+        "description": "[MV] IU(아이유) _ Through the Night(밤편지)\n\n*English subtitles are now available. :D\n(Please click on 'CC' button or activate 'Interactive Transcript' function)\n\n:: iTunes : https://itunes.apple.com/album/%EB%B0%A4%ED%8E%B8%EC%A7%80-through-the-night-single/id1219218445?l=ko&ls=1&app=itunes\n\n▶1theK FB  : http://www.facebook.com/1theK\n▶1theK TW : https://twitter.com/1theK\n▶1theK G+ : https://plus.google.com/+1theK",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BzYnNdJhZQw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BzYnNdJhZQw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BzYnNdJhZQw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BzYnNdJhZQw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BzYnNdJhZQw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "BzYnNdJhZQw"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "BzYnNdJhZQw",
+        "videoPublishedAt": "2017-03-24T09:00:00Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Mu0snGCaMFiggtV82jPgneIdaCw",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC5DQUNERDQ2NkIzRUQxNTY1",
+      "snippet": {
+        "publishedAt": "2019-12-17T06:06:57Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "IU(아이유) _ YOU&I(너랑나) MV",
+        "description": "[ ♬ Download ]\niTunes : http://itunes.apple.com/us/album/last-fantasy/id484346200\nMelon : http://www.melon.com/cds/album/web/albumdetailmain_list.htm?albumId=2040666\n\n▶ LOENMUSIC TW : https://twitter.com/LOEN_MUSIC\n▶ LOENMUSIC FB : http://www.facebook.com/LOENMUSIC.official\n\nIU's new album 'Last Fantasy' is the first full album in 2 years since her first album 'Growing Up', produced by Cho Young-Chul who gave birth to the \"IU syndrome\" last year.\n\nThe title song \"You and I\" is a work by composer Lee Min-Soo and lyricist Kim Ee-Na of \"Good Day\" with a somewhat mystic and peculiar concept of a teenage girl traveling through time to go into the future. Switching to and from the minor and major keys, the arrangement is noteworthy for its diverse and fantasy-like atmosphere using real sounds from instruments that are rarely used in K-pop, such as the harp and horn, and listeners may also come across IU's more colorful vocal expressions.\n\nIn the music video for \"You and I\", a girl travels in a time machine to meet her future boyfriend. The 19 year old IU lives with Hyunwoo -- a boy who has fallen into deep sleep -- in a workshop inside a clock tower inherited by her grandfather. IU does not leave his side and while waiting for him to wake up, decides to make a time machine to go meet him. Finally, the long-awaited moment arrives and she leaves for her time travel both afraid yet excited about meeting Hyunwoo but the two miss each other as Hyunwoo wakes up the moment he reaches age 20. \nOne can enjoy the minute details of the space within the huge clock tower where cogwheels are turning, including the vintage feel of the workshop and the fairytale-like story with the male protagonist waking up from his sleep when he reaches 20 as well as a time machine to travel into the future. \n\nアイユ（IU）_ ノランナ（あなたと私/YOU&I)\nアイユのニューアルバム［Last Fantasy］は、１stアルバム［Growing up］から2年ぶりの正規アルバムだ。今回のアルバムは昨年[アイユ・シンドローム]を誕生させたチョ・ヨンチョル・プロデューサーが総括プロデューシングを引き受けた。\n\n 正規２ndアルバムのタイトル曲 [あなたと私]は、[良い日] を誕生させたイ・ミンス作曲家とキム・イナ作詞家の合同作品で、アイユのボーカルの魅力が引き立つ曲だ。１０代の少女が遠い未来へと時間の旅に出るという神秘的で奇妙なコンセプトを持っている。マイナーとメジャーコードを行き来する構成でハープ、ホルンなど歌謡ではなかなか見られない楽器を使用したリアルサウンドのバラエティーでファンタジーな感じを伝える編曲が目立つ。またアイユの多彩なボーカルの表現も見所である。\n\n[あなたと私]のミュージックビデオは、一人の少女がタイムマシンに乗って時空の旅をしながら未来の彼氏に会いに行くという話を盛り込んでいる。時計塔の中、おじいちゃんから譲ってもらった工房で暮らしている１９歳の少女アイユは、時間が止まったかのように深い眠りに落ちている一人の男、ヒョヌと一緒に工房で過ごす。 アイユはヒョヌのそばを離れずに彼が目覚めるのを待ちながらタイムマシンを作って彼に会いに行く決心をする。とうとう待ちに待った時が来る。怖いけどヒョヌに会えるという期待を抱いて時間の旅に出る。しかし２０歳になったヒョヌが目覚めて二人はすれ違ってしまう。\n歯車がかみ合って回っている巨大な時計塔の中の空間とビンテージ感のある工房を表現した繊細さが引き立つ。２０歳になると眠りから覚めるという主人公の設定やタイムマシンに乗って未来へと旅立つというストーリーはまるで神秘的な童話のような感じがする。\n\n아이유의 새 앨범 'Last Fantasy'는 1집 'Growing up' 이후 2년 만에 선보이는 정규앨범으로, 이번 앨범은 지난 해 '아이유 신드롬'을 탄생시켰던 조영철 프로듀서가 총괄 프로듀싱을 맡았다.\n\n 정규 2집의 타이틀곡인 '너랑 나'는 '좋은 날'을 탄생시켰던 이민수 작곡가-김이나 작사가의 합작품으로, 아이유의 보컬의 매력 나타나는 곡으로, 10대 소녀가 시간 여행을 떠나 먼 미래를 만나고 온다는 신비롭고 기묘한 컨셉을 가지고 있다. 마이너와 메이저 코드를 넘나드는 구성으로 하프, 호른 등 가요에서 거의 찾아보기 힘든 악기를 사용한 리얼 사운드의 버라이어티하고 판타지스러운 느낌을 전하는 편곡이 돋보이며, 아이유의 다양해진 보컬 표현력을 만나볼 수 있다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f_iQRO5BdCM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f_iQRO5BdCM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f_iQRO5BdCM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/f_iQRO5BdCM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/f_iQRO5BdCM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "f_iQRO5BdCM"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "f_iQRO5BdCM",
+        "videoPublishedAt": "2011-11-29T05:20:00Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "uDFkImsKfbqUMsML9xQZRtenLrc",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC45NDk1REZENzhEMzU5MDQz",
+      "snippet": {
+        "publishedAt": "2019-12-17T07:02:14Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "[Music Clip] IU(아이유) _ Neoui uimi(너의 의미) : Meaning of you (Feat. Kim Chang-Wan(김창완))",
+        "description": "[Music Clip] IU(아이유) _ Neoui uimi(너의 의미) : Meaning of you (Feat. Kim Chang-Wan(김창완))\n\n*English & Japanese subtitles are now available. :D\n(Please click on 'CC' button or activate 'Interactive Transcript' function)\n*日本語/英語の字幕が用意されてあります。:D\n(CCボタンをクリック、それとも'Interactive Transcript' 機能を活性化して下さい)\n\nIU's version of Sanulrim's song from 1984, \"[Neoui Uimi]: The Meaning of You\" has Kim Chang Wan's touches, from building up the overall feeling of the vocal to featuring. \nKim Chang Wan's unique way of leading the artist as he breathes and works inside the booth when recording is very similar to how he records with Sanulrim. He became the link connecting the original's purity and sensation to the current generation.\n\n▶1theK FB  : http://www.facebook.com/1theK\n▶1theK TW : https://twitter.com/1theK\n▶1theK G+  : https://plus.google.com/+1theK\n\nアイユが歌ったサンウリムの1984年の作品「ノエ・イミ[Neoui uimi]:Meaning of you」は、ボーカルの感性をデザインする作業からフィーチャリングまで曲の全般にかけてキム•チャンワンの手が届いている。\n録音を行う際、一緒にブースの中で自然に息を合わせながらでリードする独創的なキム•チャンワン。彼ならではのやり方は、サンウリムの音楽そのものと非常に似ていて、加工されていない原曲の感性を世代を超えて繋げる共鳴の輪になってくれた。\n\n아이유가 부른 산울림의 1984년 작품 \"너의 의미\"는 보컬의 감성을 디자인하는 작업에서부터 피처링까지 곡의 전반에 걸쳐 김창완의 손길이 묻어난다. 녹음을 진행할 때 같이 부스 안에서 자연스럽게 호흡하며 리드하는 독창적인 김창완 그 만의 방식은 산울림의 음악 그 자체와 매우 닮아있었으며 가공되지 않은 원곡의 감성을 세대를 넘어 연결하는 교감의 고리가 되어주었다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4L-H_cXSNhQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4L-H_cXSNhQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4L-H_cXSNhQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4L-H_cXSNhQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4L-H_cXSNhQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "4L-H_cXSNhQ"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "4L-H_cXSNhQ",
+        "videoPublishedAt": "2014-05-19T03:00:54Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "EEGy6Tp9CeIw3jI624-KUL_vIyI",
+      "id": "UEx1MWtkZkJxeWNQTXppT3dRYzYteDJPT0xhVXFJbHdHTC5GNjNDRDREMDQxOThCMDQ2",
+      "snippet": {
+        "publishedAt": "2019-12-17T07:50:11Z",
+        "channelId": "UCx1KezQYT4F-XIRQVbrj8DA",
+        "title": "[MV] IU(아이유) _ The red shoes(분홍신) (Performance ver.)",
+        "description": "[MV] IU(아이유) _ The red shoes(분홍신) (Performance ver.)\n\n*English subtitles are now available. :D\n(Please click on 'CC' button or activate 'Interactive Transcript' function)\n\n\n:: iTunes DL : https://itunes.apple.com/us/album/modern-times/id721958263\n\nAfter her 2nd regular album [Last Fantasy] and the mini album [Every end of the Day], IU is coming back after 1 year and 5months with the new  theme of 'Maturity through musical development'.\n\nThe title song is a new work done by Lee min-soo and Kim eana togtheter, and they got their inspiration from the Anderson fairy tale [ The Red Shoes], which is about a red shoe that if you wear it, you will dance no matter of your own will.  \n\nThe song has 1930s big band swing mixed with classical and vintage parts in it. The session work is also done in a 1930s classical swing style. In order to do this, the master of drama/animation/musical music,Toyama Kazuhiko, and under his direction, the best big band of Japan worked together. It was done in a improvisation manner, and here Lee min-soo's dramatic song line and the chorus worked well with to make a 'big' music. \n\n▶ LOENMUSIC FB : http://www.facebook.com/LOENMUSIC.official\n▶ LOENMUSIC TW : https://twitter.com/LOEN_MUSIC\n\nアイユ＿ブンホンシン：ピンクシューズ（Red Shoes）\n2ndフルアルバム[ Last Fantasy ]とミニアルバム[二十歳の春]以来1年5ヶ月ぶりに発表するアイユの新しいアルバムは、'音楽的な成長を通じた成熟'というテーマで企画・制作された。\n\nタイトル曲「ピンクシューズ」はイ・ミンス、キム・イナ、コンビの新作で、赤い靴を履くと自分の意志とは関係なく続けて踊るようになるという内容のアンデルセン童話'赤い靴（The Red Shoes）'からインスピレーションを受けて完成した曲だ。\n\n1930年代のビッグバンドのスイング・サウンドをベースにクラシカルでヴィンテージな要素を加えて期待を高める。セッションの作業も、1930年代の古典的なスイング感を最大に生かすために、ドラマ∙アニメ∙ミュージカル界の巨匠Toyama Kazuhikoの指揮の下、日本現地で最高のビッグバンドメンバーたちと一緒に即興演奏（ Improvisation ）技法で録音を行った。ここにイ・ミンス作曲家特有のドラマチックな展開と洗練されたコーラスが加わり、スケール感のある曲に仕上がった。\n\n정규 2집 [Last Fantasy]와 미니앨범 [스무 살의 봄] 이후 1년 5개월 만에 발표되는 아이유의 새 앨범은 '음악적 성장을 통한 성숙'이라는 테마로 기획과 제작이 진행되었다. \n\n타이틀곡 '분홍신'은 이민수-김이나 콤비의 새로운 작품으로, 빨간구두를 신으면 자신의 의지와 상관없이 계속해서 춤을 추게 된다는 내용의 안데르센 동화 '빨간구두(The Red Shoes)'에서 영감을 받아 완성된 곡이다.\n\n1930년대 빅밴드 스윙 사운드를 기반으로 클래시컬하고 빈티지한 요소를 한 데 녹여 기대를 더한다.  세션 작업 역시 1930년대 고전 스윙의 느낌을 최대한 살리기 위해 드라마∙애니메이션∙뮤지컬 음악계의 거장 Toyama Kazuhiko의 지휘 아래 일본 현지에서 최고의 빅밴드 멤버들과 함께 즉흥 연주(Improvisation) 기법으로 녹음이 진행되었으며, 여기에 이민수 작곡가 특유의 드라마틱한 전개와 정교한 코러스가 더해져 스케일 감 있는 곡으로 마무리되었다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/js3PTlQFakk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/js3PTlQFakk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/js3PTlQFakk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/js3PTlQFakk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/js3PTlQFakk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YI LUN LI",
+        "playlistId": "PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "js3PTlQFakk"
+        },
+        "videoOwnerChannelTitle": "1theK (원더케이)",
+        "videoOwnerChannelId": "UCweOkPb1wVVH0Q0Tlj4a5Pw"
+      },
+      "contentDetails": {
+        "videoId": "js3PTlQFakk",
+        "videoPublishedAt": "2013-10-21T05:00:00Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 57,
+    "resultsPerPage": 10
+  }
+}

@@ -1,0 +1,959 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "VvRkHf6HJ5IEVUsqN8a70MNzYUo",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "nEhVYy5LlP6TF1hizbWz8Z4MYnA",
+      "id": "UTHLKHL_whs",
+      "snippet": {
+        "publishedAt": "2021-07-23T04:00:12Z",
+        "channelId": "UCtTfSyci2urfwXXu_eRpNRA",
+        "title": "Lil Nas X, Jack Harlow - INDUSTRY BABY (Official Video)",
+        "description": "Official video for “Industry Baby” by Lil Nas X & Jack Harlow\n\nListen & Download “Industry Baby” out now: https://lilnasx.lnk.to/IndustryBaby\n\nDonate to the Bail X Fund to help with cash bail around the country - http://bailxfund.com/\n\nhttps://freelilnasx.com/\n\nAmazon Music - https://lilnasx.lnk.to/IndustryBaby/amazonmusic\n\nApple Music - https://lilnasx.lnk.to/IndustryBaby/applemusic\n\nAudiomack - https://lilnasx.lnk.to/IndustryBaby/audiomack\n\nDeezer - https://lilnasx.lnk.to/IndustryBaby/deezer\n\niTunes - https://lilnasx.lnk.to/IndustryBaby/itunes\n\nSoundCloud - https://lilnasx.lnk.to/IndustryBaby/soundcloud\n\nSpotify - https://lilnasx.lnk.to/IndustryBaby/spotify\n\nYouTube Music - https://lilnasx.lnk.to/IndustryBaby/youtubemusic\n\nStory By: Lil Nas X\n\nDirector: Christian Breslauer\n\nProducer: Andrew Lerios\n\nProduction Company: London Alley\n\nExec Producer: Luga Podesta, Brandon Bonfiglio\n\nProducer/ Commissioner: Saul Levitz\n\nCreative Director / Stylist: Hodo Musa\n\nProduction Manager: Alex Randall\n\nDP: Elias Talbot\n\nProduction Design: Alex Delgado\n\nChoreographer: Sean Bankhead\n\nPost Producer: Ivan Ovalle\n\nEditor: Luis Caraza\n\nColorist: Matt Osborne\n\nFX: Cameo FX\n\nActing / Movement Coach (Lil Nas X): KJ Rose\n\nMakeup Artist (Lil Nas X): Grace Pae\n\nMakeup Effects Artist (Lil Nas X): Catherine Yuki\n\nMakeup Effects Artist (Lil Nas X): Sasha Glasser\n\nHairstylilst (Lil Nas X): Stacey Morris\n\nFollow Lil Nas X\n\nFacebook - https://www.facebook.com/LilNasX/\n\nInstagram - https://www.instagram.com/lilnasx/\n\nTwitter - https://twitter.com/LilNasX\n\nTikTok - https://www.tiktok.com/@lilnasx\n\nhttps://www.lilnasx.com/\n\nFollow Jack Harlow\n\nFacebook - https://www.facebook.com/handsomeharlow/\n\nInstagram - https://www.instagram.com/jackharlow\n\nTwitter - https://twitter.com/jackharlow\n\nTikTok - https://www.tiktok.com/@missionaryjack\n\n#LilNasX #JackHarlow #IndustryBaby",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UTHLKHL_whs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UTHLKHL_whs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UTHLKHL_whs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/UTHLKHL_whs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/UTHLKHL_whs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "LilNasXVEVO",
+        "tags": [
+          "Columbia",
+          "Hip Hop",
+          "INDUSTRY BABY",
+          "Lil Nas X & Jack Harlow"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Lil Nas X, Jack Harlow - INDUSTRY BABY (Official Video)",
+          "description": "Official video for “Industry Baby” by Lil Nas X & Jack Harlow\n\nListen & Download “Industry Baby” out now: https://lilnasx.lnk.to/IndustryBaby\n\nDonate to the Bail X Fund to help with cash bail around the country - http://bailxfund.com/\n\nhttps://freelilnasx.com/\n\nAmazon Music - https://lilnasx.lnk.to/IndustryBaby/amazonmusic\n\nApple Music - https://lilnasx.lnk.to/IndustryBaby/applemusic\n\nAudiomack - https://lilnasx.lnk.to/IndustryBaby/audiomack\n\nDeezer - https://lilnasx.lnk.to/IndustryBaby/deezer\n\niTunes - https://lilnasx.lnk.to/IndustryBaby/itunes\n\nSoundCloud - https://lilnasx.lnk.to/IndustryBaby/soundcloud\n\nSpotify - https://lilnasx.lnk.to/IndustryBaby/spotify\n\nYouTube Music - https://lilnasx.lnk.to/IndustryBaby/youtubemusic\n\nStory By: Lil Nas X\n\nDirector: Christian Breslauer\n\nProducer: Andrew Lerios\n\nProduction Company: London Alley\n\nExec Producer: Luga Podesta, Brandon Bonfiglio\n\nProducer/ Commissioner: Saul Levitz\n\nCreative Director / Stylist: Hodo Musa\n\nProduction Manager: Alex Randall\n\nDP: Elias Talbot\n\nProduction Design: Alex Delgado\n\nChoreographer: Sean Bankhead\n\nPost Producer: Ivan Ovalle\n\nEditor: Luis Caraza\n\nColorist: Matt Osborne\n\nFX: Cameo FX\n\nActing / Movement Coach (Lil Nas X): KJ Rose\n\nMakeup Artist (Lil Nas X): Grace Pae\n\nMakeup Effects Artist (Lil Nas X): Catherine Yuki\n\nMakeup Effects Artist (Lil Nas X): Sasha Glasser\n\nHairstylilst (Lil Nas X): Stacey Morris\n\nFollow Lil Nas X\n\nFacebook - https://www.facebook.com/LilNasX/\n\nInstagram - https://www.instagram.com/lilnasx/\n\nTwitter - https://twitter.com/LilNasX\n\nTikTok - https://www.tiktok.com/@lilnasx\n\nhttps://www.lilnasx.com/\n\nFollow Jack Harlow\n\nFacebook - https://www.facebook.com/handsomeharlow/\n\nInstagram - https://www.instagram.com/jackharlow\n\nTwitter - https://twitter.com/jackharlow\n\nTikTok - https://www.tiktok.com/@missionaryjack\n\n#LilNasX #JackHarlow #IndustryBaby"
+        }
+      },
+      "contentDetails": {
+        "duration": "PT3M56S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "55455131",
+        "likeCount": "2648986",
+        "dislikeCount": "200418",
+        "favoriteCount": "0",
+        "commentCount": "247912"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/UTHLKHL_whs\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "5zI8icbBX5PTLYY_A5AYT7DHyaU",
+      "id": "CEw-7cMnBDY",
+      "snippet": {
+        "publishedAt": "2021-07-30T04:00:03Z",
+        "channelId": "UCoUM-UJ7rirJYP8CQ0EIaHA",
+        "title": "Bruno Mars, Anderson .Paak, Silk Sonic - Skate [Official Music Video]",
+        "description": "The official music video for Silk Sonic's \"Skate\" \n\nSkate out now: https://SilkSonic.lnk.to/SkateID\n\nDirected by Bruno Mars and Florent Dechard\nProduced by Jeremy Sullivan\nCinematography by Tehillah De Castro\nCo-Directed by Phil Tayag\n\nLyrics:\nIn a room full of dimes you would be 100 dollars\nIf being fine was a crime, girl, they’d lock your lil’ fine ass up in a tower\nThe way you move like you do\nOoh it’s like you do it for a livin’\nDo a lil’ spin, do it again – sshhiiiii\nlook like you playin’ for the win, OH BABY\n\nI’m trynna roll, I’m trynna ride\nI’m trynna float, I’m trynna glide\nNo no, don’t be shy, just take my hand and hold on tight\n\nOh, skate to me baby\nSkate\nSlide your way on over\nSlide your way on over\nSkate to me baby\nSkate\nI wanna get to know ya\nI wanna get to know ya\n\nGot your hair in the wind and your skin glistening\nI can smell your sweet perfume\nMmmm, ya smell better than a barbecue\nOh, superstar is what you are\nI’m your biggest fan\nif you’re lookin’ for a man, suga, here I am\n\nI’m trynna roll, I’m trynna ride\nI’m trynna float, I’m trynna glide\nNo no, don’t be shy, just take my hand and hold on tight!\n\nOh, skate to me baby\nSkate\nSlide your way on over\nSlide your way on over\nSkate to me baby\nSkate\nI wanna get to know ya\nI wanna get to know ya\n\nI never fall but tonight you got me falling for you, and only you, YOU\nI’m reaching out in hopes that you reach for me too, girl, let’s groove\n\nGirl, you got me singing ooooooohhhh\nMy oh my\nMy oh my\nMy oh my\nMy oh my\n\nOh, skate to me baby\nSkate\nSlide your way on over\nSlide your way on over\nSkate to me baby\nSkate\nI wanna get to know ya\nI wanna get to know ya\n\n\n🔔 Subscribe for the latest official music videos, live performances, lyric videos, official audio, and more: https://Atlantic.lnk.to/BMsubscribe\n \n🎵 Listen to the Best of Bruno Mars playlist ➤ https://bit.ly/3bbslw8\u200b \n🎵 Watch Bruno Mars’ Official Music Videos ➤ https://bit.ly/2U7I3mi\u200b \n\nGet Bruno Mars merchandise! https://brunom.rs/brunomarsstore \n\nConnect with Bruno:\nhttp://www.brunomars.com\u200b\nhttp://www.instagram.com/brunomars\u200b\nhttp://www.twitter.com/brunomars\u200b\nhttp://www.facebook.com/brunomars\n\nConnect with Anderson .Paak: \nhttps://www.facebook.com/AndersonPaak \nhttps://www.instagram.com/anderson._p... \nhttps://twitter.com/AndersonPaak \n\nConnect with Silk Sonic: \nhttps://SilkSonic.lnk.to/Instagram \nhttps://SilkSonic.lnk.to/Twitter \nhttps://SilkSonic.lnk.to/Facebook \nhttps://SilkSonic.lnk.to/Spotify \nhttps://SilkSonic.lnk.to/AppleMusic \nhttps://SilkSonic.lnk.to/TikTok \n\nGet Bruno Mars merchandise! https://brunom.rs/brunomarsstore\n\nThe official YouTube channel of Atlantic Records artist Bruno Mars. \n \n11x GRAMMY Award winner and 27x GRAMMY Award nominee Bruno Mars is a celebrated singer, songwriter, producer, and musician with iconic hits like \"The Lazy Song\", \"That's What I Like\", \"Just The Way You Are\", \"24K Magic\", \"Locked Out Of Heaven\", and \"When I Was Your Man\". His legendary body of work also includes blockbuster albums such as Doo-Wops & Hooligans, Unorthodox Jukebox, and 24K Magic, as well as era-defining collaborations like \"Uptown Funk\" with Mark Ronson, \"Finesse\" with Cardi B, and \"Nothin' On You\" with B.o.B. Forever classic, yet supremely innovative, Bruno continues to redefine music, style, and popular culture, pushing the boundaries of pop, R&B, funk, soul, hip-hop, and dance, and remains as influential as ever.\n \n#BrunoMars #Skate #SilkSonic #AndersonPaak",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CEw-7cMnBDY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CEw-7cMnBDY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CEw-7cMnBDY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CEw-7cMnBDY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CEw-7cMnBDY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Bruno Mars",
+        "tags": [
+          "bruno mars",
+          "bruno",
+          "skate",
+          "skate bruno mars",
+          "skate anderson paak",
+          "silk sonic skate",
+          "skate silk sonic",
+          "new silk sonic song",
+          "skate to me baby",
+          "skate video",
+          "skate official video",
+          "skate music video",
+          "bruno mars and anderson paak - skate",
+          "silk sonic - skate official music video",
+          "bruno mars music",
+          "bruno mars music videos",
+          "leave the door open",
+          "silk sonic",
+          "silk sonic leave the door open",
+          "silk sonic songs",
+          "silk sonic videos",
+          "rollerskating",
+          "rollerblading",
+          "skating",
+          "roller skate",
+          "rollerblade"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Bruno Mars, Anderson .Paak, Silk Sonic - Skate [Official Music Video]",
+          "description": "The official music video for Silk Sonic's \"Skate\" \n\nSkate out now: https://SilkSonic.lnk.to/SkateID\n\nDirected by Bruno Mars and Florent Dechard\nProduced by Jeremy Sullivan\nCinematography by Tehillah De Castro\nCo-Directed by Phil Tayag\n\nLyrics:\nIn a room full of dimes you would be 100 dollars\nIf being fine was a crime, girl, they’d lock your lil’ fine ass up in a tower\nThe way you move like you do\nOoh it’s like you do it for a livin’\nDo a lil’ spin, do it again – sshhiiiii\nlook like you playin’ for the win, OH BABY\n\nI’m trynna roll, I’m trynna ride\nI’m trynna float, I’m trynna glide\nNo no, don’t be shy, just take my hand and hold on tight\n\nOh, skate to me baby\nSkate\nSlide your way on over\nSlide your way on over\nSkate to me baby\nSkate\nI wanna get to know ya\nI wanna get to know ya\n\nGot your hair in the wind and your skin glistening\nI can smell your sweet perfume\nMmmm, ya smell better than a barbecue\nOh, superstar is what you are\nI’m your biggest fan\nif you’re lookin’ for a man, suga, here I am\n\nI’m trynna roll, I’m trynna ride\nI’m trynna float, I’m trynna glide\nNo no, don’t be shy, just take my hand and hold on tight!\n\nOh, skate to me baby\nSkate\nSlide your way on over\nSlide your way on over\nSkate to me baby\nSkate\nI wanna get to know ya\nI wanna get to know ya\n\nI never fall but tonight you got me falling for you, and only you, YOU\nI’m reaching out in hopes that you reach for me too, girl, let’s groove\n\nGirl, you got me singing ooooooohhhh\nMy oh my\nMy oh my\nMy oh my\nMy oh my\n\nOh, skate to me baby\nSkate\nSlide your way on over\nSlide your way on over\nSkate to me baby\nSkate\nI wanna get to know ya\nI wanna get to know ya\n\n\n🔔 Subscribe for the latest official music videos, live performances, lyric videos, official audio, and more: https://Atlantic.lnk.to/BMsubscribe\n \n🎵 Listen to the Best of Bruno Mars playlist ➤ https://bit.ly/3bbslw8\u200b \n🎵 Watch Bruno Mars’ Official Music Videos ➤ https://bit.ly/2U7I3mi\u200b \n\nGet Bruno Mars merchandise! https://brunom.rs/brunomarsstore \n\nConnect with Bruno:\nhttp://www.brunomars.com\u200b\nhttp://www.instagram.com/brunomars\u200b\nhttp://www.twitter.com/brunomars\u200b\nhttp://www.facebook.com/brunomars\n\nConnect with Anderson .Paak: \nhttps://www.facebook.com/AndersonPaak \nhttps://www.instagram.com/anderson._p... \nhttps://twitter.com/AndersonPaak \n\nConnect with Silk Sonic: \nhttps://SilkSonic.lnk.to/Instagram \nhttps://SilkSonic.lnk.to/Twitter \nhttps://SilkSonic.lnk.to/Facebook \nhttps://SilkSonic.lnk.to/Spotify \nhttps://SilkSonic.lnk.to/AppleMusic \nhttps://SilkSonic.lnk.to/TikTok \n\nGet Bruno Mars merchandise! https://brunom.rs/brunomarsstore\n\nThe official YouTube channel of Atlantic Records artist Bruno Mars. \n \n11x GRAMMY Award winner and 27x GRAMMY Award nominee Bruno Mars is a celebrated singer, songwriter, producer, and musician with iconic hits like \"The Lazy Song\", \"That's What I Like\", \"Just The Way You Are\", \"24K Magic\", \"Locked Out Of Heaven\", and \"When I Was Your Man\". His legendary body of work also includes blockbuster albums such as Doo-Wops & Hooligans, Unorthodox Jukebox, and 24K Magic, as well as era-defining collaborations like \"Uptown Funk\" with Mark Ronson, \"Finesse\" with Cardi B, and \"Nothin' On You\" with B.o.B. Forever classic, yet supremely innovative, Bruno continues to redefine music, style, and popular culture, pushing the boundaries of pop, R&B, funk, soul, hip-hop, and dance, and remains as influential as ever.\n \n#BrunoMars #Skate #SilkSonic #AndersonPaak"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT3M24S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "12687652",
+        "likeCount": "688854",
+        "dislikeCount": "5593",
+        "favoriteCount": "0",
+        "commentCount": "31985"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"360\" src=\"//www.youtube.com/embed/CEw-7cMnBDY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "7u45QS5QYonnFACZvRbNyQulTKY",
+      "id": "yDr5gEdOcg4",
+      "snippet": {
+        "publishedAt": "2021-07-19T19:29:54Z",
+        "channelId": "UChEYVadfkMCfrKUi6qr3I1Q",
+        "title": "Kodak Black - Senseless [Official Music Video]",
+        "description": "Kodak Black - Senseless\n'Happy Birthday Kodak' OUT NOW! \nStream/Download: https://Kodak.lnk.to/HappyBirthdayKodakID  \n \nSubscribe for more official content from Kodak Black:\nhttps://Atlantic.lnk.to/KBsubscribe\n\nFollow Kodak Black\nhttps://twitter.com/KodakBlack1k\nhttps://facebook.com/TheRealKodakBlack\nhttps://instagram.com/kodakblack\nhttps://soundcloud.com/kodak-black\nhttps://open.spotify.com/artist/46SHBwWsqBkxI7EeeBEQG7\n\nThe official YouTube channel of Atlantic Records artist Kodak Black. Subscribe for the latest music videos, performances, and more.\n\n#KodakBlack #Senseless #HipHop",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yDr5gEdOcg4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yDr5gEdOcg4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yDr5gEdOcg4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yDr5gEdOcg4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yDr5gEdOcg4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kodak Black",
+        "tags": [
+          "kodak",
+          "black",
+          "kodak black",
+          "atlantic records",
+          "codeine dreaming",
+          "tunnel vision",
+          "heart break kodak",
+          "project baby 2",
+          "Kodak Black Bill Israel",
+          "Bill Israel",
+          "Sniper Gang",
+          "Hip Hop",
+          "Kodak Black I Knew It",
+          "Kodak Bill Israel",
+          "Kodak Black Easter in Miami",
+          "Easter",
+          "Easter in Miami",
+          "Kodak Easter",
+          "Kodak Black Haitian Boy Kodak",
+          "Haitian Boy Kodak",
+          "Kodak Black HBK",
+          "HBK",
+          "Kodak Black Happy Birthday Kodak",
+          "Happy Birthday Kodak",
+          "Kodak Black Senseless",
+          "Senseless",
+          "I feel like I'm Kodak Black in 2015"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Kodak Black - Senseless [Official Music Video]",
+          "description": "Kodak Black - Senseless\n'Happy Birthday Kodak' OUT NOW! \nStream/Download: https://Kodak.lnk.to/HappyBirthdayKodakID  \n \nSubscribe for more official content from Kodak Black:\nhttps://Atlantic.lnk.to/KBsubscribe\n\nFollow Kodak Black\nhttps://twitter.com/KodakBlack1k\nhttps://facebook.com/TheRealKodakBlack\nhttps://instagram.com/kodakblack\nhttps://soundcloud.com/kodak-black\nhttps://open.spotify.com/artist/46SHBwWsqBkxI7EeeBEQG7\n\nThe official YouTube channel of Atlantic Records artist Kodak Black. Subscribe for the latest music videos, performances, and more.\n\n#KodakBlack #Senseless #HipHop"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT2M26S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "9677217",
+        "likeCount": "282861",
+        "dislikeCount": "7574",
+        "favoriteCount": "0",
+        "commentCount": "19707"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/yDr5gEdOcg4\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "wI0xhInBuqXti0AJzDc4GFHqFUQ",
+      "id": "5GJWxDKyk3A",
+      "snippet": {
+        "publishedAt": "2021-07-30T16:00:09Z",
+        "channelId": "UCDGmojLIoWpXok597xYo8cg",
+        "title": "Billie Eilish - Happier Than Ever (Official Music Video)",
+        "description": "Listen to the new album “Happier Than Ever”, out now: https://BillieEilish.lnk.to/HappierThanEver\n \nDirected by Billie Eilish\n \nFollow Billie Eilish: \nFacebook: https://BillieEilish.lnk.to/Facebook\nInstagram: https://BillieEilish.lnk.to/Instagram\nTwitter: https://BillieEilish.lnk.to/Twitter\nTikTok: https://BillieEilish.lnk.to/TikTok\nYouTube: https://youtube.com/BillieEilish\nEmail: https://smarturl.it/BillieEilishEmail\nStore: https://smarturl.it/BillieEilishStore",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5GJWxDKyk3A/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5GJWxDKyk3A/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5GJWxDKyk3A/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5GJWxDKyk3A/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5GJWxDKyk3A/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BillieEilishVEVO",
+        "tags": [
+          "Billie",
+          "Eilish",
+          "Happier",
+          "Than",
+          "Ever",
+          "Darkroom/Interscope",
+          "Records",
+          "Alternative"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Billie Eilish - Happier Than Ever (Official Music Video)",
+          "description": "Listen to the new album “Happier Than Ever”, out now: https://BillieEilish.lnk.to/HappierThanEver\n \nDirected by Billie Eilish\n \nFollow Billie Eilish: \nFacebook: https://BillieEilish.lnk.to/Facebook\nInstagram: https://BillieEilish.lnk.to/Instagram\nTwitter: https://BillieEilish.lnk.to/Twitter\nTikTok: https://BillieEilish.lnk.to/TikTok\nYouTube: https://youtube.com/BillieEilish\nEmail: https://smarturl.it/BillieEilishEmail\nStore: https://smarturl.it/BillieEilishStore"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT5M16S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "regionRestriction": {
+          "blocked": ["IO", "KP", "SS"]
+        },
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "8952763",
+        "likeCount": "842544",
+        "dislikeCount": "12518",
+        "favoriteCount": "0",
+        "commentCount": "55875"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/5GJWxDKyk3A\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "hGI4oHb37LbSSzCa-2nq1YSY6Uw",
+      "id": "TJFWeweZkWk",
+      "snippet": {
+        "publishedAt": "2021-07-30T04:00:09Z",
+        "channelId": "UCyVppwD0G-t1KQM9zWn_oOA",
+        "title": "Morray - Trenches Remix [Feat. Polo G] (Official Music Video)",
+        "description": "Morray - Trenches Remix [Feat. Polo G] (Official Music Video)\nSTREET SERMONS Out Now: https://morray.lnk.to/StreetSermons\nIG: @morrayda1 Subscribe to Morray https://tinyurl.com/yy8fzunh\n\nListen to Trenches Remix by Morray Ft. Polo G on all platforms: https://morray.lnk.to/TrenchesRemix\n\nFollow Morray (@morrayda1)\nhttp://facebook.com/morrayda1\nhttp://soundcloud.com/morrayda1\nhttp://instagram.com/morrayda1\nhttp://twitter.com/morrayda1\n\nFollow Polo G\nhttps://facebook.com/pologofficial\nhttps://instagram.com/polo.capalot\nhttps://twitter.com/Polo_Capalot\n\nTrenches Remix Lyrics:\n[Chorus]\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that it could be worse \nLove for the people that’s putting their family first\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that sh*t could be worse\nLove for the people that’s putting their family first\n \n[Verse 1]\nBreakfast in the morning, yeah it's finger lickin’ good\nBunch of laughs outside the window, kids playing in the hood\nGet dressed, step outside, and know today is gonna be good\nBut I’m still on the high alert ‘cause ni**as still from the hood\nEverybody see the ghetto as being a bad place\nWhere people run a muck, ni**as stuck in a sad state\nThey don’t see the good times that outweigh the bad days\nIn the hood we still smile to lighten up them dark caves \nHave a cookout, make the kids dance, then we share a couple laughs\nPop a bottle, share it with my homies, ni**a f*ck a glass\nBouta roll up, tell em hold up, pass the blunt before I spazz\n‘Cause its five ni**as smoking on a dime bag of gas\n \n[Pre-Chorus]\nYou don’t need the type of things on TV\nEverything ain't always what it seems\nEverything is easier if you believe, if you believe\n \n[Chorus] \nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that it could be worse \nLove for the people that’s putting their family first\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that sh*t could be worse\nLove for the people that’s putting their family first\n \n[Verse 2] - Polo G \nGrew up in the ghetto \nKnow some savages with good hearts \nHe smoking on dead ni**as \nEvery time that wood spark\nRemember I was f*cked up\nNow my foreign in the hood parked\nYou can beat the system \nIf you street and book smart, check mate\nPosted on them corners \nHe just waiting on his death day \nThey went left from the road to riches \nSo I Thank the lord I kept straight \nThey say I’m the mvp \nAin’t even see my best play \nI done took some losses \nType of sh*t that make your chest ache \nWilding with them teks like we don’t care bout what them refs say \nNFL balling like masses \nI only care bout what my checks say\nNow I’m hopping on n off them jets \nI’m where the nets play\nNever thought I’d make it used to see the next day \n \n[Chorus]\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that it could be worse \nLove for the people that’s putting their family first\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that sh*t could be worse\nLove for the people that’s putting their family first\n\n#Morray #PoloG #TrenchesRemix #StreetSermons",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TJFWeweZkWk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TJFWeweZkWk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TJFWeweZkWk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TJFWeweZkWk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TJFWeweZkWk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Morray",
+        "tags": [
+          "Morray",
+          "R&B",
+          "Hip Hop",
+          "Rap",
+          "pick six records",
+          "morray quicksand",
+          "quicksand",
+          "big decisions",
+          "trenches",
+          "switched up",
+          "mistakes",
+          "cant use me",
+          "trap soul",
+          "hip hop 2021",
+          "rap 2021",
+          "rod wave",
+          "roddy ricch",
+          "drake",
+          "j cole",
+          "dababy",
+          "melodic rap",
+          "genius",
+          "fayetteville",
+          "xxl",
+          "worldstar",
+          "akademiks",
+          "music",
+          "moray",
+          "street sermons",
+          "type beat",
+          "reaction",
+          "trenches remix",
+          "polo g",
+          "polo g rapstar",
+          "morray polo g",
+          "polo g morray",
+          "morray trenches remix",
+          "polo g trenches",
+          "morray trenches",
+          "rolling loud",
+          "my life j cole"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Morray - Trenches Remix [Feat. Polo G] (Official Music Video)",
+          "description": "Morray - Trenches Remix [Feat. Polo G] (Official Music Video)\nSTREET SERMONS Out Now: https://morray.lnk.to/StreetSermons\nIG: @morrayda1 Subscribe to Morray https://tinyurl.com/yy8fzunh\n\nListen to Trenches Remix by Morray Ft. Polo G on all platforms: https://morray.lnk.to/TrenchesRemix\n\nFollow Morray (@morrayda1)\nhttp://facebook.com/morrayda1\nhttp://soundcloud.com/morrayda1\nhttp://instagram.com/morrayda1\nhttp://twitter.com/morrayda1\n\nFollow Polo G\nhttps://facebook.com/pologofficial\nhttps://instagram.com/polo.capalot\nhttps://twitter.com/Polo_Capalot\n\nTrenches Remix Lyrics:\n[Chorus]\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that it could be worse \nLove for the people that’s putting their family first\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that sh*t could be worse\nLove for the people that’s putting their family first\n \n[Verse 1]\nBreakfast in the morning, yeah it's finger lickin’ good\nBunch of laughs outside the window, kids playing in the hood\nGet dressed, step outside, and know today is gonna be good\nBut I’m still on the high alert ‘cause ni**as still from the hood\nEverybody see the ghetto as being a bad place\nWhere people run a muck, ni**as stuck in a sad state\nThey don’t see the good times that outweigh the bad days\nIn the hood we still smile to lighten up them dark caves \nHave a cookout, make the kids dance, then we share a couple laughs\nPop a bottle, share it with my homies, ni**a f*ck a glass\nBouta roll up, tell em hold up, pass the blunt before I spazz\n‘Cause its five ni**as smoking on a dime bag of gas\n \n[Pre-Chorus]\nYou don’t need the type of things on TV\nEverything ain't always what it seems\nEverything is easier if you believe, if you believe\n \n[Chorus] \nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that it could be worse \nLove for the people that’s putting their family first\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that sh*t could be worse\nLove for the people that’s putting their family first\n \n[Verse 2] - Polo G \nGrew up in the ghetto \nKnow some savages with good hearts \nHe smoking on dead ni**as \nEvery time that wood spark\nRemember I was f*cked up\nNow my foreign in the hood parked\nYou can beat the system \nIf you street and book smart, check mate\nPosted on them corners \nHe just waiting on his death day \nThey went left from the road to riches \nSo I Thank the lord I kept straight \nThey say I’m the mvp \nAin’t even see my best play \nI done took some losses \nType of sh*t that make your chest ache \nWilding with them teks like we don’t care bout what them refs say \nNFL balling like masses \nI only care bout what my checks say\nNow I’m hopping on n off them jets \nI’m where the nets play\nNever thought I’d make it used to see the next day \n \n[Chorus]\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that it could be worse \nLove for the people that’s putting their family first\nI got love for the ghetto, love for the hood\nLove for the people that turn the bad into good\nLove for the people that think that sh*t could be worse\nLove for the people that’s putting their family first\n\n#Morray #PoloG #TrenchesRemix #StreetSermons"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT2M53S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1062737",
+        "likeCount": "62391",
+        "dislikeCount": "619",
+        "favoriteCount": "0",
+        "commentCount": "2942"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/TJFWeweZkWk\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "4469w1fRaLQ4hZEnCD5OhmbSyFA",
+      "id": "9Vpb7NH3LSo",
+      "snippet": {
+        "publishedAt": "2021-07-26T17:00:04Z",
+        "channelId": "UCbfUA3UGxAWL3muD004g0WQ",
+        "title": "Tory Lanez - Grah Tah Tah (feat. Kodak Black) [Official Music Video]",
+        "description": "The official music video for Tory Lanez - Grah Tah Tah (feat. Kodak Black)\nGrah Tah Tah out now on all platforms: https://create.ffm.to/grahtahtah.oyd\n\nFrom the We Outside capsule, out now: https://create.ffm.to/weoutside.oyd\nSubscribe to Tory Lanez's channel: https://create.ffm.to/torylanezyt.oyd\n\nDirected by Christian Breslauer | The Lucky Bastards, Inc\nEdited by: Tory Lanez\n\nFollow @Tory Lanez \nhttp://twitter.com/torylanez\nhttp://instagram.com/torylanez\nhttp://www.facebook.com/torylanez\n\nTory Lanez Merch: https://torylanez.shop\n\nFollow Kodak Black:\nhttps://www.facebook.com/TheRealKodakBlack\nhttps://www.instagram.com/kodakblack/\nhttps://www.youtube.com/KodakBlack/\n\n#ToryLanez #GrahTahTah #KodakBlack",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9Vpb7NH3LSo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9Vpb7NH3LSo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9Vpb7NH3LSo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9Vpb7NH3LSo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9Vpb7NH3LSo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tory Lanez",
+        "tags": [
+          "tory lanez kodak black grah tah tah official music video",
+          "officiial music video tory lanez kodak black grah tah tah",
+          "tory lanez kodak black",
+          "kodak black tory lanez",
+          "grah tah tah",
+          "grahtahtah",
+          "tory lanez kodak",
+          "kodack",
+          "kodack black",
+          "tory lanes",
+          "tory lanez kodak black video",
+          "kodak black happy birthday",
+          "tory lanez we outside",
+          "we outside",
+          "new tory lanez kodak black",
+          "tory lanez grah tah tah",
+          "kodak black grah tah tah",
+          "tory lanez official music video",
+          "new tory lanez kodak"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Tory Lanez - Grah Tah Tah (feat. Kodak Black) [Official Music Video]",
+          "description": "The official music video for Tory Lanez - Grah Tah Tah (feat. Kodak Black)\nGrah Tah Tah out now on all platforms: https://create.ffm.to/grahtahtah.oyd\n\nFrom the We Outside capsule, out now: https://create.ffm.to/weoutside.oyd\nSubscribe to Tory Lanez's channel: https://create.ffm.to/torylanezyt.oyd\n\nDirected by Christian Breslauer | The Lucky Bastards, Inc\nEdited by: Tory Lanez\n\nFollow @Tory Lanez \nhttp://twitter.com/torylanez\nhttp://instagram.com/torylanez\nhttp://www.facebook.com/torylanez\n\nTory Lanez Merch: https://torylanez.shop\n\nFollow Kodak Black:\nhttps://www.facebook.com/TheRealKodakBlack\nhttps://www.instagram.com/kodakblack/\nhttps://www.youtube.com/KodakBlack/\n\n#ToryLanez #GrahTahTah #KodakBlack"
+        },
+        "defaultAudioLanguage": "en"
+      },
+      "contentDetails": {
+        "duration": "PT3M41S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "7892559",
+        "likeCount": "131326",
+        "dislikeCount": "3331",
+        "favoriteCount": "0",
+        "commentCount": "203274"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/9Vpb7NH3LSo\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "xkwWZGFL19OD3J9wUGmRuXxxzsI",
+      "id": "cFD9KnwQgQY",
+      "snippet": {
+        "publishedAt": "2021-07-23T04:00:11Z",
+        "channelId": "UC6G2vAJrt407lwiynW116Eg",
+        "title": "The Kid LAROI - Not Sober (feat. Polo G and Stunna Gambino) (Official Video)",
+        "description": "Official video for \"Not Sober\" by The Kid LAROI feat. Polo G and Stunna Gambino\n\nListen to The Kid Laroi's \"F*CK LOVE 3: Over You\": https://thekidlaroi.lnk.to/FL3\n\nAmazon Music - https://thekidlaroi.lnk.to/FL3/amazonmusic\nApple Music - https://thekidlaroi.lnk.to/FL3/applemusic\nAudiomack - https://thekidlaroi.lnk.to/FL3/audiomack\nDeezer - https://thekidlaroi.lnk.to/FL3/deezer\niTunes - https://thekidlaroi.lnk.to/FL3/itunes\nSoundCloud - https://thekidlaroi.lnk.to/FL3/soundcloud\nSpotify - https://thekidlaroi.lnk.to/FL3/spotify\nYouTube Music - https://thekidlaroi.lnk.to/FL3/youtubemusic\n \nFollow The Kid LAROI\nInstagram - https://www.instagram.com/thekidlaroi/\nTwitter - https://twitter.com/thekidlaroi\nTikTok - https://www.tiktok.com/@thekidlaroi\nFacebook - https://www.facebook.com/thekidlaroi\n\nDirected by Steve Cannon\nProduced by Nolan Riddle\n\n#TheKidLAROI #FvckLove3 #NotSober",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cFD9KnwQgQY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cFD9KnwQgQY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cFD9KnwQgQY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cFD9KnwQgQY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cFD9KnwQgQY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "The Kid LAROI.",
+        "tags": [
+          "the kid laroi",
+          "laroi",
+          "not sober",
+          "fvcklove",
+          "fvck love",
+          "over you",
+          "polo g",
+          "stunna gambino",
+          "the kid laroi new video",
+          "the kid laroi new song"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "The Kid LAROI - Not Sober (feat. Polo G and Stunna Gambino) (Official Video)",
+          "description": "Official video for \"Not Sober\" by The Kid LAROI feat. Polo G and Stunna Gambino\n\nListen to The Kid Laroi's \"F*CK LOVE 3: Over You\": https://thekidlaroi.lnk.to/FL3\n\nAmazon Music - https://thekidlaroi.lnk.to/FL3/amazonmusic\nApple Music - https://thekidlaroi.lnk.to/FL3/applemusic\nAudiomack - https://thekidlaroi.lnk.to/FL3/audiomack\nDeezer - https://thekidlaroi.lnk.to/FL3/deezer\niTunes - https://thekidlaroi.lnk.to/FL3/itunes\nSoundCloud - https://thekidlaroi.lnk.to/FL3/soundcloud\nSpotify - https://thekidlaroi.lnk.to/FL3/spotify\nYouTube Music - https://thekidlaroi.lnk.to/FL3/youtubemusic\n \nFollow The Kid LAROI\nInstagram - https://www.instagram.com/thekidlaroi/\nTwitter - https://twitter.com/thekidlaroi\nTikTok - https://www.tiktok.com/@thekidlaroi\nFacebook - https://www.facebook.com/thekidlaroi\n\nDirected by Steve Cannon\nProduced by Nolan Riddle\n\n#TheKidLAROI #FvckLove3 #NotSober"
+        },
+        "defaultAudioLanguage": "en-US"
+      },
+      "contentDetails": {
+        "duration": "PT3M49S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": false,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "4971212",
+        "likeCount": "216236",
+        "dislikeCount": "2705",
+        "favoriteCount": "0",
+        "commentCount": "11249"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/cFD9KnwQgQY\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "vOh3v2BGdM23H_oW_pQTF6A0Oew",
+      "id": "cjqeQPQvrwg",
+      "snippet": {
+        "publishedAt": "2021-07-28T17:00:10Z",
+        "channelId": "UChPQNFEbdvaZWZJLTRngYBQ",
+        "title": "EST Gee - Riata Dada (Official Music Video)",
+        "description": "Listen to EST Gee's “Bigger Than Life Or Death” available on all platforms: https://estgee.lnk.to/BTLOD\n\nFollow EST Gee:\nhttps://twitter.com/ESTGEE1\nhttps://www.instagram.com/est.gee\nhttps://www.facebook.com/ESTGeeOfficialMusic\nhttps://smarturl.it/ESTGeeYT\nhttp://www.est-gee.com/\n\nLyrics:\nAin't shit fuckin' with me, I'm nothin' like these rap niggas\nReal street nigga, 5500 made man, yeah\nI'm the real thing\n\nYeah, I can't vouch for them, but they can vouch for me\nLegend of Riata Dada, came up sellin' hank and weed\nI can't make no opps not diss Lil Dead, but I can make 'em bleed\nPaper right and I ain't fightin', you in a gunfight with a steak knife\nPolice know they need helicopters tryna stop us 'cause I'm gon' yank, right?\nWhen I move, it's a chopper scene like the opera, I send a bitch nigga to the doctor\nI was tryna stop you, but all that shit you pop make it impossible\nGuccis on me, semi spit like a run-on sentence, it ain't no comma\nIf I wasn't this, then I probably been done signed with DJ Drama\nBut I'm thuggin' and I'm shinin', fuck with coke, I roll with Gotti\nWhen he met me, I had sixty, all fifty stuffed in my pocket\nBefore I signed it, me and all my partners, diamond chains and watches\nWe like mobsters, only difference, we sip syrup with our pasta\nAim is true, he's clocked in, I watched brethen drop it, then he locked it\nPay him whack his partner, niggas snakes, but I'm an anaconda\nI make sure that's proper, way more with the cut, it ain't Hydroxy'\nBut I made it, mama\nCouldn't save you first, you know I'm sorry\nThis shit hypnotized me\nOnly thing excite me is a body\nHe be acting cocky like we ain't shoot at him when he's with his mama\nThis a blackout, give you to my lil' partner, he flip niggas' Honda\nNigga coolin', we done mucked they shooter, fucked up they lil' roster\nI was nappin' chronic 'til I got a book, I'm hooked on phonics\nI'm a Fendi scholar, hit it two, three times and it's still proper\nGet that strong white, call this batch a boxer, Ivan Drago\nDid I really leave the streets alone to rap? I ain't decided\nHit your partner top, he squirmin' just like fishes outta water\nI ain't got advice, just hit the trap and pray you make it out it\nI had sleepless nights, can't let 'em sneak me twice, I gotta watch 'em\nGet a move, turn off your phone, we finna slide, pop my yopper\nThey be wildin' 'til we hit they blocks, then niggas playin' possum\nNiggas bold like we ain't takin' souls and puttin' 'em with my mama\nAnd don't pat me at no shows, I got my gun and I get hot there\nI'm from Louisville, where we wet our Blacks and sip raw out the bottle\nI don't care how much he did, he rat, he do not get acknowledged\nI'm the same nigga used to play pitch back, talkin' with Fat Chris on Redondo\nNow I'm twelve floors up with a thick slut getting my dick sucked in a condo\n\nDick sucked in a condo, bitch nigga\n5500 made man\nEST, Big Gee, nigga\nYou hear this shit, nigga\nReal street nigga, you know\nPlay me like no rapper, jump off stage on one of you niggas\n\n#ESTGee #RiataDada #BiggerThanLifeOrDeath #EverybodyShinesTogether\n\nMusic video by EST Gee performing Riata Dada. © 2021 CMG/Interscope Records\n\nhttp://vevo.ly/UAHkXh",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cjqeQPQvrwg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cjqeQPQvrwg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cjqeQPQvrwg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "ESTGeeVEVO",
+        "tags": [
+          "EST",
+          "Gee",
+          "Riata",
+          "Dada",
+          "CMG/Warlike/Interscope",
+          "Records",
+          "Hip",
+          "Hop",
+          "est gee",
+          "riata dada",
+          "est gee riata dada",
+          "riata dada est gee",
+          "riata dada video",
+          "riata dada lyrics",
+          "btlod",
+          "bigger than life or death",
+          "est gee bigger than life or death",
+          "bigger than life or death est gee",
+          "est gee music",
+          "est gee new music",
+          "est gee 2021",
+          "est gee songs",
+          "est gee video",
+          "yo gotti",
+          "cmg",
+          "everybody shines together"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "EST Gee - Riata Dada (Official Music Video)",
+          "description": "Listen to EST Gee's “Bigger Than Life Or Death” available on all platforms: https://estgee.lnk.to/BTLOD\n\nFollow EST Gee:\nhttps://twitter.com/ESTGEE1\nhttps://www.instagram.com/est.gee\nhttps://www.facebook.com/ESTGeeOfficialMusic\nhttps://smarturl.it/ESTGeeYT\nhttp://www.est-gee.com/\n\nLyrics:\nAin't shit fuckin' with me, I'm nothin' like these rap niggas\nReal street nigga, 5500 made man, yeah\nI'm the real thing\n\nYeah, I can't vouch for them, but they can vouch for me\nLegend of Riata Dada, came up sellin' hank and weed\nI can't make no opps not diss Lil Dead, but I can make 'em bleed\nPaper right and I ain't fightin', you in a gunfight with a steak knife\nPolice know they need helicopters tryna stop us 'cause I'm gon' yank, right?\nWhen I move, it's a chopper scene like the opera, I send a bitch nigga to the doctor\nI was tryna stop you, but all that shit you pop make it impossible\nGuccis on me, semi spit like a run-on sentence, it ain't no comma\nIf I wasn't this, then I probably been done signed with DJ Drama\nBut I'm thuggin' and I'm shinin', fuck with coke, I roll with Gotti\nWhen he met me, I had sixty, all fifty stuffed in my pocket\nBefore I signed it, me and all my partners, diamond chains and watches\nWe like mobsters, only difference, we sip syrup with our pasta\nAim is true, he's clocked in, I watched brethen drop it, then he locked it\nPay him whack his partner, niggas snakes, but I'm an anaconda\nI make sure that's proper, way more with the cut, it ain't Hydroxy'\nBut I made it, mama\nCouldn't save you first, you know I'm sorry\nThis shit hypnotized me\nOnly thing excite me is a body\nHe be acting cocky like we ain't shoot at him when he's with his mama\nThis a blackout, give you to my lil' partner, he flip niggas' Honda\nNigga coolin', we done mucked they shooter, fucked up they lil' roster\nI was nappin' chronic 'til I got a book, I'm hooked on phonics\nI'm a Fendi scholar, hit it two, three times and it's still proper\nGet that strong white, call this batch a boxer, Ivan Drago\nDid I really leave the streets alone to rap? I ain't decided\nHit your partner top, he squirmin' just like fishes outta water\nI ain't got advice, just hit the trap and pray you make it out it\nI had sleepless nights, can't let 'em sneak me twice, I gotta watch 'em\nGet a move, turn off your phone, we finna slide, pop my yopper\nThey be wildin' 'til we hit they blocks, then niggas playin' possum\nNiggas bold like we ain't takin' souls and puttin' 'em with my mama\nAnd don't pat me at no shows, I got my gun and I get hot there\nI'm from Louisville, where we wet our Blacks and sip raw out the bottle\nI don't care how much he did, he rat, he do not get acknowledged\nI'm the same nigga used to play pitch back, talkin' with Fat Chris on Redondo\nNow I'm twelve floors up with a thick slut getting my dick sucked in a condo\n\nDick sucked in a condo, bitch nigga\n5500 made man\nEST, Big Gee, nigga\nYou hear this shit, nigga\nReal street nigga, you know\nPlay me like no rapper, jump off stage on one of you niggas\n\n#ESTGee #RiataDada #BiggerThanLifeOrDeath #EverybodyShinesTogether\n\nMusic video by EST Gee performing Riata Dada. © 2021 CMG/Interscope Records\n\nhttp://vevo.ly/UAHkXh"
+        }
+      },
+      "contentDetails": {
+        "duration": "PT2M18S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "regionRestriction": {
+          "blocked": ["IO", "KP", "SS"]
+        },
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "833819",
+        "likeCount": "20135",
+        "dislikeCount": "443",
+        "favoriteCount": "0",
+        "commentCount": "1485"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/cjqeQPQvrwg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "56T_gs39qQJmUQRF3B-gppXb4gA",
+      "id": "YExFaP_R6lU",
+      "snippet": {
+        "publishedAt": "2021-07-28T19:00:08Z",
+        "channelId": "UC0_95MpNlRz9x7JmsXBClZA",
+        "title": "Eladio Carrion, J Balvin, Daddy Yankee, Bobby Shmurda - TATA REMIX (Video Oficial)",
+        "description": "Eladio Carrion, J Balvin, Daddy Yankee, Bobby Shmurda - TATA REMIX \nFilmado en Puerto Rico and New York. \nProducido por Filmheads.\nDirigido por Jose Sagaro, Jon J Visuals & Squid.\n\nEscucha “SEN2 KBRN” \nhttps://www.sen2kbrn.com/\n\nSuscríbete al Canal: https://rimas.ffm.to/yteladio ✅\n\nSEN2 KBRN en Plataformas Digitales:\nSpotify: https://rimas.ffm.to/spotifyeladio\nApple Music: https://rimas.ffm.to/applemusiceladio\n\nEladio Carrion - TATA REMIX - Letra\nWuh (Wuh, wuh)\nYeah, yeah, yeah\nYeah, yeah, yeah, yeah\n\nOff-White la' chancla', Gucci la' bata' (Ey)\nAmigo' delincuente', no como Tata (Tata)\nLa calle caliente como fogata (Wuh)\nAquel trató, pero cuando tratan (Tratan)\nPew pa' lo' pie', ello' bailan bachata (Ah)\nSiempre en nota, Hakuna Matata (Prr; wuh)\nMP5 (Yah) te deja trinco\nCuando suena hace ra-ta-ta-ta (Eh; rrr)\n\nDicen mi nombre, nunca mi cara; hablan, no tienen data (Wuh, wuh)\nEstoy en LA con mi essay, why you so thirsty? You need some water (Wuh, wuh)\nCon la cone de México, sí, el médico, tomando Henny Horchata\nNo me llamen pa' bochinche', revoluce', que eso e' de Satán (¡Ey, ey!)\nRa-ta-ta-ta, Eladio no empata, Eladio fuma como rasta (Rrr)\nVine de la mata, solo tigueraje, no coro con rata'\nNo te meta' con el diablo, eso lo dijo Nata (¡Prr, prr!)\nVine de abajo, como la batata (¡Pah, pah!)\nQuieren verme muerto, dale, ven y trata (¡Pla, pla; pla, pla!)\nHay do' opcione', nigga, plomo o plata (¡Plo, plo!), yeah\n\nSmokin' on zaza, whippin' up yaya\nTell 'em \"Free [Quavo and Rashad]\nPlaka, tell 'em this bad man, tell 'em this [danda]\nTell 'em that I'm top shotter\nRobber, me and my pilots\nMe and my naggas, mi mami, my choppers (Grr)\n\nJust came home off a lock-up (Grr)\n\"Grr\" anything when I pop up (Like baow)\nBlowin' that nino, throw that thing up\nRoll everything I see up (Baow)\nSmokin' on Easter, really don't need her\nAfter I fuck her, you can keep her\nBaby, I'm steady in this breach up (Rra)\nBaby, I rack them, niner (Uh)\nAnd I got hitters in Humacao\nAnd even in Medellín, uh (Oh, jeez)\nUh, bang-bang, bitch\nYou better never speak up (Hey, skrrt)\nBang-bang, bitch\nI went to sleep with a eater, uh (Krr)\nBang (Bang) or gang, bitch\nI got to sleep with the nina' (Ah)\nI go to sleep with these divas (Yeah, okay, yeah)\nI done came up from the keesh, yeah (Uh-huh)\n\nOff-White la' chancla', Gucci la' bata' (Ey)\nAmigo' delincuente', no como Tata (Tata)\nLa calle caliente como fogata (Wuh)\nAquel trató, pero cuando tratan (Tratan)\nPew pa' lo' pies, ello' bailan bachata (Ah)\nSiempre en nota, Hakuna Matata (Wuh; yeah, ey)\n\n(J Balvin, man)\nDe hacer historia, de eso se trata\nTu movie e' falsa y por ende, barata\nYo soy el mismo, solo que con má' plata (¡Ching!)\nUstede' son bueno', pero el ego los mata (Ah), uh\nMillo sin corbata\nJosé siempre la tiene en alta\nAndamo' tranquilo', Hakuna Matata\nComiéndome un J Balvin meal con patata'\n'Tá to' bien, chillin' con mi gata (Eh)\nEn el Ferrari rojo escarlata, uh\nPrendío' como fogata (Ah)\nMás que tú está ganando mi azafata\nAquí no se pregunta cuánto se gasta (No)\nNo fumo mata, pero pura hoja como un rasta (Rasta)\nMi vida es una película (Ah), ya mismo me vuelvo cineasta\nEsto no me basta, yo quiero más pasta\nFuchi, de lejito' con las rata' (Basta)\nEn París, no estoy hablando de Nata (Oui)\nEsa mala cara los delata (Ah)\nLo mío es de oro, lo tuyo es de lata (Ey, ey)\nLo mío es real, lo tuyo es pirata (Wuh, wuh)\nA eso va la candidata (¡Ah!)\nHoy quiero una española y una croata-ta-ta (J Balvin, man)\n\nOff-White la' chancla', Gucci la' bata'\nAmigo' delincuente', no como Tata\nLa calle caliente como fogata\nAquel trató, pero cuando tratan (Wuh; dímelo, Eladio)\nPew pa' lo' pies, ello' bailan bachata\nSiempre en nota, Hakuna Matata (Soñando en grande, ¿oíste?; prr)\nMP5 te deja trinco\nCuando suena hace ra-ta-ta-ta (Acábala)\n\nThe GOAT, ¿ah?\nOnce again a romper lleca\nAl uno, venga, le costeo la beca\nNacío' y cria'o donde tú no entra'\nNo hay alarma, pero sí .40\n¿Quién tú ere'? Fuck lo que proyecta'\nShooters ready, lo' mantengo alerta\nVilla Kennedy, sigo en La Meca\nSer el lider siempre fue la meta\nYo no hice maleta' cuando me pegué\nTo' lo contrario, puse al día al barrio\nTo'a la gente que a mí me vio crecer\nEstán al tanto, saben 'e lo que hablo\nMi otra casa la aventé y la compré\nNo me cabían los premio' y lo' cuadro'\nSolo Dios sabe por lo que pasé\nNo me interesa lo que te contaron (¡Wuh!)\n¡De un millón pa'l billón! To' lo que tengo e' legítimo\nAnte' quería ser bichote, ahora bajo pa' casa y to' quieren ser como yo\nDisparo' no paro, se va pa'l piso\nCuando los palo' lo' halo', le meto preciso\nTiro un rafagazo en el mic y lo paralizo\n¿Qué carajo están hablando to' esto' huelebicho?, oh\nTengo el cuello bien low zero (Zero, zero; ey, ey)\nHasta en verano paso frío (Frío), ey (Frío)\nEn la muñeca hay un resort (Dime \"Lleras\", ey); ching\nY lo' baguette' no están incluido'\n\n#EladioCarrion #TATA #REMIX",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YExFaP_R6lU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YExFaP_R6lU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YExFaP_R6lU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YExFaP_R6lU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YExFaP_R6lU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Eladio Carrion",
+        "tags": [
+          "eladio carrion",
+          "daddy yankee",
+          "jbalvin",
+          "bobby",
+          "eladio carrion tata remix",
+          "tata remix",
+          "tata eladio carrion remix",
+          "eladio carrion daddy yankee",
+          "daddy yankee eladio carrion tata remix",
+          "tata remix eladio",
+          "eladio tata remix",
+          "tata rmx",
+          "eladio jbalvin bobby tata remix",
+          "tata remix eladio carrion",
+          "tata remix daddy yankee eladio carrion",
+          "jbalvin eladio carrion",
+          "jbalvin eladio carrion tata remix",
+          "bobby shmurda tata remix",
+          "tata remix eladio carrion jbalvin daddy yankee"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Eladio Carrion, J Balvin, Daddy Yankee, Bobby Shmurda - TATA REMIX (Video Oficial)",
+          "description": "Eladio Carrion, J Balvin, Daddy Yankee, Bobby Shmurda - TATA REMIX \nFilmado en Puerto Rico and New York. \nProducido por Filmheads.\nDirigido por Jose Sagaro, Jon J Visuals & Squid.\n\nEscucha “SEN2 KBRN” \nhttps://www.sen2kbrn.com/\n\nSuscríbete al Canal: https://rimas.ffm.to/yteladio ✅\n\nSEN2 KBRN en Plataformas Digitales:\nSpotify: https://rimas.ffm.to/spotifyeladio\nApple Music: https://rimas.ffm.to/applemusiceladio\n\nEladio Carrion - TATA REMIX - Letra\nWuh (Wuh, wuh)\nYeah, yeah, yeah\nYeah, yeah, yeah, yeah\n\nOff-White la' chancla', Gucci la' bata' (Ey)\nAmigo' delincuente', no como Tata (Tata)\nLa calle caliente como fogata (Wuh)\nAquel trató, pero cuando tratan (Tratan)\nPew pa' lo' pie', ello' bailan bachata (Ah)\nSiempre en nota, Hakuna Matata (Prr; wuh)\nMP5 (Yah) te deja trinco\nCuando suena hace ra-ta-ta-ta (Eh; rrr)\n\nDicen mi nombre, nunca mi cara; hablan, no tienen data (Wuh, wuh)\nEstoy en LA con mi essay, why you so thirsty? You need some water (Wuh, wuh)\nCon la cone de México, sí, el médico, tomando Henny Horchata\nNo me llamen pa' bochinche', revoluce', que eso e' de Satán (¡Ey, ey!)\nRa-ta-ta-ta, Eladio no empata, Eladio fuma como rasta (Rrr)\nVine de la mata, solo tigueraje, no coro con rata'\nNo te meta' con el diablo, eso lo dijo Nata (¡Prr, prr!)\nVine de abajo, como la batata (¡Pah, pah!)\nQuieren verme muerto, dale, ven y trata (¡Pla, pla; pla, pla!)\nHay do' opcione', nigga, plomo o plata (¡Plo, plo!), yeah\n\nSmokin' on zaza, whippin' up yaya\nTell 'em \"Free [Quavo and Rashad]\nPlaka, tell 'em this bad man, tell 'em this [danda]\nTell 'em that I'm top shotter\nRobber, me and my pilots\nMe and my naggas, mi mami, my choppers (Grr)\n\nJust came home off a lock-up (Grr)\n\"Grr\" anything when I pop up (Like baow)\nBlowin' that nino, throw that thing up\nRoll everything I see up (Baow)\nSmokin' on Easter, really don't need her\nAfter I fuck her, you can keep her\nBaby, I'm steady in this breach up (Rra)\nBaby, I rack them, niner (Uh)\nAnd I got hitters in Humacao\nAnd even in Medellín, uh (Oh, jeez)\nUh, bang-bang, bitch\nYou better never speak up (Hey, skrrt)\nBang-bang, bitch\nI went to sleep with a eater, uh (Krr)\nBang (Bang) or gang, bitch\nI got to sleep with the nina' (Ah)\nI go to sleep with these divas (Yeah, okay, yeah)\nI done came up from the keesh, yeah (Uh-huh)\n\nOff-White la' chancla', Gucci la' bata' (Ey)\nAmigo' delincuente', no como Tata (Tata)\nLa calle caliente como fogata (Wuh)\nAquel trató, pero cuando tratan (Tratan)\nPew pa' lo' pies, ello' bailan bachata (Ah)\nSiempre en nota, Hakuna Matata (Wuh; yeah, ey)\n\n(J Balvin, man)\nDe hacer historia, de eso se trata\nTu movie e' falsa y por ende, barata\nYo soy el mismo, solo que con má' plata (¡Ching!)\nUstede' son bueno', pero el ego los mata (Ah), uh\nMillo sin corbata\nJosé siempre la tiene en alta\nAndamo' tranquilo', Hakuna Matata\nComiéndome un J Balvin meal con patata'\n'Tá to' bien, chillin' con mi gata (Eh)\nEn el Ferrari rojo escarlata, uh\nPrendío' como fogata (Ah)\nMás que tú está ganando mi azafata\nAquí no se pregunta cuánto se gasta (No)\nNo fumo mata, pero pura hoja como un rasta (Rasta)\nMi vida es una película (Ah), ya mismo me vuelvo cineasta\nEsto no me basta, yo quiero más pasta\nFuchi, de lejito' con las rata' (Basta)\nEn París, no estoy hablando de Nata (Oui)\nEsa mala cara los delata (Ah)\nLo mío es de oro, lo tuyo es de lata (Ey, ey)\nLo mío es real, lo tuyo es pirata (Wuh, wuh)\nA eso va la candidata (¡Ah!)\nHoy quiero una española y una croata-ta-ta (J Balvin, man)\n\nOff-White la' chancla', Gucci la' bata'\nAmigo' delincuente', no como Tata\nLa calle caliente como fogata\nAquel trató, pero cuando tratan (Wuh; dímelo, Eladio)\nPew pa' lo' pies, ello' bailan bachata\nSiempre en nota, Hakuna Matata (Soñando en grande, ¿oíste?; prr)\nMP5 te deja trinco\nCuando suena hace ra-ta-ta-ta (Acábala)\n\nThe GOAT, ¿ah?\nOnce again a romper lleca\nAl uno, venga, le costeo la beca\nNacío' y cria'o donde tú no entra'\nNo hay alarma, pero sí .40\n¿Quién tú ere'? Fuck lo que proyecta'\nShooters ready, lo' mantengo alerta\nVilla Kennedy, sigo en La Meca\nSer el lider siempre fue la meta\nYo no hice maleta' cuando me pegué\nTo' lo contrario, puse al día al barrio\nTo'a la gente que a mí me vio crecer\nEstán al tanto, saben 'e lo que hablo\nMi otra casa la aventé y la compré\nNo me cabían los premio' y lo' cuadro'\nSolo Dios sabe por lo que pasé\nNo me interesa lo que te contaron (¡Wuh!)\n¡De un millón pa'l billón! To' lo que tengo e' legítimo\nAnte' quería ser bichote, ahora bajo pa' casa y to' quieren ser como yo\nDisparo' no paro, se va pa'l piso\nCuando los palo' lo' halo', le meto preciso\nTiro un rafagazo en el mic y lo paralizo\n¿Qué carajo están hablando to' esto' huelebicho?, oh\nTengo el cuello bien low zero (Zero, zero; ey, ey)\nHasta en verano paso frío (Frío), ey (Frío)\nEn la muñeca hay un resort (Dime \"Lleras\", ey); ching\nY lo' baguette' no están incluido'\n\n#EladioCarrion #TATA #REMIX"
+        },
+        "defaultAudioLanguage": "es"
+      },
+      "contentDetails": {
+        "duration": "PT4M31S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "7552337",
+        "likeCount": "317855",
+        "dislikeCount": "5869",
+        "favoriteCount": "0",
+        "commentCount": "20419"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/YExFaP_R6lU\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    },
+    {
+      "kind": "youtube#video",
+      "etag": "bjSyNCvqw51mFYnVxi-2WbWQQMg",
+      "id": "DFMEBquxeO8",
+      "snippet": {
+        "publishedAt": "2021-07-16T04:00:08Z",
+        "channelId": "UCpd3rXPsHKu1nRnUyxEm1xQ",
+        "title": "Normani - Wild Side (Official Video) ft. Cardi B",
+        "description": "Normani feat. Cardi B – “Wild Side” Out Now!\nListen Now: https://normaniwildside.com \n\nhttps://smarturl.it/xWildSide\n\nFollow Normani:\nhttps://www.twitter.com/Normani  \nhttps://www.facebook.com/normanikordei \nhttps://www.instagram.com/normani/\n\nFollow Cardi B:\nhttp://www.twitter.com/IAmCardiB \nhttp://www.facebook.com/IAmCardiB \nhttps://www.instagram.com/iamcardib/ \n\nDirected by: Tanu Muino\nProduced by: Jack Winter\nExecutive Produced by: Frank Borin, Ivanna Borin\nLabel Producers - Camille Yorrick & Chris Clavadetscher\n\nCreative Director: Maxime Quoilin\nManagement: Brandon Silverstein and Jay Cao for S10 Entertainment\n\nProduction Co: UnderWonder Content\nCinematographer: Nikita Kuzmenko\nProduction Designer: Spencer Graves\nChoreographer: Sean Bankhead\n1st AD: Braden Anderson\nLocation Manager: Max Simon\nEditor: Vinnie Hobbs @ VHpost\nColor: Joseph Bicknell @ CO3\nVFX: Max Colt @ FRENDER\n  \nStylist: Kollin Carter\nNormani MU: Priscilla Ono\nNormani Hair: Yusef Williams\nNormani Nails: Sojin Oh\nDancer Hair: Ashanti Lation\nDancer Hair: Davontae Washington\nDancer MU: Hayley Kassel\nDancer MU: Jordana Aguon\nDancer MU: Kasha Lassien\n\n#Normani #CardiB #WildSide #OfficialVideo",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DFMEBquxeO8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DFMEBquxeO8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DFMEBquxeO8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DFMEBquxeO8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DFMEBquxeO8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "NormaniVEVO",
+        "tags": [
+          "Normani wild side",
+          "normai cardi b",
+          "cardi b wild side",
+          "wild side music video",
+          "normani new music",
+          "normani motivation",
+          "cardi b up",
+          "normani cardi b leak",
+          "normani live",
+          "normani Aaliyah",
+          "Aaliyah one in a million",
+          "normani dancing",
+          "cardi b feature",
+          "cardi b kulture",
+          "cardi b wap",
+          "normani ft cardi b",
+          "normani wild side snippet",
+          "normani wap",
+          "cardi b new song",
+          "cardi b normani",
+          "cardi b megan thee stallion",
+          "cardi b ne wsong 2021",
+          "normani new song 2021",
+          "music"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Normani - Wild Side (Official Video) ft. Cardi B",
+          "description": "Normani feat. Cardi B – “Wild Side” Out Now!\nListen Now: https://normaniwildside.com \n\nhttps://smarturl.it/xWildSide\n\nFollow Normani:\nhttps://www.twitter.com/Normani  \nhttps://www.facebook.com/normanikordei \nhttps://www.instagram.com/normani/\n\nFollow Cardi B:\nhttp://www.twitter.com/IAmCardiB \nhttp://www.facebook.com/IAmCardiB \nhttps://www.instagram.com/iamcardib/ \n\nDirected by: Tanu Muino\nProduced by: Jack Winter\nExecutive Produced by: Frank Borin, Ivanna Borin\nLabel Producers - Camille Yorrick & Chris Clavadetscher\n\nCreative Director: Maxime Quoilin\nManagement: Brandon Silverstein and Jay Cao for S10 Entertainment\n\nProduction Co: UnderWonder Content\nCinematographer: Nikita Kuzmenko\nProduction Designer: Spencer Graves\nChoreographer: Sean Bankhead\n1st AD: Braden Anderson\nLocation Manager: Max Simon\nEditor: Vinnie Hobbs @ VHpost\nColor: Joseph Bicknell @ CO3\nVFX: Max Colt @ FRENDER\n  \nStylist: Kollin Carter\nNormani MU: Priscilla Ono\nNormani Hair: Yusef Williams\nNormani Nails: Sojin Oh\nDancer Hair: Ashanti Lation\nDancer Hair: Davontae Washington\nDancer MU: Hayley Kassel\nDancer MU: Jordana Aguon\nDancer MU: Kasha Lassien\n\n#Normani #CardiB #WildSide #OfficialVideo"
+        }
+      },
+      "contentDetails": {
+        "duration": "PT4M6S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "25204782",
+        "likeCount": "1065907",
+        "dislikeCount": "46099",
+        "favoriteCount": "0",
+        "commentCount": "74670"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"270\" src=\"//www.youtube.com/embed/DFMEBquxeO8\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    }
+  ],
+  "nextPageToken": "CAoQAA",
+  "pageInfo": {
+    "totalResults": 30,
+    "resultsPerPage": 10
+  }
+}

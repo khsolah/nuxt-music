@@ -1,0 +1,550 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "ZlwtipSeontTLGdPLa8eE6U26nU",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "byQsI94cZW3042gbY9Fg0RATXxY",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcuNE9yQ0ExT0lub28",
+      "snippet": {
+        "publishedAt": "2015-10-07T03:00:02Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "TAEYEON 태연 'I (feat. Verbal Jint)' MV",
+        "description": "TAEYEON's first solo album \"I\" has been released.\nListen and download on iTunes\nhttps://itunes.apple.com/album/i-the-1st-mini-album-ep/id1046202716\n\nTAEYEON Official\nhttp://taeyeon.smtown.com\nhttp://www.youtube.com/GIRLSGENERATION\nhttp://www.facebook.com/girlsgeneration\nhttp://twitter.com/girlsgeneration\n\nTAEYEON 태연 'I (feat. Verbal Jint)' MV ℗ S.M.Entertainment",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4OrCA1OInoo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4OrCA1OInoo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4OrCA1OInoo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4OrCA1OInoo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4OrCA1OInoo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "4OrCA1OInoo"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "4OrCA1OInoo",
+        "videoPublishedAt": "2015-10-07T03:00:02Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "-Imgxw2AymKGCfSf07dFZ9BAciE",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcuLUloNVVBcmQ0ems",
+      "snippet": {
+        "publishedAt": "2021-04-05T09:00:00Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "WENDY 웬디 'Like Water' MV",
+        "description": "WENDY's 1st Mini Album \"Like Water\" is out!\nListen and download on your favorite platform: https://smarturl.it/WENDY_LIKEWATER\n💧'When This Rain Stops' Live Video: https://youtu.be/tknKZe_TyqU\n\n[Tracklist]\n01 When This Rain Stops\n02 Like Water\n03 Why Can't You Love Me?\n04 초행길 (The Road)\n05 Best Friend (with SEULGI)\n\nWENDY Official\nhttp://www.youtube.com/redvelvet\nhttp://www.facebook.com/RedVelvet\nhttp://www.instagram.com/redvelvet.smtown\nhttps://www.tiktok.com/@redvelvet_smtown\nhttps://www.vlive.tv/channel/DCF447\nhttp://twitter.com/RVsmtown\n\n#WENDY\u200b #웬디\u200b #Like_Water\nWENDY 웬디 'Like Water' MV ℗ SM Entertainment",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-Ih5UArd4zk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-Ih5UArd4zk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-Ih5UArd4zk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-Ih5UArd4zk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-Ih5UArd4zk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "-Ih5UArd4zk"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "-Ih5UArd4zk",
+        "videoPublishedAt": "2021-04-05T09:00:00Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "BKITw31zQ46Og2c-zonN8E29INo",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcudVI4TXJ0MUlwWGc",
+      "snippet": {
+        "publishedAt": "2019-12-23T09:00:11Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "Red Velvet 레드벨벳 'Psycho' MV",
+        "description": "Red Velvet's \"'The ReVe Festival' Finale\" is out!\nListen and download on your favorite platform: https://smarturl.it/RV_Finale\n\n[Tracklist]\n01 Psycho\n02 In & Out\n03 Remember Forever\n04 눈 맞추고, 손 맞대고 (Eyes Locked, Hands Locked)\n05 Ladies Night\n06 Jumpin'\n07 Love Is The Way\n08 카풀 (Carpool)\n09 음파음파 (Umpah Umpah)\n10 LP\n11 안녕, 여름 (Parade)\n12 친구가 아냐 (Bing Bing)\n13 Milkshake\n14 Sunny Side Up!\n15 짐살라빔 (Zimzalabim)\n16 La Rouge (Special Track)\n\nRed Velvet Official\nhttp://redvelvet.smtown.com\nhttp://www.youtube.com/redvelvet \nhttp://www.facebook.com/RedVelvet\nhttps://www.instagram.com/redvelvet.smtown\nhttps://twitter.com/RVsmtown\n\n#RedVelvet #Psycho #레드벨벳 #RVF #TheReVeFestival #Finale\nRed Velvet 레드벨벳 'Psycho' MV ℗ SM ENTERTAINMENT",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/uR8Mrt1IpXg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/uR8Mrt1IpXg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/uR8Mrt1IpXg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/uR8Mrt1IpXg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/uR8Mrt1IpXg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "uR8Mrt1IpXg"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "uR8Mrt1IpXg",
+        "videoPublishedAt": "2019-12-23T09:00:11Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "_tFbF8IZg3kmwmIGV6W5v5TncVM",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcudWxyMG11UUtqazA",
+      "snippet": {
+        "publishedAt": "2016-11-01T14:00:07Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "TAEYEON 태연 '11:11' MV",
+        "description": "TAEYEON’s new digital single “11:11” has been released. \nListen and download on iTunes & Apple Music, Spotify, and Google Play Music http://smarturl.it/TAEYEON_1111\n\nTAEYEON Official\nhttp://taeyeon.smtown.com\nhttp://www.youtube.com/GIRLSGENERATION\nhttp://www.facebook.com/girlsgeneration\nhttp://twitter.com/girlsgeneration\n\nTAEYEON 태연 '11:11' MV ℗ S.M.Entertainment",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ulr0muQKjk0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ulr0muQKjk0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ulr0muQKjk0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ulr0muQKjk0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ulr0muQKjk0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ulr0muQKjk0"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "ulr0muQKjk0",
+        "videoPublishedAt": "2016-11-01T14:00:07Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "M9-VlYSTi0qocZiWtYH4hM4e8zI",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcuYjZjSFlyVmdLb2c",
+      "snippet": {
+        "publishedAt": "2015-10-07T02:25:38Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "쌍둥이자리 雙子座(Gemini) - 태연(Taeyeon) 韓中字",
+        "description": "中字歌詞只供參考 影片歡迎隨意轉載\n-------------\n一直都覺得聽泰妍唱歌是一種享受TT\nSOLO專裡很喜歡這一首",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/b6cHYrVgKog/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/b6cHYrVgKog/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/b6cHYrVgKog/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/b6cHYrVgKog/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/b6cHYrVgKog/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "b6cHYrVgKog"
+        },
+        "videoOwnerChannelTitle": "lkimshan",
+        "videoOwnerChannelId": "UCR3_B-I0VJ-ZQYmDoJZ6mHg"
+      },
+      "contentDetails": {
+        "videoId": "b6cHYrVgKog",
+        "videoPublishedAt": "2015-10-07T02:25:38Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "Zp9BkILBvkL1Y9-BeVLQkr2AhIU",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcuUm11TC1CUEZpMlE",
+      "snippet": {
+        "publishedAt": "2021-07-06T09:00:09Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "TAEYEON 태연 'Weekend' MV",
+        "description": "TAEYEON's new single \"Weekend\" is out!\nListen and download on your favorite platform: https://smarturl.it/TAEYEON_Weekend\n\nTAEYEON Official\nhttp://www.youtube.com/GIRLSGENERATION\nhttp://www.facebook.com/girlsgeneration\nhttp://twitter.com/girlsgeneration\nhttps://www.instagram.com/girlsgeneration\n\n#TAEYEON #태연 #Weekend\nTAEYEON 태연 'Weekend' MV ℗ SM Entertainment",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RmuL-BPFi2Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RmuL-BPFi2Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RmuL-BPFi2Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RmuL-BPFi2Q/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RmuL-BPFi2Q/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "RmuL-BPFi2Q"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "RmuL-BPFi2Q",
+        "videoPublishedAt": "2021-07-06T09:00:09Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "I-hUbi3NDfkylvMyHGjvq0wVTe8",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcuNnVKZjJJVDJaaDg",
+      "snippet": {
+        "publishedAt": "2017-11-17T09:00:03Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "Red Velvet 레드벨벳 '피카부 (Peek-A-Boo)' MV",
+        "description": "Red Velvet's 2nd full length album \"Perfect Velvet\" has been released.\nListen and download on iTunes & Apple Music, Spotify, and Google Play Music http://smarturl.it/Perfect_Velvet\n\n[Tracklist]\n01 피카부 (Peek-A-Boo)\n02 봐 (Look)\n03 I Just\n04 Kingdom Come\n05 두 번째 데이트 (My Second Date)\n06 Attaboy\n07 Perfect 10\n08 About Love\n09 달빛 소리 (Moonlight Melody)\n\n#RedVelvet #레드벨벳 #The2ndAlbum #PerfectVelvet #TitleTrack #피카부 #PeekABoo #Release #171117 #6PM\n\nRed Velvet Official\nhttp://redvelvet.smtown.com\nhttp://www.youtube.com/redvelvet \nhttp://www.facebook.com/RedVelvet\nhttp://www.instagram.com/redvelvet.smtown\nhttp://twitter.com/RVsmtown\n\nRed Velvet 레드벨벳 '피카부 (Peek-A-Boo)' MV ℗ S.M.Entertainment",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6uJf2IT2Zh8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6uJf2IT2Zh8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6uJf2IT2Zh8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6uJf2IT2Zh8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6uJf2IT2Zh8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "6uJf2IT2Zh8"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "6uJf2IT2Zh8",
+        "videoPublishedAt": "2017-11-17T09:00:03Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "XdTAJTUD6B-bKOW3zQTDl9J4qNM",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcuTkhYVU0tNmEzZFU",
+      "snippet": {
+        "publishedAt": "2017-02-28T03:00:02Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "TAEYEON 태연 'Fine' MV",
+        "description": "TAEYEON’s 1st Full Album \"My Voice” has been released. \nListen and download on iTunes & Apple Music, Spotify, and Google Play Music http://smarturl.it/TAEYEON_MyVoice\n\nTAEYEON Official\nhttp://taeyeon.smtown.com\nhttp://www.youtube.com/GIRLSGENERATION\nhttp://www.facebook.com/girlsgeneration\nhttp://twitter.com/girlsgeneration\n\nTAEYEON 태연 'Fine' MV  ℗ S.M.Entertainment",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NHXUM-6a3dU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NHXUM-6a3dU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NHXUM-6a3dU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NHXUM-6a3dU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NHXUM-6a3dU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "NHXUM-6a3dU"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "NHXUM-6a3dU",
+        "videoPublishedAt": "2017-02-28T03:00:02Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "DTw2_zMgd7hn7mCBXqpUNxLxP_I",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcuNUxiRmRZNnZHc1E",
+      "snippet": {
+        "publishedAt": "2020-12-15T09:00:07Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "TAEYEON 태연 'What Do I Call You' MV",
+        "description": "TAEYEON’s 4th Mini Album \"What Do I Call You\" is out!\nListen and download on your favorite platform: https://smarturl.it/TY_WDICY\n\n[Tracklist]\n01 What Do I Call You\n02 Playlist\n03 To the moon\n04 들불 (Wildfire)\n05 Galaxy\n06 Happy (CD Only)\n\nTAEYEON Official\nhttp://www.youtube.com/GIRLSGENERATION\nhttp://www.facebook.com/girlsgeneration\nhttp://twitter.com/girlsgeneration\nhttps://www.instagram.com/girlsgeneration\n\n#TAEYEON #태연 #What_Do_I_Call_You\nTAEYEON 태연 'What Do I Call You' MV ℗ SM Entertainment",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5LbFdY6vGsQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5LbFdY6vGsQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5LbFdY6vGsQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5LbFdY6vGsQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5LbFdY6vGsQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "5LbFdY6vGsQ"
+        },
+        "videoOwnerChannelTitle": "SMTOWN",
+        "videoOwnerChannelId": "UCEf_Bc-KVd7onSeifS3py9g"
+      },
+      "contentDetails": {
+        "videoId": "5LbFdY6vGsQ",
+        "videoPublishedAt": "2020-12-15T09:00:07Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "XweMizasGIs9HRg8yA5l_ikX1xs",
+      "id": "UkRFTXk4cGt6aXU4YVZnUkJwdGxTd3hvaWcucURXLXNWVnRUR2s",
+      "snippet": {
+        "publishedAt": "2017-07-27T13:12:20Z",
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ",
+        "title": "Time Lapse",
+        "description": "Provided to YouTube by SM Entertainment\n\nTime Lapse · TAEYEON\n\nMy Voice - The 1st Album\n\n℗ SM Entertainment\n\nReleased on: 2017-02-28\n\nAuto-generated by YouTube.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qDW-sVVtTGk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qDW-sVVtTGk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qDW-sVVtTGk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qDW-sVVtTGk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qDW-sVVtTGk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "YouTube",
+        "playlistId": "RDEMy8pkziu8aVgRBptlSwxoig",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "qDW-sVVtTGk"
+        },
+        "videoOwnerChannelTitle": "TAEYEON - Topic",
+        "videoOwnerChannelId": "UCwzCuKxyMY_sT7hr1E8G1XA"
+      },
+      "contentDetails": {
+        "videoId": "qDW-sVVtTGk",
+        "videoPublishedAt": "2017-07-27T13:12:20Z"
+      },
+      "status": {
+        "privacyStatus": "public"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 10,
+    "resultsPerPage": 10
+  }
+}
