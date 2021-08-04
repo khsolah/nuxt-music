@@ -12,7 +12,7 @@
       <slot name="default">
         <li
           v-for="item in data"
-          :key="item.id"
+          :key="item.etag"
           class="
             cursor-pointer
             flex-col
@@ -70,22 +70,30 @@
                 line-clamp-2
               "
             >
-              {{ item.snippet.title.split('-')[1].trim() }}
+              {{ item.snippet.title }}
             </div>
             <span
-              v-if="item.snippet && item.statistics"
+              v-if="item.snippet"
               class="
                 flex flex-wrap
                 mt-3px
                 text-xs text-white text-opacity-70
                 line-clamp-2
               "
-              ><span>{{ item.snippet.title.split('-')[0].trim() }}</span
-              ><span> &nbsp;&bull;&nbsp; </span
-              ><span
-                >觀看次數：{{ transformCount(item.statistics.viewCount) }}</span
-              ></span
             >
+              <template v-if="item.statistics">
+                <span>{{ item.snippet.title }}</span
+                ><span> &nbsp;&bull;&nbsp; </span
+                ><span
+                  >觀看次數：{{
+                    transformCount(item.statistics.viewCount)
+                  }}</span
+                >
+              </template>
+              <span v-if="item.snippet.videoOwnerChannelTitle">{{
+                item.snippet.videoOwnerChannelTitle
+              }}</span>
+            </span>
           </div>
         </li>
       </slot>
@@ -95,7 +103,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { Video } from '~/@types'
+import { HotVideoItem, PlayListItem } from '~/@types'
 
 export default Vue.extend({
   name: 'Swiper',
@@ -106,7 +114,7 @@ export default Vue.extend({
     } as PropOptions<number>,
     data: {
       type: Array
-    } as PropOptions<Video[]>
+    } as PropOptions<HotVideoItem[] | PlayListItem[]>
   },
   data() {
     return {
@@ -115,21 +123,19 @@ export default Vue.extend({
       maxTranslateX: 0,
       startX: 0,
       slideWidth: 0,
-      sliding: false
+      sliding: false,
+      alreadyInitialized: false
     }
   },
   watch: {
-    data: {
-      immediate: true,
-      handler() {
-        console.log('[watch]', this.data)
-        if (this.data.length > 0) this.$nextTick(() => this.initialize())
-      }
+    data() {
+      if (this.data.length > 0 && !this.alreadyInitialized)
+        this.$nextTick(() => this.initialize())
     }
   },
   methods: {
     initialize() {
-      console.log('[initialize]')
+      this.alreadyInitialized = true
       const slideStyle = getComputedStyle(
         (this.$refs.wrapper as Element).firstElementChild as HTMLDivElement
       )
