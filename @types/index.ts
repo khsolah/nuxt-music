@@ -4,7 +4,7 @@ interface thumbnail {
   height: number
 }
 
-export interface Video {
+export interface HotVideoItem {
   id: string
   snippet: {
     publishedAt: string
@@ -18,11 +18,11 @@ export interface Video {
       description: string
     }
     thumbnails: {
-      default: thumbnail
-      medium: thumbnail
-      high: thumbnail
-      standard: thumbnail
-      maxres: thumbnail
+      default?: thumbnail
+      medium?: thumbnail
+      high?: thumbnail
+      standard?: thumbnail
+      maxres?: thumbnail
     }
     title: string
     tags: string[]
@@ -44,5 +44,40 @@ export interface Video {
   }
   player: {
     embedHtml: string
+  }
+}
+
+export interface PlayListItem {
+  kind: string
+  etag: string
+  id: string
+  snippet: {
+    publishedAt: string
+    channelId: string
+    title: string
+    description: string
+    thumbnails: {
+      default?: thumbnail
+      medium?: thumbnail
+      high?: thumbnail
+      standard?: thumbnail
+      maxres?: thumbnail
+    }
+    channelTitle: string
+    playlistId: string
+    position: number
+    resourceId: {
+      kind: string
+      videoId: string
+    }
+    videoOwnerChannelTitle: string
+    videoOwnerChannelId: string
+  }
+  contentDetails: {
+    videoId: string
+    videoPublishedAt: string
+  }
+  status: {
+    privacyStatus: string
   }
 }
