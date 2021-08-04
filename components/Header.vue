@@ -4,6 +4,7 @@
       flex
       h-20
       w-full
+      px-4
       top-0
       right-0
       left-0
@@ -12,7 +13,6 @@
       items-center
       justify-between
       xl:h-16
-      px-4
     "
   >
     <NuxtLogo />
@@ -59,7 +59,10 @@
           items-center
           -md:hidden
         "
-        :class="{ 'bg-[#212121] !border-[#333]': searching }"
+        :class="{
+          'bg-[#212121] !border-[#333]': searching,
+          'opacity-50 hover:opacity-100': !searching
+        }"
         @click.stop=""
       >
         <Icon
@@ -107,20 +110,22 @@
     </nav>
 
     <a
+      v-show="!accessToken"
+      ref="loginLink"
       href="/auth"
       class="
         bg-white
         rounded-sm
         cursor-pointer
         font-medium
+        h-8
+        text-sm
+        px-4
         text-[#030303]
         z-99
         inline-flex
         items-center
         no-underline
-        text-sm
-        h-8
-        px-4
       "
       >登入</a
     >
@@ -130,6 +135,7 @@
 <script lang="ts">
 import { Route } from 'vue-router'
 import Vue from 'vue'
+import { Store } from '~/store'
 
 interface NavData {
   title: string
@@ -162,6 +168,11 @@ export default Vue.extend({
       search: ''
     }
   },
+  computed: {
+    accessToken() {
+      return (this.$store as Store).getters.GET_TOKEN.accessToken
+    }
+  },
   mounted() {
     window.addEventListener('click', () => {
       this.searching = false
@@ -172,6 +183,6 @@ export default Vue.extend({
 
 <style lang="postcss" scoped>
 .nuxt-link-exact-active {
-  @apply !text-opacity-100;
+  @apply !opacity-100;
 }
 </style>
