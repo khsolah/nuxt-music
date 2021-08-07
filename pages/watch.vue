@@ -152,6 +152,7 @@
         name="progress"
         class="
           border-none
+          cursor-pointer
           outline-none
           h-1
           w-full
@@ -211,9 +212,9 @@
           <Icon name="skip-next" class="h-full fill-white w-full" />
         </div>
         <span class="font-normal mr-4 text-xs ml-2 text-gray-400 -lg:hidden">
-          {{ convertTimeString(currentTime) }}&nbsp;/&nbsp;{{
-            durations.timeString
-          }}
+          {{ (currentTime.minutes > 10 ? '' : '0') + currentTime.minutes }}:{{
+            (currentTime.seconds > 10 ? '' : '0') + currentTime.seconds
+          }}&nbsp;/&nbsp;{{ durations.timeString }}
         </span>
       </div>
 
@@ -263,7 +264,7 @@
       <!-- right controls -->
       <div class="mr-1 inline-flex items-center justify-center">
         <div
-          class="h-10 p-2 w-10"
+          class="cursor-pointer h-10 p-2 w-10"
           :aria-label="
             $route.name === 'watch' ? '關閉播放器頁面' : '開啟播放器頁面'
           "
@@ -295,7 +296,7 @@ import { AxiosResponse } from 'axios'
 import qs from 'qs'
 import Vue from 'vue'
 import { PlayListItem, VideoItem } from '~/@types'
-import convertDurations from '~/utilities/convertDurations'
+import { Store } from '~/store'
 
 export default Vue.extend({
   name: 'Watch',
@@ -306,91 +307,39 @@ export default Vue.extend({
     return {
       info: null as null | VideoItem,
       playlist: [] as PlayListItem[],
-      videos: [] as VideoItem[],
-      player: null as null | {
-        playerInfo: { currentTime: number }
-        seekTo: Function
-      },
-      durations: {
-        time: 0,
-        timeString: ''
-      },
-      currentTime: {
-        minutes: 0,
-        seconds: 0,
-        time: 0
-      },
-      progress: 0,
-      playerStatus: 'play' as 'play' | 'pause'
+      videos: [] as VideoItem[]
     }
   },
   async fetch() {
     this.info = await this.getInfo()
-    const durations = convertDurations(this.info!.contentDetails.duration || '')
-    this.durations.time = durations.time
-    this.durations.timeString = this.convertTimeString(durations)
+    ;(this.$store as Store).commit(
+      'Player/SET_DURATIONS',
+      this.info!.contentDetails.duration
+    )
 
     this.$route.query.list && this.playlist.length === 0
       ? (this.playlist = this.playlist.concat(await this.getPlayListItems()))
       : (this.videos = await this.getVideos())
   },
+  computed: {
+    currentTime() {
+      return (this.$store as Store).getters['Player/GET_CURRENT_TIME']
+    },
+    durations() {
+      return (this.$store as Store).getters['Player/GET_DURATIONS']
+    },
+    progress() {
+      return (this.$store as Store).getters['Player/GET_PROGRESS']
+    },
+    playerStatus() {
+      return (this.$store as Store).getters['Player/GET_PLAYER_STATUS']
+    }
+  },
   mounted() {
     // LINK https://developers.google.com/youtube/iframe_api_reference
-    const tag = document.createElement('script')
-    tag.src = 'https://www.youtube.com/iframe_api'
-    const firstScript = document.getElementsByTagName(
-      'script'
-    )[0] as HTMLScriptElement
-    firstScript.parentNode!.insertBefore(tag, firstScript)
-    ;(window as any).onYouTubeIframeAPIReady = () => {
-      console.log('success')
-      this.player = new (window as any).YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        videoId: this.$route.query.v,
-        events: {
-          onReady: ({
-            target
-          }: {
-            target: { playVideo: Function; pauseVideo: Function }
-          }) => {
-            target.playVideo()
-            ;(this.$refs.play as HTMLDivElement).addEventListener(
-              'click',
-              () => {
-                this.playerStatus = 'play'
-                target.playVideo()
-              }
-            )
-            ;(this.$refs.pause as HTMLDivElement).addEventListener(
-              'click',
-              () => {
-                this.playerStatus = 'pause'
-                target.pauseVideo()
-              }
-            )
-          },
-          onStateChange: (event: { data: number }) => {
-            this.currentTime = this.convertCurrentTime(
-              this.player!.playerInfo.currentTime
-            )
-            this.progress = this.currentTime.time
-
-            const data = event.data
-            if (data === (window as any).YT.PlayerState.PLAYING) {
-              this.playerStatus = 'play'
-              ;(window as any).progress = setInterval(() => {
-                this.progress++
-                this.currentTime = this.convertCurrentTime(this.progress)
-              }, 1000)
-            } else {
-              this.playerStatus = 'pause'
-              clearInterval((window as any).progress)
-            }
-          }
-        }
-      })
-    }
+    ;(this.$store as Store).dispatch('Player/INIT_PLAYER', {
+      v: this.$route.query.v as string
+    })
   },
   methods: {
     getInfo(): Promise<null | VideoItem> {
@@ -451,31 +400,8 @@ export default Vue.extend({
           return []
         })
     },
-    convertCurrentTime(time: number) {
-      const minutes = Math.floor(time / 60)
-      const seconds = Math.floor(time % 60)
-
-      return {
-        minutes,
-        seconds,
-        time: minutes * 60 + seconds
-      }
-    },
-    convertTimeString({
-      minutes,
-      seconds
-    }: {
-      minutes: number
-      seconds: number
-    }) {
-      return `${minutes < 10 ? `0${minutes}` : minutes}:${
-        seconds < 10 ? `0${seconds}` : seconds
-      }`
-    },
     seekTo() {
-      if (!this.player) return
-      this.player.seekTo(this.progress)
-      this.currentTime = this.convertCurrentTime(this.progress)
+      ;(this.$store as Store).dispatch('Player/SEEK_TO', this.progress)
     }
   }
 })
