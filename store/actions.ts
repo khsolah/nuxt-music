@@ -31,11 +31,8 @@ const actions: ActionTree<State, RootState> & Actions = {
       $cookies.set('accessToken', query.access_token, {
         expires: new Date(Date.now() + +query.expires_in * 1000)
       })
-      $cookies.set('refreshToken', query.refresh_token, {
-        expires: new Date(Date.now() + +query.expires_in * 1000)
-      })
       commit(MutationTypes.SET_TOKEN, query.access_token)
-    } else if ($cookies.get('accessToken') && $cookies.get('refreshToken')) {
+    } else if ($cookies.get('accessToken')) {
       // find token data in cookies,
       // store this token into vuex
       commit(MutationTypes.SET_TOKEN, $cookies.get('accessToken'))
