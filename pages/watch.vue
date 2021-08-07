@@ -37,7 +37,7 @@
         w-[36%]
         justify-center
         items-start
-        overflow-scroll
+        overflow-y-scroll
         lg:ml-12
         xl:ml-14
         3xl:ml-16
@@ -335,11 +335,24 @@ export default Vue.extend({
       return (this.$store as Store).getters['Player/GET_PLAYER_STATUS']
     }
   },
+  watch: {
+    $route() {
+      ;(this.$store as Store).dispatch(
+        'Player/LOAD_BY_VIDEO_ID',
+        this.$route.query.v as string
+      )
+    }
+  },
   mounted() {
     // LINK https://developers.google.com/youtube/iframe_api_reference
-    ;(this.$store as Store).dispatch('Player/INIT_PLAYER', {
-      v: this.$route.query.v as string
-    })
+    const tag = document.createElement('script')
+    tag.src = 'https://www.youtube.com/iframe_api'
+    const firstScriptTag = document.getElementsByTagName('script')[0]
+    firstScriptTag.parentNode!.insertBefore(tag, firstScriptTag)
+    ;(this.$store as Store).dispatch(
+      'Player/INIT_PLAYER',
+      this.$route.query.v as string
+    )
   },
   methods: {
     getInfo(): Promise<null | VideoItem> {
