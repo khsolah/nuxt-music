@@ -4,6 +4,7 @@ jobs:
   ci:
     docker:
       - image: cimg/node:lts
+    working_directory: ~/project
     steps:
       - checkout
 
@@ -34,7 +35,7 @@ jobs:
             - .
   deploy-to-heroku:
     docker:
-      - image: cimg/node:lts
+      - image: circleci/node:10.20.0
     working_directory: ~/project
     steps:
       - attach_workspace:
@@ -51,10 +52,10 @@ workflows:
               only:
                 - main
                 - master
-  test-and-deploy:
+  deploy-to-heroku:
     jobs:
     - ci
-    - deploy-to-heroku:
+    - heroku/deploy-via-git:
         requires:
           - ci
         filters:
