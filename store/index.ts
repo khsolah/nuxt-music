@@ -8,6 +8,10 @@ import { Getters } from './getters'
 import { Mutations } from './mutations'
 import { State } from './state'
 
+export type Namespaced<T, U extends string> = {
+  [P in keyof T & string as `${U}/${P}`]: T[P]
+}
+
 export interface Store
   extends Omit<VuexStore<State>, 'commit' | 'dispatch' | 'getters'> {
   commit<K extends keyof Mutations, P extends Parameters<Mutations[K]>[1]>(
