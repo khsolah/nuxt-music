@@ -93,3 +93,15 @@ export interface PlayListItem {
     privacyStatus: string
   }
 }
+
+export interface Player {
+  playerInfo: {
+    currentTime: number
+  }
+  loadVideoById: (
+    videoId: string,
+    startSeconds?: number,
+    endSeconds?: number
+  ) => void
+  seekTo: () => void
+}
