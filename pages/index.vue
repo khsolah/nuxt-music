@@ -5,12 +5,17 @@
       <Swiper class="lg:mt-4 lg:mb-6" :data="hot" />
     </section>
 
+    <section v-if="myPlayList" class="section">
+      <h2 class="title">我的收藏</h2>
+      <Swiper class="lg:mb-6" :data="myPlayList" type="playlist" />
+    </section>
+
     <section class="section">
       <h2 class="title">
         <div class="font-normal text-[#aaa] text-sm mb-0.5">為你推薦</div>
         <span>IU</span>
       </h2>
-      <Swiper class="lg:mb-6" :data="iu" singer="IU" />
+      <Swiper class="lg:mb-6" :data="iu" type="playlist" />
     </section>
 
     <section class="section">
@@ -18,7 +23,7 @@
         <div class="font-normal text-[#aaa] text-sm mb-0.5">為你推薦</div>
         <span>Taeyeon</span>
       </h2>
-      <Swiper class="lg:mb-6" :data="taeyeon" singer="IU" />
+      <Swiper class="lg:mb-6" :data="taeyeon" type="playlist" />
     </section>
   </main>
 </template>
