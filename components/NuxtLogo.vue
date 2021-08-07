@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center cursor-pointer">
+  <nuxt-link :to="{ name: 'index' }" class="flex items-center cursor-pointer">
     <svg
       class="w-9 h-6"
       viewBox="0 0 45 30"
@@ -12,5 +12,5 @@
       />
     </svg>
     <span class="text-white font-semibold text-xl ml-2 select-none">Music</span>
-  </div>
+  </nuxt-link>
 </template>
