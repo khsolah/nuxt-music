@@ -50,6 +50,10 @@ export default {
     middleware: ['authentication']
   },
 
+  server: {
+    host: '0.0.0.0'
+  },
+
   serverMiddleware: [{ path: '/auth', handler: '~/server/auth.ts' }],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
