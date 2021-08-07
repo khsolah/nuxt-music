@@ -36,7 +36,7 @@ import Vue from 'vue'
 import { Store } from '~/store'
 
 export default Vue.extend({
-  middleware({ route, redirect, store, $axios }) {
+  middleware({ route, redirect }) {
     // check access_token and refresh_token exist in route.query
     // if true, remove token data
     if (
@@ -46,13 +46,6 @@ export default Vue.extend({
       console.log('access_token', route.query.access_token)
       console.log('refresh_token', route.query.refresh_token)
       redirect(route.path)
-    }
-
-    if ((store as Store).getters.GET_TOKEN.accessToken) {
-      $axios.setHeader(
-        'Authorization',
-        `Bearer ${(store as Store).getters.GET_TOKEN.accessToken}`
-      )
     }
   },
   data() {
