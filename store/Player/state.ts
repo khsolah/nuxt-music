@@ -1,10 +1,4 @@
 export interface State {
-  player: {
-    playerInfo: {
-      currentTime: number
-    }
-    seekTo: () => void
-  } | null
   playerStatus: 'play' | 'pause'
   currentTime: {
     seconds: number
@@ -19,7 +13,6 @@ export interface State {
 }
 
 const state = (): State => ({
-  player: null,
   playerStatus: 'play',
   currentTime: {
     seconds: 0,
