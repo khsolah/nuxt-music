@@ -36,9 +36,9 @@
               query: {
                 v:
                   type !== 'playlist'
-                    ? item.snippet.id
+                    ? item.id
                     : item.snippet.resourceId.videoId,
-                list: type !== 'playlist' ? '' : item.snippet.playlistId
+                list: type !== 'playlist' ? undefined : item.snippet.playlistId
               }
             }"
             class="
