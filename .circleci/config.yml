@@ -38,8 +38,11 @@ jobs:
       - image: circleci/node:10.20.0
     working_directory: ~/project
     steps:
+      - checkout
+
       - attach_workspace:
           at: ~/project
+
       - heroku/deploy-via-git
 
 workflows:
@@ -52,15 +55,15 @@ workflows:
               only:
                 - main
                 - master
-  deploy-to-heroku:
+  deploy:
     jobs:
-    - ci
-    - heroku/deploy-via-git:
-        requires:
-          - ci
-        filters:
-          branches:
-            only: master
+      - ci
+      - deploy-to-heroku:
+          requires:
+            - ci
+          filters:
+            branches:
+              only: master
 
 orbs:
   heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
