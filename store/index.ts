@@ -6,25 +6,38 @@ import {
 import { Actions } from './actions'
 import { Getters } from './getters'
 import { Mutations } from './mutations'
+import { PlayerActions } from './Player/actions'
+import { PlayerGetters } from './Player/getters'
+import { PlayerMutations } from './Player/mutations'
 import { State } from './state'
 
 export type Namespaced<T, U extends string> = {
   [P in keyof T & string as `${U}/${P}`]: T[P]
 }
 
+interface RootGetters extends Getters, PlayerGetters {}
+interface RootMutations extends Mutations, PlayerMutations {}
+interface RootActions extends Actions, PlayerActions {}
+
 export interface Store
   extends Omit<VuexStore<State>, 'commit' | 'dispatch' | 'getters'> {
-  commit<K extends keyof Mutations, P extends Parameters<Mutations[K]>[1]>(
+  commit<
+    K extends keyof RootMutations,
+    P extends Parameters<RootMutations[K]>[1]
+  >(
     key: K,
     payload: P,
     options?: CommitOptions
-  ): ReturnType<Mutations[K]>
-  dispatch<K extends keyof Actions, P extends Parameters<Actions[K]>[1]>(
+  ): ReturnType<RootMutations[K]>
+  dispatch<
+    K extends keyof RootActions,
+    P extends Parameters<RootActions[K]>[1]
+  >(
     key: K,
     payload: P,
     options?: DispatchOptions
-  ): ReturnType<Actions[K]>
+  ): ReturnType<RootActions[K]>
   getters: {
-    [K in keyof Getters]: ReturnType<Getters[K]>
+    [K in keyof RootGetters]: ReturnType<RootGetters[K]>
   }
 }
