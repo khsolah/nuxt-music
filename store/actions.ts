@@ -27,8 +27,7 @@ const actions: ActionTree<State, RootState> & Actions = {
   [ActionTypes.NUXT_SERVER_INIT]: ({ commit }, { query, $cookies }) => {
     if (
       typeof query.access_token === 'string' &&
-      typeof query.refresh_token === 'string' &&
-      typeof query.expires_in === 'string'
+      typeof query.refresh_token === 'string'
     ) {
       // find code on route.query
       // store this code in both cookies and vuex
