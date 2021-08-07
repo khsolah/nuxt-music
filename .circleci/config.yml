@@ -26,7 +26,7 @@ jobs:
 
       - run:
           name: Run tests
-          command: yarn test
+          command: yarn test --passWithNoTests
 
 workflows:
   version: 2
