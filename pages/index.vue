@@ -98,13 +98,11 @@ export default Vue.extend({
     },
     getIUMusic(): Promise<PlayListItem[]> {
       return this.$axios({
-        url: `https://youtube.googleapis.com/youtube/v3/playlistItems?${qs.stringify(
-          {
-            part: 'contentDetails,id,snippet',
-            maxResults: 10,
-            playlistId: 'PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL'
-          }
-        )}`,
+        url: `/youtube/v3/playlistItems?${qs.stringify({
+          part: 'contentDetails,id,snippet',
+          maxResults: 10,
+          playlistId: 'PLu1kdfBqycPMziOwQc6-x2OOLaUqIlwGL'
+        })}`,
         method: 'GET'
       })
         .then(
