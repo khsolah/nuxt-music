@@ -11,10 +11,10 @@ app.use(express.urlencoded({ extended: false }))
 
 const clientId = process.env.CLIENT_ID
 const clientSecret = process.env.CLIENT_SECRET
-const redirectUri = 'http://localhost:5000/auth/token'
+const redirectUri = process.env.REDIRECT_URI
 
 app.get('/', (req, res) => {
-  const state = req.headers.referer || 'http://localhost:5000/'
+  const state = req.headers.referer || process.env.REFERER
   res.redirect(
     `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=https://www.googleapis.com/auth/youtube.readonly&access_type=offline&state=${state}&include_granted_scopes=true&prompt=select_account`
   )
