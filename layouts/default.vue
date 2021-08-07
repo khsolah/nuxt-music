@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Nuxt />
+    <Nuxt keep-alive />
     <div
       v-if="!accessToken"
       ref="loginPopup"
