@@ -11,10 +11,7 @@ app.use(express.urlencoded({ extended: false }))
 
 const clientId = process.env.CLIENT_ID
 const clientSecret = process.env.CLIENT_SECRET
-const redirectUri =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:5000/auth/token'
-    : 'https://khsolah-nuxt-music.herokuapp.com/auth/token'
+const redirectUri = process.env.REDIRECT_URI
 
 app.get('/', (req, res) => {
   const state = req.headers.referer || process.env.REFERER
