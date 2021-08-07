@@ -46,6 +46,10 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
+  router: {
+    middleware: ['authentication']
+  },
+
   serverMiddleware: [{ path: '/auth', handler: '~/server/auth.ts' }],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
