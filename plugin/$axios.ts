@@ -4,10 +4,16 @@ import { initializeAxios } from '~/utilities/$axios'
 
 const plugin: Plugin = ({ $axios, store }) => {
   $axios.setBaseURL('https://www.googleapis.com')
-  $axios.setHeader(
-    'Authorization',
-    `Bearer ${(store as Store).getters.GET_TOKEN.accessToken}`
-  )
+
+  $axios.interceptors.request.use(config => {
+    config.headers.Authorization = `Bearer ${
+      (store as Store).getters.GET_TOKEN.accessToken
+    }`
+
+    console.log(config.headers)
+
+    return config
+  })
 
   initializeAxios($axios)
 }
