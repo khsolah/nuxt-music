@@ -2,6 +2,7 @@ import { MutationTree } from 'vuex/types/index'
 import { Namespaced } from '..'
 import { State } from './state'
 import convertISO8601Durations from '~/utilities/convertDurations'
+import { Player } from '~/@types'
 
 export enum MutationTypes {
   SET_PLAYER_STATUS = 'SET_PLAYER_STATUS',
@@ -9,7 +10,8 @@ export enum MutationTypes {
   SET_PROGRESS = 'SET_PROGRESS',
   SET_INTERVAL = 'SET_INTERVAL',
   CLEAR_INTERVAL = 'CLEAR_INTERVAL',
-  SET_DURATIONS = 'SET_DURATIONS'
+  SET_DURATIONS = 'SET_DURATIONS',
+  SET_VIDEO_ID = 'SET_VIDEO_ID'
 }
 
 export interface Mutations<S = State> {
@@ -25,6 +27,7 @@ export interface Mutations<S = State> {
   [MutationTypes.SET_INTERVAL]: (state: S, payload: NodeJS.Timer) => void
   [MutationTypes.CLEAR_INTERVAL]: (state: S) => void
   [MutationTypes.SET_DURATIONS]: (state: S, payload: string) => void
+  [MutationTypes.SET_VIDEO_ID]: (state: S, payload: string) => void
 }
 
 export enum PlayerMutationTypes {
@@ -33,7 +36,8 @@ export enum PlayerMutationTypes {
   SET_PROGRESS = 'Player/SET_PROGRESS',
   SET_INTERVAL = 'Player/SET_INTERVAL',
   CLEAR_INTERVAL = 'Player/CLEAR_INTERVAL',
-  SET_DURATIONS = 'Player/SET_DURATIONS'
+  SET_DURATIONS = 'Player/SET_DURATIONS',
+  SET_VIDEO_ID = 'SET_VIDEO_ID'
 }
 
 export interface PlayerMutations extends Namespaced<Mutations, 'Player'> {}
@@ -49,13 +53,7 @@ const mutations: MutationTree<State> & Mutations = {
     state.progress = payload
   },
   [MutationTypes.SET_INTERVAL]: (state, payload) => {
-    state.interval = /* setInterval(() => {
-      state.progress++
-      state.currentTime = {
-        minutes: Math.floor(state.progress / 60),
-        seconds: state.progress % 60
-      }
-    }, 1000) */ payload
+    state.interval = payload
   },
   [MutationTypes.CLEAR_INTERVAL]: state => {
     if (!state.interval) return
@@ -71,6 +69,10 @@ const mutations: MutationTree<State> & Mutations = {
         seconds < 10 ? `0${seconds}` : seconds
       }`
     }
+  },
+  [MutationTypes.SET_VIDEO_ID]: (_, payload) => {
+    if (!(window as any).player) return
+    ;((window as any).player as Player).loadVideoById(payload, 0)
   }
 }
 
