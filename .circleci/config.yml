@@ -28,6 +28,19 @@ jobs:
           name: Run tests
           command: yarn test --passWithNoTests
 
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
+  deploy-to-heroku:
+    docker:
+      - image: cimg/node:lts
+    working_directory: ~/project
+    steps:
+      - attach_workspace:
+          at: ~/project
+      - heroku/deploy-via-git
+
 workflows:
   version: 2
   ci:
@@ -38,3 +51,15 @@ workflows:
               only:
                 - main
                 - master
+  test-and-deploy:
+    jobs:
+    - ci
+    - deploy-to-heroku:
+        requires:
+          - ci
+        filters:
+          branches:
+            only: master
+
+orbs:
+  heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
