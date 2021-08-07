@@ -31,7 +31,16 @@
         >
           <nuxt-link
             v-lazy="item.snippet.thumbnails.high.url"
-            :to="{ name: 'index' }"
+            :to="{
+              name: 'watch',
+              query: {
+                v:
+                  type !== 'playlist'
+                    ? item.snippet.id
+                    : item.snippet.resourceId.videoId,
+                list: type !== 'playlist' ? '' : item.snippet.playlistId
+              }
+            }"
             class="
               bg-white
               rounded-3px
@@ -103,7 +112,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { HotVideoItem, PlayListItem } from '~/@types'
+import { VideoItem, PlayListItem } from '~/@types'
 
 export default Vue.extend({
   name: 'Swiper',
@@ -114,7 +123,11 @@ export default Vue.extend({
     } as PropOptions<number>,
     data: {
       type: Array
-    } as PropOptions<HotVideoItem[] | PlayListItem[]>
+    } as PropOptions<VideoItem[] | PlayListItem[]>,
+    type: {
+      type: String,
+      default: 'video'
+    }
   },
   data() {
     return {
