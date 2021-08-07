@@ -79,7 +79,7 @@ export default Vue.extend({
   name: 'Default',
   computed: {
     accessToken() {
-      return (this.$store as Store).getters.GET_TOKEN.accessToken
+      return (this.$store as Store).getters.GET_TOKEN
     }
   }
 })

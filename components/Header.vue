@@ -170,7 +170,7 @@ export default Vue.extend({
   },
   computed: {
     accessToken() {
-      return (this.$store as Store).getters.GET_TOKEN.accessToken
+      return (this.$store as Store).getters.GET_TOKEN
     }
   },
   mounted() {

@@ -6,16 +6,12 @@ export enum MutationTypes {
 }
 
 export interface Mutations<S = State> {
-  [MutationTypes.SET_TOKEN]: (
-    state: S,
-    payload: { accessToken: string; refreshToken: string }
-  ) => void
+  [MutationTypes.SET_TOKEN]: (state: S, payload: string) => void
 }
 
 const mutations: MutationTree<State> & Mutations = {
-  [MutationTypes.SET_TOKEN]: (state, { accessToken, refreshToken }) => {
-    state.accessToken = accessToken
-    state.refreshToken = refreshToken
+  [MutationTypes.SET_TOKEN]: (state, payload) => {
+    state.accessToken = payload
   }
 }
 

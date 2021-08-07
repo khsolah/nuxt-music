@@ -7,10 +7,8 @@ const plugin: Plugin = ({ $axios, store }) => {
 
   $axios.interceptors.request.use(config => {
     config.headers.Authorization = `Bearer ${
-      (store as Store).getters.GET_TOKEN.accessToken
+      (store as Store).getters.GET_TOKEN
     }`
-
-    console.log(config.headers)
 
     return config
   })

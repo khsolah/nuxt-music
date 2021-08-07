@@ -6,17 +6,11 @@ export enum GetterTypes {
 }
 
 export interface Getters<S = State> {
-  [GetterTypes.GET_TOKEN]: (state: S) => {
-    accessToken: State['accessToken']
-    refreshToken: State['refreshToken']
-  }
+  [GetterTypes.GET_TOKEN]: (state: S) => State['accessToken']
 }
 
 const getters: GetterTree<State, RootState> & Getters = {
-  [GetterTypes.GET_TOKEN]: ({ accessToken, refreshToken }) => ({
-    accessToken,
-    refreshToken
-  })
+  [GetterTypes.GET_TOKEN]: ({ accessToken }) => accessToken
 }
 
 export default getters

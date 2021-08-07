@@ -2,7 +2,7 @@ import { Middleware } from '@nuxt/types'
 import { Store } from '~/store'
 
 const middleware: Middleware = ({ redirect, route, store }) => {
-  const accessToken = (store as Store).getters.GET_TOKEN.accessToken
+  const accessToken = (store as Store).getters.GET_TOKEN
   if (accessToken) return
 
   route.meta?.forEach((meta: { Authentication?: boolean }) => {
