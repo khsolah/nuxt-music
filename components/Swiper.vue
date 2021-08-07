@@ -6,7 +6,8 @@
       ref="wrapper"
       class="flex-nowrap h-full list-none transform pl-0 inline-flex"
       :class="{ 'transition-transform duration-300': !sliding }"
-      @mousedown.stop.prevent="slideInit"
+      @mousedown="slideInit"
+      @touchstart="touchInit"
     >
       <!-- swiper slides -->
       <slot name="default">
@@ -53,6 +54,7 @@
               xl:w-190px xl:pb-190px
               3xl:w-226px
             "
+            :class="{ 'pointer-events-none': sliding }"
           >
             <Icon
               name="play"
@@ -141,13 +143,17 @@ export default Vue.extend({
     }
   },
   watch: {
-    data() {
-      if (this.data.length > 0 && !this.alreadyInitialized)
-        this.$nextTick(() => this.initialize())
+    data: {
+      immediate: true,
+      handler() {
+        if (this.data.length > 0 && !this.alreadyInitialized)
+          this.$nextTick(() => this.initialize())
+      }
     }
   },
   methods: {
     initialize() {
+      if (process.server) return
       this.alreadyInitialized = true
       const slideStyle = getComputedStyle(
         (this.$refs.wrapper as Element).firstElementChild as HTMLDivElement
@@ -168,12 +174,12 @@ export default Vue.extend({
     slideInit(event: MouseEvent) {
       this.startX = event.clientX
       this.translateX = -this.index * this.slideWidth
-      this.sliding = true
 
       document.addEventListener('mousemove', this.slideStart)
       document.addEventListener('mouseup', this.slideEnd)
     },
     slideStart(event: MouseEvent) {
+      this.sliding = true
       this.translateX -= this.startX - event.clientX
       this.translateX =
         this.translateX > 0
@@ -200,6 +206,42 @@ export default Vue.extend({
 
       document.removeEventListener('mousemove', this.slideStart)
       document.removeEventListener('mouseup', this.slideEnd)
+    },
+    touchInit(event: TouchEvent) {
+      this.startX = event.touches[0].clientX
+      this.translateX = -this.index * this.slideWidth
+
+      document.addEventListener('touchmove', this.touchMove)
+      document.addEventListener('touchend', this.touchEnd)
+    },
+    touchMove(event: TouchEvent) {
+      this.sliding = true
+      this.translateX -= this.startX - event.touches[0].clientX
+      this.translateX =
+        this.translateX > 0
+          ? 0
+          : this.translateX < -this.maxTranslateX
+          ? -this.maxTranslateX
+          : this.translateX
+      ;(this.$refs.wrapper as Element).setAttribute(
+        'style',
+        `transform: translateX(${this.translateX}px)`
+      )
+
+      this.startX = event.touches[0].clientX
+    },
+    touchEnd() {
+      this.sliding = false
+
+      const index = +(-this.translateX / this.slideWidth).toFixed(0)
+      this.index = index <= 0 ? 0 : index
+      ;(this.$refs.wrapper as Element).setAttribute(
+        'style',
+        `transform: translateX(${-this.index * this.slideWidth}px)`
+      )
+
+      document.removeEventListener('touchmove', this.touchMove)
+      document.removeEventListener('touchend', this.touchEnd)
     },
     transformCount(count: string): string {
       if (count.length <= 4) return count
