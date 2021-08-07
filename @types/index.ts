@@ -4,8 +4,11 @@ interface thumbnail {
   height: number
 }
 
-export interface HotVideoItem {
+export interface VideoItem {
   id: string
+  contentDetails: {
+    duration: string
+  }
   snippet: {
     publishedAt: string
     categoryId: string
@@ -27,14 +30,6 @@ export interface HotVideoItem {
     title: string
     tags: string[]
   }
-  status: {
-    embeddable: boolean
-    license: string
-    madeForKids: boolean
-    publicStatsViewable: boolean
-    privacyStatus: 'public'
-    uploadStatus: string
-  }
   statistics: {
     commentCount: string
     dislikeCount: string
@@ -42,8 +37,25 @@ export interface HotVideoItem {
     likeCount: string
     viewCount: string
   }
-  player: {
-    embedHtml: string
+}
+
+export interface PlayList {
+  kind: string
+  etag: string
+  id: string
+  snippet: {
+    publishedAt: string
+    channelId: string
+    channelTitle: string
+    description: string
+    thumbnails: {
+      default?: thumbnail
+      medium?: thumbnail
+      high?: thumbnail
+      standard?: thumbnail
+      maxres?: thumbnail
+    }
+    title: string
   }
 }
 
