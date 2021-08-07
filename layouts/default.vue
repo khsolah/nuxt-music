@@ -77,6 +77,13 @@ import { Store } from '~/store'
 
 export default Vue.extend({
   name: 'Default',
+  middleware({ route, redirect }) {
+    // check access_token exist in route.query
+    // if true, remove token data
+    if (typeof route.query.access_token === 'string') {
+      redirect(route.path)
+    }
+  },
   computed: {
     accessToken() {
       return (this.$store as Store).getters.GET_TOKEN
