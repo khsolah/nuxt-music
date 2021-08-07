@@ -1,5 +1,8 @@
 version: 2
 
+orbs:
+  heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
+
 jobs:
   ci:
     docker:
@@ -64,6 +67,3 @@ workflows:
           filters:
             branches:
               only: master
-
-orbs:
-  heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
