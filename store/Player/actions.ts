@@ -10,6 +10,7 @@ import { RootState } from '../state'
 import { Getters } from './getters'
 import { Mutations, MutationTypes } from './mutations'
 import { State } from './state'
+import { Player } from '~/@types'
 
 interface AugmentedContext
   extends Omit<
@@ -34,24 +35,28 @@ interface AugmentedContext
 export enum ActionTypes {
   INIT_PLAYER = 'INIT_PLAYER',
   PLAY_VIDEO = 'PLAY_VIDEO',
-  SEEK_TO = 'SEEK_TO'
+  SEEK_TO = 'SEEK_TO',
+  LOAD_BY_VIDEO_ID = 'LOAD_BY_VIDEO_ID'
 }
 
 export interface Actions {
   [ActionTypes.INIT_PLAYER]: (
     { commit }: AugmentedContext,
-    payload: {
-      v: string
-    }
+    payload: string
   ) => void
   [ActionTypes.PLAY_VIDEO]: ({ commit }: AugmentedContext) => void
   [ActionTypes.SEEK_TO]: ({ commit }: AugmentedContext, payload: number) => void
+  [ActionTypes.LOAD_BY_VIDEO_ID]: (
+    { commit }: AugmentedContext,
+    payload: string
+  ) => void
 }
 
 export enum PlayerActionTyoes {
   INIT_PLAYER = 'Player/INIT_PLAYER',
   PLAY_VIDEO = 'Player/PLAY_VIDEO',
-  SEEK_TO = 'Player/SEEK_TO'
+  SEEK_TO = 'Player/SEEK_TO',
+  LOAD_BY_VIDEO_ID = 'Player/LOAD_BY_VIDEO_ID'
 }
 
 export interface PlayerActions extends Namespaced<Actions, 'Player'> {}
@@ -59,10 +64,10 @@ export interface PlayerActions extends Namespaced<Actions, 'Player'> {}
 const actions: ActionTree<State, RootState> & Actions = {
   [ActionTypes.INIT_PLAYER]: ({ commit, dispatch }, payload) => {
     ;(window as any).onYouTubeIframeAPIReady = () => {
-      const player: State['player'] = new (window as any).YT.Player('player', {
+      ;(window as any).player = new (window as any).YT.Player('player', {
         height: '100%',
         width: '100%',
-        videoId: payload.v,
+        videoId: payload,
         events: {
           onReady: ({
             target
@@ -86,7 +91,8 @@ const actions: ActionTree<State, RootState> & Actions = {
             })
           },
           onStateChange: (event: { data: number }) => {
-            const currentTime = player!.playerInfo.currentTime as number
+            const currentTime = ((window as any).player as Player).playerInfo
+              .currentTime as number
             const seconds = Math.floor(currentTime % 60)
             const minutes = Math.floor(currentTime / 60)
             commit(MutationTypes.SET_CURRENT_TIME, { seconds, minutes })
@@ -95,7 +101,6 @@ const actions: ActionTree<State, RootState> & Actions = {
             const data = event.data
             if (data === (window as any).YT.PlayerState.PLAYING) {
               commit(MutationTypes.SET_PLAYER_STATUS, 'play')
-              // commit(MutationTypes.SET_INTERVAL, undefined)
               dispatch(ActionTypes.PLAY_VIDEO, undefined)
             } else {
               commit(MutationTypes.SET_PLAYER_STATUS, 'pause')
@@ -118,14 +123,19 @@ const actions: ActionTree<State, RootState> & Actions = {
 
     commit(MutationTypes.SET_INTERVAL, interval)
   },
-  [ActionTypes.SEEK_TO]: ({ commit, getters }, payload) => {
-    if (!getters.GET_PLAYER) return
+  [ActionTypes.SEEK_TO]: ({ commit }, payload) => {
+    if (!(window as any).player) return
 
     commit(MutationTypes.SET_PROGRESS, Math.floor(payload))
     commit(MutationTypes.SET_CURRENT_TIME, {
       minutes: Math.floor(payload / 60),
       seconds: Math.floor(payload % 60)
     })
+  },
+  [ActionTypes.LOAD_BY_VIDEO_ID]: ({ commit, dispatch }, payload) => {
+    if (!(window as any).player) dispatch(ActionTypes.INIT_PLAYER, payload)
+
+    commit(MutationTypes.SET_VIDEO_ID, payload)
   }
 }
 
