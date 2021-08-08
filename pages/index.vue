@@ -1,5 +1,5 @@
 <template>
-  <main class="text-white pt-16">
+  <main class="text-white pt-16 pb-28">
     <section class="section">
       <h1 class="title">熱門歌曲</h1>
       <Swiper class="lg:mt-4 lg:mb-6" :data="hot" />
