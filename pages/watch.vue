@@ -43,9 +43,9 @@
         3xl:ml-16
       "
     >
-      <ul v-if="$route.query.list" class="list-none pl-0">
+      <ul v-if="playerQueue.type === 'playlist'" class="list-none pl-0">
         <li
-          v-for="item in playlist"
+          v-for="item in playerQueue.data"
           :key="item.etag"
           class="flex w-full items-center justify-center"
         >
@@ -88,7 +88,7 @@
       </ul>
       <ul v-else class="list-none pl-0">
         <li
-          v-for="item in videos"
+          v-for="item in playerQueue.data"
           :key="item.etag"
           class="flex w-full items-center justify-center"
         >
@@ -169,7 +169,6 @@
         :style="`background-image: linear-gradient(to right, #f00 0%, #f00 ${
           (progress * 100) / durations.time
         }%, #bdbdbd ${(progress * 100) / durations.time}%)`"
-        @change="seekTo"
       />
       <!-- left controls -->
       <div class="flex-shrink-0 inline-flex items-center justify-center">
@@ -226,7 +225,7 @@
           alt=""
         />
 
-        <div class="flex flex-col flex-shrink-0 mr-2 text-white ml-4">
+        <div class="flex flex-col flex-1 mr-2 text-white ml-4">
           <span class="font-medium line-clamp-1 lg:text-sm 2xl:text-base">{{
             info ? info.snippet.title : ''
           }}</span>
@@ -292,10 +291,7 @@
 </template>
 
 <script lang="ts">
-import { AxiosResponse } from 'axios'
-import qs from 'qs'
 import Vue from 'vue'
-import { PlayListItem, VideoItem } from '~/@types'
 import { Store } from '~/store'
 
 export default Vue.extend({
@@ -303,118 +299,103 @@ export default Vue.extend({
   meta: {
     Authentication: true
   },
-  data() {
-    return {
-      info: null as null | VideoItem,
-      playlist: [] as PlayListItem[],
-      videos: [] as VideoItem[]
-    }
-  },
   async fetch() {
-    this.info = await this.getInfo()
+    await (this.$store as Store).dispatch('Player/FETCH_VIDEO_INFO', {
+      v: this.$route.query.v as string,
+      playlistId: this.$route.query.list as string | null | undefined
+    })
     ;(this.$store as Store).commit(
       'Player/SET_DURATIONS',
       this.info!.contentDetails.duration
     )
-
-    this.$route.query.list && this.playlist.length === 0
-      ? (this.playlist = this.playlist.concat(await this.getPlayListItems()))
-      : (this.videos = await this.getVideos())
+    ;(this.$store as Store).commit('Player/SET_PROGRESS', 0)
   },
   computed: {
+    info() {
+      return (this.$store as Store).getters['Player/GET_CURRENT_VIDEO_INFO']
+    },
     currentTime() {
       return (this.$store as Store).getters['Player/GET_CURRENT_TIME']
     },
     durations() {
       return (this.$store as Store).getters['Player/GET_DURATIONS']
     },
-    progress() {
-      return (this.$store as Store).getters['Player/GET_PROGRESS']
+    progress: {
+      get() {
+        return (this.$store as Store).getters['Player/GET_PROGRESS']
+      },
+      set(value: number) {
+        return (this.$store as Store).dispatch('Player/SEEK_TO', value)
+      }
     },
     playerStatus() {
       return (this.$store as Store).getters['Player/GET_PLAYER_STATUS']
+    },
+    playlist() {
+      return (this.$store as Store).getters['Player/GET_PLAYLIST']
+    },
+    videos() {
+      return (this.$store as Store).getters['Player/GET_VIDEOS']
+    },
+    playerQueue() {
+      return (this.$store as Store).getters['Player/GET_PLAYER_QUEUE']
     }
   },
   watch: {
-    $route() {
-      ;(this.$store as Store).dispatch(
+    async $route() {
+      if (!this.$route.query.v) return
+
+      await this.$fetch()
+
+      await (this.$store as Store).dispatch(
         'Player/LOAD_BY_VIDEO_ID',
-        this.$route.query.v as string
+        this.info!.id
       )
     }
   },
+  async activated() {
+    console.log('[activated] info: ', this.info)
+    if (!this.info || this.info.id === this.$route.query.v) return
+
+    console.log('[continutued]')
+    this.fetchPlayerQueue()
+
+    await this.$fetch()
+    await this.fetchPlayerQueue()
+    console.log('after activated fetch info', this.info)
+    this.$nextTick(() => {
+      ;(this.$store as Store).dispatch('Player/LOAD_BY_VIDEO_ID', this.info!.id)
+    })
+  },
+  deactivated() {
+    // ;(window as any).player.destroy()
+  },
   mounted() {
-    // LINK https://developers.google.com/youtube/iframe_api_reference
-    const tag = document.createElement('script')
-    tag.src = 'https://www.youtube.com/iframe_api'
-    const firstScriptTag = document.getElementsByTagName('script')[0]
-    firstScriptTag.parentNode!.insertBefore(tag, firstScriptTag)
-    ;(this.$store as Store).dispatch(
-      'Player/INIT_PLAYER',
-      this.$route.query.v as string
-    )
+    console.log('%c[mounted]', 'color:red')
+    this.loadYouTubeIframeAPI()
+
+    this.fetchPlayerQueue()
   },
   methods: {
-    getInfo(): Promise<null | VideoItem> {
-      return this.$axios({
-        url: `/youtube/v3/videos?${qs.stringify({
-          part: 'snippet,contentDetails,statistics',
-          id: this.$route.query.v,
-          videoCategoryId: 10
-        })}`,
-        method: 'GET'
-      })
-        .then(
-          ({ data: { items } }: AxiosResponse<{ items: VideoItem[] }>) =>
-            items[0]
-        )
-        .catch(error => {
-          console.log('[info error]: ', error)
-          return null
-        })
+    async fetchPlayerQueue() {
+      if (!this.$route.query.list) return
+
+      await (this.$store as Store).dispatch(
+        'Player/FETCH_PLAYER_QUEUE',
+        this.$route.query.list as string | undefined | null
+      )
     },
-    getVideos(): Promise<VideoItem[]> {
-      return this.$axios({
-        url: `/youtube/v3/videos?${qs.stringify({
-          part: 'id,snippet,contentDetails,statistics',
-          chart: 'mostPopular',
-          regionCode: 'KR',
-          videoCategoryId: 10,
-          maxResults: 15
-        })}`,
-        method: 'GET'
-      })
-        .then(
-          ({ data: { items } }: AxiosResponse<{ items: VideoItem[] }>) => items
-        )
-        .catch(error => {
-          console.log('[get videos error]: ', error)
-          console.log('[error response]: ', error.response)
-          return []
-        })
-    },
-    getPlayListItems(): Promise<PlayListItem[]> {
-      return this.$axios({
-        url: `/youtube/v3/playlistItems?${qs.stringify({
-          part: 'id,snippet',
-          playlistId: this.$route.query.list,
-          maxResults: 15
-        })}`
-      })
-        .then(
-          ({ data: { items } }: AxiosResponse<{ items: PlayListItem[] }>) => {
-            console.log(items)
-            return items
-          }
-        )
-        .catch(error => {
-          console.log('[error]: ', error)
-          console.log('[error.response]', error.response)
-          return []
-        })
-    },
-    seekTo() {
-      ;(this.$store as Store).dispatch('Player/SEEK_TO', this.progress)
+    loadYouTubeIframeAPI() {
+      // LINK https://developers.google.com/youtube/iframe_api_reference
+      const tag = document.createElement('script')
+      console.log('tag: ', tag)
+      tag.src = 'https://www.youtube.com/iframe_api'
+      const firstScriptTag = document.getElementsByTagName('script')[0]
+      firstScriptTag.parentNode!.insertBefore(tag, firstScriptTag)
+      ;(this.$store as Store).dispatch(
+        'Player/INIT_PLAYER',
+        this.$route.query.v as string
+      )
     }
   }
 })
