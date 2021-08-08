@@ -103,5 +103,5 @@ export interface Player {
     startSeconds?: number,
     endSeconds?: number
   ) => void
-  seekTo: () => void
+  seekTo: (seconds: number) => void
 }
