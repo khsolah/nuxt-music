@@ -1,5 +1,14 @@
+import { PlayListItem, VideoItem } from '~/@types'
+
 export interface State {
   playerStatus: 'play' | 'pause'
+  currentVideoInfo: null | (VideoItem & { playlistId: string | null })
+  playlist: PlayListItem[]
+  videos: VideoItem[]
+  playerQueue: {
+    type: 'playlist' | 'videos'
+    data: PlayListItem[] | VideoItem[]
+  }
   currentTime: {
     seconds: number
     minutes: number
@@ -14,6 +23,13 @@ export interface State {
 
 const state = (): State => ({
   playerStatus: 'play',
+  currentVideoInfo: null,
+  playlist: [],
+  videos: [],
+  playerQueue: {
+    type: 'videos',
+    data: []
+  },
   currentTime: {
     seconds: 0,
     minutes: 0
