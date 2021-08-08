@@ -165,7 +165,8 @@ const actions: ActionTree<State, RootState> & Actions = {
     })
   },
   [ActionTypes.LOAD_BY_VIDEO_ID]: ({ commit, dispatch }, payload) => {
-    if (!(window as any).player) dispatch(ActionTypes.INIT_PLAYER, payload)
+    if (!(window as any).player.loadVideoById)
+      return dispatch(ActionTypes.INIT_PLAYER, payload)
 
     commit(MutationTypes.SET_VIDEO_ID, payload)
   },
@@ -200,10 +201,6 @@ const actions: ActionTree<State, RootState> & Actions = {
       })}`
     })
       .then(({ data: { items } }: AxiosResponse<{ items: PlayListItem[] }>) => {
-        // Array.prototype.forEach.call(items, (item: PlayListItem) => {
-        //   item.id = item.snippet.resourceId.videoId
-        //   item.snippet.channelTitle = item.snippet.videoOwnerChannelTitle
-        // })
         commit(MutationTypes.SET_PLAYLIST, items)
         return items
       })
