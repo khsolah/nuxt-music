@@ -4,6 +4,7 @@ import { RootState } from '../state'
 import { State } from './state'
 
 export enum GetterTypes {
+  GET_PLAYER_SLOT_STYLE = 'GET_PLAYER_SLOT_STYLE',
   GET_PLAYER_STATUS = 'GET_PLAYER_STATUS',
   GET_CURRENT_VIDEO_INFO = 'GET_CURRENT_VIDEO_INFO',
   GET_PLAYER_QUEUE = 'GET_PLAYER_QUEUE',
@@ -15,6 +16,7 @@ export enum GetterTypes {
 }
 
 export interface Getters<S = State> {
+  [GetterTypes.GET_PLAYER_SLOT_STYLE]: (state: S) => State['playerSlotStyle']
   [GetterTypes.GET_PLAYER_STATUS]: (state: S) => State['playerStatus']
   [GetterTypes.GET_CURRENT_VIDEO_INFO]: (state: S) => State['currentVideoInfo']
   [GetterTypes.GET_PLAYER_QUEUE]: (state: S) => State['playerQueue']
@@ -26,6 +28,7 @@ export interface Getters<S = State> {
 }
 
 export enum PlayerGetterTypes {
+  GET_PLAYER_SLOT_STYLE = 'Player/GET_PLAYER_SLOT_STYLE',
   GET_PLAYER_STATUS = 'Player/GET_PLAYER_STATUS',
   GET_CURRENT_VIDEO_INFO = 'Player/GET_CURRENT_VIDEO_INFO',
   GET_PLAYER_QUEUE = 'Player/GET_PLAYER_QUEUE',
@@ -39,6 +42,7 @@ export enum PlayerGetterTypes {
 export interface PlayerGetters extends Namespaced<Getters, 'Player'> {}
 
 const getters: GetterTree<State, RootState> & Getters = {
+  [GetterTypes.GET_PLAYER_SLOT_STYLE]: ({ playerSlotStyle }) => playerSlotStyle,
   [GetterTypes.GET_PLAYER_STATUS]: ({ playerStatus }) => playerStatus,
   [GetterTypes.GET_CURRENT_VIDEO_INFO]: ({ currentVideoInfo }) =>
     currentVideoInfo,
