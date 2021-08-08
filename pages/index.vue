@@ -121,7 +121,7 @@ export default Vue.extend({
         url: `/youtube/v3/playlistItems?${qs.stringify({
           part: 'id,snippet',
           maxResults: 10,
-          playlistId: 'RDEMy8pkziu8aVgRBptlSwxoig'
+          playlistId: 'PLmThAs3vlH9er8woAsvRoJvkm9Q-xavzu'
         })}`,
         method: 'GET'
       })
