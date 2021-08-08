@@ -2,6 +2,7 @@
   <div>
     <Header />
     <Nuxt keep-alive />
+    <PlayerController />
     <div
       v-if="!accessToken"
       ref="loginPopup"
