@@ -92,55 +92,50 @@ export interface PlayerActions extends Namespaced<Actions, 'Player'> {}
 
 const actions: ActionTree<State, RootState> & Actions = {
   [ActionTypes.INIT_PLAYER]: ({ commit, dispatch }, payload) => {
-    ;(window as any).onYouTubeIframeAPIReady = () => {
-      ;(window as any).player = new (window as any).YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        videoId: payload,
-        events: {
-          onReady: ({
-            target
-          }: {
-            target: { playVideo: Function; pauseVideo: Function }
-          }) => {
+    ;(window as any).player = new (window as any).YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: payload,
+      events: {
+        onReady: ({
+          target
+        }: {
+          target: { playVideo: Function; pauseVideo: Function }
+        }) => {
+          ;(window as any).playerReady = true
+          target.playVideo()
+          ;(
+            document.querySelector("div[title='播放'") as HTMLDivElement
+          ).addEventListener('click', () => {
+            commit(MutationTypes.SET_PLAYER_STATUS, 'play')
             target.playVideo()
-            ;(
-              document.querySelector("div[title='播放'") as HTMLDivElement
-            ).addEventListener('click', () => {
-              commit(MutationTypes.SET_PLAYER_STATUS, 'play')
-              target.playVideo()
-            })
-            ;(
-              document.querySelector("div[title='暫停'") as HTMLDivElement
-            ).addEventListener('click', () => {
-              commit(MutationTypes.SET_PLAYER_STATUS, 'pause')
-              target.pauseVideo()
-            })
-          },
-          onStateChange: (event: { data: number }) => {
-            const currentTime = ((window as any).player as Player).playerInfo
-              .currentTime as number
-            const seconds = Math.floor(currentTime % 60)
-            const minutes = Math.floor(currentTime / 60)
-            commit(MutationTypes.SET_CURRENT_TIME, { seconds, minutes })
-            commit(MutationTypes.SET_PROGRESS, Math.floor(currentTime))
+          })
+          ;(
+            document.querySelector("div[title='暫停'") as HTMLDivElement
+          ).addEventListener('click', () => {
+            commit(MutationTypes.SET_PLAYER_STATUS, 'pause')
+            target.pauseVideo()
+          })
+        },
+        onStateChange: (event: { data: number }) => {
+          const currentTime = ((window as any).player as Player).playerInfo
+            .currentTime as number
+          const seconds = Math.floor(currentTime % 60)
+          const minutes = Math.floor(currentTime / 60)
+          commit(MutationTypes.SET_CURRENT_TIME, { seconds, minutes })
+          commit(MutationTypes.SET_PROGRESS, Math.floor(currentTime))
 
-            const data = event.data
-            console.group('[on state change]')
-            console.log('data', data)
-            console.log(currentTime)
-            console.groupEnd()
-            if (data === (window as any).YT.PlayerState.PLAYING) {
-              commit(MutationTypes.SET_PLAYER_STATUS, 'play')
-              dispatch(ActionTypes.PLAY_VIDEO, undefined)
-            } else {
-              commit(MutationTypes.SET_PLAYER_STATUS, 'pause')
-              commit(MutationTypes.CLEAR_INTERVAL, undefined)
-            }
+          const data = event.data
+          if (data === (window as any).YT.PlayerState.PLAYING) {
+            commit(MutationTypes.SET_PLAYER_STATUS, 'play')
+            dispatch(ActionTypes.PLAY_VIDEO, undefined)
+          } else {
+            commit(MutationTypes.SET_PLAYER_STATUS, 'pause')
+            commit(MutationTypes.CLEAR_INTERVAL, undefined)
           }
         }
-      })
-    }
+      }
+    })
   },
   [ActionTypes.PLAY_VIDEO]: ({ commit, getters }) => {
     const interval = setInterval(() => {
