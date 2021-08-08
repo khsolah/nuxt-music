@@ -1,6 +1,14 @@
 import { PlayListItem, VideoItem } from '~/@types'
 
 export interface State {
+  playerSlotStyle: {
+    width: string
+    height: string
+    top: string
+    left: string
+    right: string
+    bottom: string
+  } | null
   playerStatus: 'play' | 'pause'
   currentVideoInfo: null | (VideoItem & { playlistId: string | null })
   playlist: PlayListItem[]
@@ -22,6 +30,7 @@ export interface State {
 }
 
 const state = (): State => ({
+  playerSlotStyle: null,
   playerStatus: 'play',
   currentVideoInfo: null,
   playlist: [],
