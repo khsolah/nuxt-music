@@ -1,16 +1,19 @@
 /* eslint-disable no-use-before-define */
+import { AxiosResponse } from 'axios'
 import {
   ActionContext,
   ActionTree,
   CommitOptions,
   DispatchOptions
 } from 'vuex/types/index'
+import qs from 'qs'
 import { Namespaced } from '..'
 import { RootState } from '../state'
 import { Getters } from './getters'
 import { Mutations, MutationTypes } from './mutations'
 import { State } from './state'
-import { Player } from '~/@types'
+import { Player, PlayListItem, VideoItem } from '~/@types'
+import { $axios } from '~/utilities/$axios'
 
 interface AugmentedContext
   extends Omit<
@@ -36,7 +39,11 @@ export enum ActionTypes {
   INIT_PLAYER = 'INIT_PLAYER',
   PLAY_VIDEO = 'PLAY_VIDEO',
   SEEK_TO = 'SEEK_TO',
-  LOAD_BY_VIDEO_ID = 'LOAD_BY_VIDEO_ID'
+  LOAD_BY_VIDEO_ID = 'LOAD_BY_VIDEO_ID',
+  FETCH_VIDEO_INFO = 'FETCH_VIDEO_INFO',
+  FETCH_PLAYLIST = 'FETCH_PLAYLIST',
+  FETCH_VIDEOS = 'FETCH_VIDEOS',
+  FETCH_PLAYER_QUEUE = 'FETCH_PLAYER_QUEUE'
 }
 
 export interface Actions {
@@ -50,13 +57,35 @@ export interface Actions {
     { commit }: AugmentedContext,
     payload: string
   ) => void
+  [ActionTypes.FETCH_VIDEO_INFO]: (
+    { commit }: AugmentedContext,
+    payload: { v: string; playlistId: string | null | undefined }
+  ) => Promise<null | VideoItem>
+  [ActionTypes.FETCH_PLAYLIST]: (
+    { commit }: AugmentedContext,
+    playlistId: string
+  ) => Promise<PlayListItem[]>
+  [ActionTypes.FETCH_VIDEOS]: ({
+    commit
+  }: AugmentedContext) => Promise<VideoItem[]>
+  [ActionTypes.FETCH_PLAYER_QUEUE]: (
+    { commit }: AugmentedContext,
+    playlistId?: string | null
+  ) => Promise<{
+    type: 'playlist' | 'videos'
+    data: VideoItem[] | PlayListItem[]
+  }>
 }
 
 export enum PlayerActionTyoes {
   INIT_PLAYER = 'Player/INIT_PLAYER',
   PLAY_VIDEO = 'Player/PLAY_VIDEO',
   SEEK_TO = 'Player/SEEK_TO',
-  LOAD_BY_VIDEO_ID = 'Player/LOAD_BY_VIDEO_ID'
+  LOAD_BY_VIDEO_ID = 'Player/LOAD_BY_VIDEO_ID',
+  FETCH_VIDEO_INFO = 'Player/FETCH_VIDEO_INFO',
+  FETCH_PLAYLIST = 'Player/FETCH_PLAYLIST',
+  FETCH_VIDEOS = 'Player/FETCH_VIDEOS',
+  FETCH_PLAYER_QUEUE = 'Player/FETCH_PLAYER_QUEUE'
 }
 
 export interface PlayerActions extends Namespaced<Actions, 'Player'> {}
@@ -78,14 +107,12 @@ const actions: ActionTree<State, RootState> & Actions = {
             ;(
               document.querySelector("div[title='播放'") as HTMLDivElement
             ).addEventListener('click', () => {
-              console.log('play')
               commit(MutationTypes.SET_PLAYER_STATUS, 'play')
               target.playVideo()
             })
             ;(
               document.querySelector("div[title='暫停'") as HTMLDivElement
             ).addEventListener('click', () => {
-              console.log('pause')
               commit(MutationTypes.SET_PLAYER_STATUS, 'pause')
               target.pauseVideo()
             })
@@ -99,6 +126,10 @@ const actions: ActionTree<State, RootState> & Actions = {
             commit(MutationTypes.SET_PROGRESS, Math.floor(currentTime))
 
             const data = event.data
+            console.group('[on state change]')
+            console.log('data', data)
+            console.log(currentTime)
+            console.groupEnd()
             if (data === (window as any).YT.PlayerState.PLAYING) {
               commit(MutationTypes.SET_PLAYER_STATUS, 'play')
               dispatch(ActionTypes.PLAY_VIDEO, undefined)
@@ -125,6 +156,7 @@ const actions: ActionTree<State, RootState> & Actions = {
   },
   [ActionTypes.SEEK_TO]: ({ commit }, payload) => {
     if (!(window as any).player) return
+    ;((window as any).player as Player).seekTo(payload)
 
     commit(MutationTypes.SET_PROGRESS, Math.floor(payload))
     commit(MutationTypes.SET_CURRENT_TIME, {
@@ -136,6 +168,84 @@ const actions: ActionTree<State, RootState> & Actions = {
     if (!(window as any).player) dispatch(ActionTypes.INIT_PLAYER, payload)
 
     commit(MutationTypes.SET_VIDEO_ID, payload)
+  },
+  [ActionTypes.FETCH_VIDEO_INFO]: ({ commit }, { v, playlistId }) => {
+    return $axios({
+      url: `/youtube/v3/videos?${qs.stringify({
+        part: 'snippet,contentDetails,statistics',
+        id: v,
+        videoCategoryId: 10
+      })}`,
+      method: 'GET'
+    })
+      .then(({ data: { items } }: AxiosResponse<{ items: VideoItem[] }>) => {
+        commit(MutationTypes.SET_CURRENT_VIDEO_INFO, {
+          ...items[0],
+          playlistId: playlistId || null
+        })
+        return items[0]
+      })
+      .catch(error => {
+        console.log('[info error]: ', error)
+        commit(MutationTypes.SET_CURRENT_VIDEO_INFO, null)
+        return null
+      })
+  },
+  [ActionTypes.FETCH_PLAYLIST]: ({ commit }, playlistId) => {
+    return $axios({
+      url: `/youtube/v3/playlistItems?${qs.stringify({
+        part: 'id,snippet',
+        playlistId,
+        maxResults: 15
+      })}`
+    })
+      .then(({ data: { items } }: AxiosResponse<{ items: PlayListItem[] }>) => {
+        // Array.prototype.forEach.call(items, (item: PlayListItem) => {
+        //   item.id = item.snippet.resourceId.videoId
+        //   item.snippet.channelTitle = item.snippet.videoOwnerChannelTitle
+        // })
+        commit(MutationTypes.SET_PLAYLIST, items)
+        return items
+      })
+      .catch(error => {
+        console.log('[error]: ', error)
+        console.log('[error.response]', error.response)
+        return []
+      })
+  },
+  [ActionTypes.FETCH_VIDEOS]: ({ commit }) => {
+    return $axios({
+      url: `/youtube/v3/videos?${qs.stringify({
+        part: 'id,snippet,contentDetails,statistics',
+        chart: 'mostPopular',
+        regionCode: 'KR',
+        videoCategoryId: 10,
+        maxResults: 15
+      })}`,
+      method: 'GET'
+    })
+      .then(({ data: { items } }: AxiosResponse<{ items: VideoItem[] }>) => {
+        commit(MutationTypes.SET_VIDEOS, items)
+        return items
+      })
+      .catch(error => {
+        console.log('[get videos error]: ', error)
+        console.log('[error response]: ', error.response)
+        return []
+      })
+  },
+  [ActionTypes.FETCH_PLAYER_QUEUE]: async ({ commit, dispatch, getters }) => {
+    const playlistId = getters.GET_CURRENT_VIDEO_INFO?.playlistId
+    const data = playlistId
+      ? await dispatch(ActionTypes.FETCH_PLAYLIST, playlistId)
+      : await dispatch(ActionTypes.FETCH_VIDEOS, undefined)
+
+    commit(MutationTypes.SET_CURRENT_QUEUE, {
+      type: playlistId ? 'playlist' : 'videos',
+      data
+    })
+
+    return { type: playlistId ? 'playlist' : 'videos', data }
   }
 }
 
