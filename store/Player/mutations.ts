@@ -5,6 +5,7 @@ import convertISO8601Durations from '~/utilities/convertDurations'
 import { Player, PlayListItem, VideoItem } from '~/@types'
 
 export enum MutationTypes {
+  SET_PLAYER_SLOT_STYLE = 'SET_PLAYER_SLOT_STYLE',
   SET_PLAYER_STATUS = 'SET_PLAYER_STATUS',
   SET_CURRENT_VIDEO_INFO = 'SET_CURRENT_VIDEO_INFO',
   SET_CURRENT_QUEUE = 'SET_CURRENT_QUEUE',
@@ -19,6 +20,10 @@ export enum MutationTypes {
 }
 
 export interface Mutations<S = State> {
+  [MutationTypes.SET_PLAYER_SLOT_STYLE]: (
+    state: S,
+    payload: HTMLElement
+  ) => void
   [MutationTypes.SET_PLAYER_STATUS]: (
     state: S,
     payload: State['playerStatus']
@@ -45,6 +50,7 @@ export interface Mutations<S = State> {
 }
 
 export enum PlayerMutationTypes {
+  SET_PLAYER_SLOT_STYLE = 'Player/SET_PLAYER_SLOT_STYLE',
   SET_PLAYER_STATUS = 'Player/SET_PLAYER_STATUS',
   SET_CURRENT_VIDEO_INFO = 'Player/SET_CURRENT_VIDEO_INFO',
   SET_CURRENT_QUEUE = 'Player/SET_CURRENT_QUEUE',
@@ -61,6 +67,17 @@ export enum PlayerMutationTypes {
 export interface PlayerMutations extends Namespaced<Mutations, 'Player'> {}
 
 const mutations: MutationTree<State> & Mutations = {
+  [MutationTypes.SET_PLAYER_SLOT_STYLE]: (state, payload) => {
+    const rect = payload.getBoundingClientRect()
+    state.playerSlotStyle = {
+      width: `${rect.width}px`,
+      height: `${rect.height}px`,
+      top: `${rect.top}px`,
+      left: `${rect.left}px`,
+      right: `${rect.right}px`,
+      bottom: `${rect.bottom}px`
+    }
+  },
   [MutationTypes.SET_PLAYER_STATUS]: (state, payload) => {
     state.playerStatus = payload
   },
@@ -101,8 +118,7 @@ const mutations: MutationTree<State> & Mutations = {
     }
   },
   [MutationTypes.SET_VIDEO_ID]: (_, payload) => {
-    if (!(window as any).player) return
-    ;((window as any).player as Player).loadVideoById(payload, 0)
+    return ((window as any).player as Player).loadVideoById(payload, 0)
   }
 }
 
