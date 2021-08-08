@@ -2,10 +2,14 @@ import { MutationTree } from 'vuex/types/index'
 import { Namespaced } from '..'
 import { State } from './state'
 import convertISO8601Durations from '~/utilities/convertDurations'
-import { Player } from '~/@types'
+import { Player, PlayListItem, VideoItem } from '~/@types'
 
 export enum MutationTypes {
   SET_PLAYER_STATUS = 'SET_PLAYER_STATUS',
+  SET_CURRENT_VIDEO_INFO = 'SET_CURRENT_VIDEO_INFO',
+  SET_CURRENT_QUEUE = 'SET_CURRENT_QUEUE',
+  SET_PLAYLIST = 'SET_PLAYLIST',
+  SET_VIDEOS = 'SET_VIDEOS',
   SET_CURRENT_TIME = 'SET_CURRENT_TIME',
   SET_PROGRESS = 'SET_PROGRESS',
   SET_INTERVAL = 'SET_INTERVAL',
@@ -19,6 +23,16 @@ export interface Mutations<S = State> {
     state: S,
     payload: State['playerStatus']
   ) => void
+  [MutationTypes.SET_CURRENT_VIDEO_INFO]: (
+    state: S,
+    payload: State['currentVideoInfo']
+  ) => void
+  [MutationTypes.SET_CURRENT_QUEUE]: (
+    state: S,
+    payload: State['playerQueue']
+  ) => void
+  [MutationTypes.SET_PLAYLIST]: (state: S, payload: PlayListItem[]) => void
+  [MutationTypes.SET_VIDEOS]: (state: S, payload: VideoItem[]) => void
   [MutationTypes.SET_CURRENT_TIME]: (
     state: S,
     payload: State['currentTime']
@@ -32,6 +46,10 @@ export interface Mutations<S = State> {
 
 export enum PlayerMutationTypes {
   SET_PLAYER_STATUS = 'Player/SET_PLAYER_STATUS',
+  SET_CURRENT_VIDEO_INFO = 'Player/SET_CURRENT_VIDEO_INFO',
+  SET_CURRENT_QUEUE = 'Player/SET_CURRENT_QUEUE',
+  SET_PLAYLIST = 'Player/SET_PLAYLIST',
+  SET_VIDEOS = 'Player/SET_VIDEOS',
   SET_CURRENT_TIME = 'Player/SET_CURRENT_TIME',
   SET_PROGRESS = 'Player/SET_PROGRESS',
   SET_INTERVAL = 'Player/SET_INTERVAL',
@@ -45,6 +63,18 @@ export interface PlayerMutations extends Namespaced<Mutations, 'Player'> {}
 const mutations: MutationTree<State> & Mutations = {
   [MutationTypes.SET_PLAYER_STATUS]: (state, payload) => {
     state.playerStatus = payload
+  },
+  [MutationTypes.SET_CURRENT_VIDEO_INFO]: (state, payload) => {
+    state.currentVideoInfo = payload
+  },
+  [MutationTypes.SET_CURRENT_QUEUE]: (state, payload) => {
+    state.playerQueue = payload
+  },
+  [MutationTypes.SET_PLAYLIST]: (state, payload) => {
+    state.playlist = payload
+  },
+  [MutationTypes.SET_VIDEOS]: (state, payload) => {
+    state.videos = payload
   },
   [MutationTypes.SET_CURRENT_TIME]: (state, payload) => {
     state.currentTime = payload
