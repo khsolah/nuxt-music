@@ -124,6 +124,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Store } from '~/store'
+import { PlayerActionTypes } from '~/store/Player/actions'
 import { PlayerGetterTypes } from '~/store/Player/getters'
 import { PlayerMutationTypes } from '~/store/Player/mutations'
 
@@ -138,7 +139,12 @@ export default Vue.extend({
     }
   },
   activated() {
+    this.setPlayerSlotStyle()
     window.addEventListener('resize', this.setPlayerSlotStyle)
+    ;(this.$store as Store).dispatch(
+      PlayerActionTypes.FETCH_PLAYER_QUEUE,
+      this.$route.query.list as string | undefined
+    )
   },
   deactivated() {
     window.removeEventListener('resize', this.setPlayerSlotStyle)

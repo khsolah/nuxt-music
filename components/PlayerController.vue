@@ -207,8 +207,6 @@ export default Vue.extend({
       this.info!.contentDetails.duration
     )
     ;(this.$store as Store).commit(PlayerMutationTypes.SET_PROGRESS, 0)
-
-    await this.fetchPlayerQueue()
   },
   computed: {
     info() {
@@ -263,16 +261,8 @@ export default Vue.extend({
         PlayerActionTypes.PLAYER_INIT,
         `${this.$route.query.v}`
       )
-
-    this.fetchPlayerQueue()
   },
   methods: {
-    async fetchPlayerQueue() {
-      await (this.$store as Store).dispatch(
-        PlayerActionTypes.FETCH_PLAYER_QUEUE,
-        this.$route.query.list as string | undefined | null
-      )
-    },
     togglePlayer() {
       if (this.$route.name === 'watch') {
         this.$router.push({
