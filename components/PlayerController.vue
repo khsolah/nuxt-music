@@ -285,6 +285,13 @@ export default Vue.extend({
           }
         })
       }
+    },
+    checkoutPlayer() {
+      if ((window as any).player.loadVideoById) return
+      ;(this.$store as Store).dispatch(
+        PlayerActionTypes.PLAYER_INIT,
+        (this.$route.query.v as string) || `${this.info?.id}`
+      )
     }
   }
 })
