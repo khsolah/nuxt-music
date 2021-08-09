@@ -57,6 +57,7 @@
       :style="`background-image: linear-gradient(to right, #f00 0%, #f00 ${
         (progress * 100) / durations.time
       }%, #bdbdbd ${(progress * 100) / durations.time}%)`"
+      @click.stop="checkoutPlayer"
     />
     <!-- left controls -->
     <div class="flex-shrink-0 inline-flex items-center justify-center">
@@ -65,7 +66,7 @@
         role="button"
         aria-label="上一首歌"
         title="上一首歌"
-        @click.stop.prevent=""
+        @click.stop.prevent="checkoutPlayer"
       >
         <Icon name="skip-previous" class="h-full fill-white w-full" />
       </div>
@@ -76,7 +77,7 @@
         role="button"
         aria-label="播放"
         title="播放"
-        @click.stop=""
+        @click.stop="checkoutPlayer"
       >
         <Icon name="play" class="h-full fill-white w-full" />
       </div>
@@ -87,7 +88,7 @@
         role="button"
         aria-label="暫停"
         title="暫停"
-        @click.stop=""
+        @click.stop="checkoutPlayer"
       >
         <Icon name="pause" class="h-full fill-white w-full" />
       </div>
@@ -185,6 +186,9 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Store } from '~/store'
+import { PlayerActionTypes } from '~/store/Player/actions'
+import { PlayerGetterTypes } from '~/store/Player/getters'
+import { PlayerMutationTypes } from '~/store/Player/mutations'
 
 export default Vue.extend({
   name: 'PlayerController',
@@ -194,47 +198,45 @@ export default Vue.extend({
   async fetch() {
     if (!this.$route.query.v) return
 
-    await (this.$store as Store).dispatch('Player/FETCH_VIDEO_INFO', {
+    await (this.$store as Store).dispatch(PlayerActionTypes.FETCH_VIDEO_INFO, {
       v: this.$route.query.v as string,
       playlistId: this.$route.query.list as string | null | undefined
     })
     ;(this.$store as Store).commit(
-      'Player/SET_DURATIONS',
+      PlayerMutationTypes.SET_DURATIONS,
       this.info!.contentDetails.duration
     )
-    ;(this.$store as Store).commit('Player/SET_PROGRESS', 0)
+    ;(this.$store as Store).commit(PlayerMutationTypes.SET_PROGRESS, 0)
 
     await this.fetchPlayerQueue()
   },
   computed: {
     info() {
-      return (this.$store as Store).getters['Player/GET_CURRENT_VIDEO_INFO']
+      return (this.$store as Store).getters[
+        PlayerGetterTypes.GET_CURRENT_VIDEO_INFO
+      ]
     },
     currentTime() {
-      return (this.$store as Store).getters['Player/GET_CURRENT_TIME']
+      return (this.$store as Store).getters[PlayerGetterTypes.GET_CURRENT_TIME]
     },
     durations() {
-      return (this.$store as Store).getters['Player/GET_DURATIONS']
+      return (this.$store as Store).getters[PlayerGetterTypes.GET_DURATIONS]
     },
     progress: {
       get() {
-        return (this.$store as Store).getters['Player/GET_PROGRESS']
+        return (this.$store as Store).getters[PlayerGetterTypes.GET_PROGRESS]
       },
       set(value: number) {
-        return (this.$store as Store).dispatch('Player/SEEK_TO', value)
+        return (this.$store as Store).dispatch(PlayerActionTypes.SEEK_TO, value)
       }
     },
     playerStatus() {
-      return (this.$store as Store).getters['Player/GET_PLAYER_STATUS']
-    },
-    playlist() {
-      return (this.$store as Store).getters['Player/GET_PLAYLIST']
-    },
-    videos() {
-      return (this.$store as Store).getters['Player/GET_VIDEOS']
+      return (this.$store as Store).getters[PlayerGetterTypes.GET_PLAYER_STATUS]
     },
     playerSlotStyle() {
-      return (this.$store as Store).getters['Player/GET_PLAYER_SLOT_STYLE']
+      return (this.$store as Store).getters[
+        PlayerGetterTypes.GET_PLAYER_SLOT_STYLE
+      ]
     }
   },
   watch: {
@@ -248,7 +250,7 @@ export default Vue.extend({
       await this.$fetch()
 
       await (this.$store as Store).dispatch(
-        'Player/LOAD_BY_VIDEO_ID',
+        PlayerActionTypes.LOAD_BY_VIDEO_ID,
         `${this.$route.query.v}`
       )
     }
@@ -258,7 +260,7 @@ export default Vue.extend({
     // LINK https://developers.google.com/youtube/iframe_api_reference
     ;(window as any).onYouTubeIframeAPIReady = () =>
       (this.$store as Store).dispatch(
-        'Player/PLAYER_INIT',
+        PlayerActionTypes.PLAYER_INIT,
         `${this.$route.query.v}`
       )
 
@@ -267,7 +269,7 @@ export default Vue.extend({
   methods: {
     async fetchPlayerQueue() {
       await (this.$store as Store).dispatch(
-        'Player/FETCH_PLAYER_QUEUE',
+        PlayerActionTypes.FETCH_PLAYER_QUEUE,
         this.$route.query.list as string | undefined | null
       )
     },
