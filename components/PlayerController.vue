@@ -14,18 +14,20 @@
       lg:h-18
       -lg:h-16
     "
+    @click="togglePlayer"
   >
     <div
       class="
         bg-black
+        rounded-sm
         h-45
+        transition-all
         right-12
         bottom-22
         w-80
+        duration-500
         fixed
         -lg:hidden
-        transition-all
-        duration-500
       "
       :style="$route.name === 'watch' ? playerSlotStyle : ''"
     >
@@ -63,7 +65,7 @@
         role="button"
         aria-label="上一首歌"
         title="上一首歌"
-        @click.prevent=""
+        @click.stop.prevent=""
       >
         <Icon name="skip-previous" class="h-full fill-white w-full" />
       </div>
@@ -74,6 +76,7 @@
         role="button"
         aria-label="播放"
         title="播放"
+        @click.stop=""
       >
         <Icon name="play" class="h-full fill-white w-full" />
       </div>
@@ -84,6 +87,7 @@
         role="button"
         aria-label="暫停"
         title="暫停"
+        @click.stop=""
       >
         <Icon name="pause" class="h-full fill-white w-full" />
       </div>
@@ -92,7 +96,7 @@
         role="button"
         aria-label="下一首歌"
         title="下一首歌"
-        @click.prevent=""
+        @click.stop.prevent=""
       >
         <Icon name="skip-next" class="h-full fill-white w-full" />
       </div>
@@ -126,6 +130,7 @@
           role="button"
           title="喜歡"
           aria-label="喜歡"
+          @click.stop=""
         >
           <Icon
             name="thumb-up-outline"
@@ -137,6 +142,7 @@
           role="button"
           title="不喜歡"
           aria-label="不喜歡"
+          @click.stop=""
         >
           <Icon
             name="thumb-down-outline"
@@ -154,7 +160,7 @@
           $route.name === 'watch' ? '關閉播放器頁面' : '開啟播放器頁面'
         "
         role="button"
-        @click="togglePlayer"
+        @click.stop="togglePlayer"
       >
         <Icon
           name="play"
@@ -260,8 +266,6 @@ export default Vue.extend({
   },
   methods: {
     async fetchPlayerQueue() {
-      if (!this.$route.query.list) return
-
       await (this.$store as Store).dispatch(
         'Player/FETCH_PLAYER_QUEUE',
         this.$route.query.list as string | undefined | null
