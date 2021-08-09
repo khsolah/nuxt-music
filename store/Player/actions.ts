@@ -36,7 +36,7 @@ interface AugmentedContext
 }
 
 export enum ActionTypes {
-  INIT_PLAYER = 'INIT_PLAYER',
+  PLAYER_INIT = 'PLAYER_INIT',
   PLAY_VIDEO = 'PLAY_VIDEO',
   SEEK_TO = 'SEEK_TO',
   LOAD_BY_VIDEO_ID = 'LOAD_BY_VIDEO_ID',
@@ -47,7 +47,7 @@ export enum ActionTypes {
 }
 
 export interface Actions {
-  [ActionTypes.INIT_PLAYER]: (
+  [ActionTypes.PLAYER_INIT]: (
     { commit }: AugmentedContext,
     payload: string
   ) => void
@@ -78,7 +78,7 @@ export interface Actions {
 }
 
 export enum PlayerActionTyoes {
-  INIT_PLAYER = 'Player/INIT_PLAYER',
+  PLAYER_INIT = 'Player/PLAYER_INIT',
   PLAY_VIDEO = 'Player/PLAY_VIDEO',
   SEEK_TO = 'Player/SEEK_TO',
   LOAD_BY_VIDEO_ID = 'Player/LOAD_BY_VIDEO_ID',
@@ -91,7 +91,7 @@ export enum PlayerActionTyoes {
 export interface PlayerActions extends Namespaced<Actions, 'Player'> {}
 
 const actions: ActionTree<State, RootState> & Actions = {
-  [ActionTypes.INIT_PLAYER]: ({ commit, dispatch }, payload) => {
+  [ActionTypes.PLAYER_INIT]: ({ commit, dispatch }, payload) => {
     ;(window as any).player = new (window as any).YT.Player('player', {
       height: '100%',
       width: '100%',
@@ -161,9 +161,9 @@ const actions: ActionTree<State, RootState> & Actions = {
   },
   [ActionTypes.LOAD_BY_VIDEO_ID]: ({ commit, dispatch }, payload) => {
     if (!(window as any).player.loadVideoById)
-      return dispatch(ActionTypes.INIT_PLAYER, payload)
+      return dispatch(ActionTypes.PLAYER_INIT, payload)
 
-    commit(MutationTypes.SET_VIDEO_ID, payload)
+    commit(MutationTypes.LOAD_BY_VIDEO_ID, payload)
   },
   [ActionTypes.FETCH_VIDEO_INFO]: ({ commit }, { v, playlistId }) => {
     return $axios({
@@ -177,7 +177,9 @@ const actions: ActionTree<State, RootState> & Actions = {
       .then(({ data: { items } }: AxiosResponse<{ items: VideoItem[] }>) => {
         commit(MutationTypes.SET_CURRENT_VIDEO_INFO, {
           ...items[0],
-          playlistId: playlistId || null
+          playlistId: playlistId || null,
+          time: { minutes: 0, seconds: 0 },
+          durations: { time: 0, timeString: '00:00' }
         })
         return items[0]
       })

@@ -23,8 +23,12 @@ export interface Getters<S = State> {
   [GetterTypes.GET_PLAYLIST]: (state: S) => State['playlist']
   [GetterTypes.GET_VIDEOS]: (state: S) => State['videos']
   [GetterTypes.GET_PROGRESS]: (state: S) => State['progress']
-  [GetterTypes.GET_CURRENT_TIME]: (state: S) => State['currentTime']
-  [GetterTypes.GET_DURATIONS]: (state: S) => State['durations']
+  [GetterTypes.GET_CURRENT_TIME]: (
+    state: S
+  ) => { minutes: number; seconds: number } | undefined
+  [GetterTypes.GET_DURATIONS]: (
+    state: S
+  ) => { time: number; timeString: string } | undefined
 }
 
 export enum PlayerGetterTypes {
@@ -50,8 +54,10 @@ const getters: GetterTree<State, RootState> & Getters = {
   [GetterTypes.GET_PLAYLIST]: ({ playlist }) => playlist,
   [GetterTypes.GET_VIDEOS]: ({ videos }) => videos,
   [GetterTypes.GET_PROGRESS]: ({ progress }) => progress,
-  [GetterTypes.GET_CURRENT_TIME]: ({ currentTime }) => currentTime,
-  [GetterTypes.GET_DURATIONS]: ({ durations }) => durations
+  [GetterTypes.GET_CURRENT_TIME]: ({ currentVideoInfo }) =>
+    currentVideoInfo?.time,
+  [GetterTypes.GET_DURATIONS]: ({ currentVideoInfo }) =>
+    currentVideoInfo?.durations
 }
 
 export default getters

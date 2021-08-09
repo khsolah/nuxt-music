@@ -252,7 +252,7 @@ export default Vue.extend({
     // LINK https://developers.google.com/youtube/iframe_api_reference
     ;(window as any).onYouTubeIframeAPIReady = () =>
       (this.$store as Store).dispatch(
-        'Player/INIT_PLAYER',
+        'Player/PLAYER_INIT',
         `${this.$route.query.v}`
       )
 

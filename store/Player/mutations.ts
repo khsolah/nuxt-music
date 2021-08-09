@@ -16,7 +16,7 @@ export enum MutationTypes {
   SET_INTERVAL = 'SET_INTERVAL',
   CLEAR_INTERVAL = 'CLEAR_INTERVAL',
   SET_DURATIONS = 'SET_DURATIONS',
-  SET_VIDEO_ID = 'SET_VIDEO_ID'
+  LOAD_BY_VIDEO_ID = 'LOAD_BY_VIDEO_ID'
 }
 
 export interface Mutations<S = State> {
@@ -40,13 +40,13 @@ export interface Mutations<S = State> {
   [MutationTypes.SET_VIDEOS]: (state: S, payload: VideoItem[]) => void
   [MutationTypes.SET_CURRENT_TIME]: (
     state: S,
-    payload: State['currentTime']
+    payload: { minutes: number; seconds: number }
   ) => void
   [MutationTypes.SET_PROGRESS]: (state: S, payload: number) => void
   [MutationTypes.SET_INTERVAL]: (state: S, payload: NodeJS.Timer) => void
   [MutationTypes.CLEAR_INTERVAL]: (state: S) => void
   [MutationTypes.SET_DURATIONS]: (state: S, payload: string) => void
-  [MutationTypes.SET_VIDEO_ID]: (state: S, payload: string) => void
+  [MutationTypes.LOAD_BY_VIDEO_ID]: (state: S, payload: string) => void
 }
 
 export enum PlayerMutationTypes {
@@ -61,7 +61,7 @@ export enum PlayerMutationTypes {
   SET_INTERVAL = 'Player/SET_INTERVAL',
   CLEAR_INTERVAL = 'Player/CLEAR_INTERVAL',
   SET_DURATIONS = 'Player/SET_DURATIONS',
-  SET_VIDEO_ID = 'SET_VIDEO_ID'
+  LOAD_BY_VIDEO_ID = 'LOAD_BY_VIDEO_ID'
 }
 
 export interface PlayerMutations extends Namespaced<Mutations, 'Player'> {}
@@ -94,7 +94,9 @@ const mutations: MutationTree<State> & Mutations = {
     state.videos = payload
   },
   [MutationTypes.SET_CURRENT_TIME]: (state, payload) => {
-    state.currentTime = payload
+    if (!state.currentVideoInfo) return
+
+    state.currentVideoInfo.time = payload
   },
   [MutationTypes.SET_PROGRESS]: (state, payload) => {
     state.progress = payload
@@ -109,15 +111,17 @@ const mutations: MutationTree<State> & Mutations = {
     state.interval = null
   },
   [MutationTypes.SET_DURATIONS]: (state, payload) => {
+    if (!state.currentVideoInfo) return
+
     const { minutes, seconds, time } = convertISO8601Durations(payload)
-    state.durations = {
+    state.currentVideoInfo.durations = {
       time,
       timeString: `${minutes < 10 ? `0${minutes}` : minutes}:${
         seconds < 10 ? `0${seconds}` : seconds
       }`
     }
   },
-  [MutationTypes.SET_VIDEO_ID]: (_, payload) => {
+  [MutationTypes.LOAD_BY_VIDEO_ID]: (_, payload) => {
     return ((window as any).player as Player).loadVideoById(payload, 0)
   }
 }
