@@ -135,11 +135,28 @@ export default Vue.extend({
       return (this.$store as Store).getters['Player/GET_PLAYER_QUEUE']
     }
   },
+  activated() {
+    window.addEventListener('resize', this.setPlayerSlotStyle)
+  },
+  deactivated() {
+    window.removeEventListener('resize', this.setPlayerSlotStyle)
+  },
   mounted() {
     ;(this.$store as Store).commit(
       'Player/SET_PLAYER_SLOT_STYLE',
       this.$refs['player-slot'] as HTMLElement
     )
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setPlayerSlotStyle)
+  },
+  methods: {
+    setPlayerSlotStyle() {
+      ;(this.$store as Store).commit(
+        'Player/SET_PLAYER_SLOT_STYLE',
+        this.$refs['player-slot'] as HTMLElement
+      )
+    }
   }
 })
 </script>
