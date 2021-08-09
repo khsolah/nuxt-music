@@ -77,7 +77,7 @@ export interface Actions {
   }>
 }
 
-export enum PlayerActionTyoes {
+export enum PlayerActionTypes {
   PLAYER_INIT = 'Player/PLAYER_INIT',
   PLAY_VIDEO = 'Player/PLAY_VIDEO',
   SEEK_TO = 'Player/SEEK_TO',
