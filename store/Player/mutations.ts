@@ -121,7 +121,11 @@ const mutations: MutationTree<State> & Mutations = {
       }`
     }
   },
-  [MutationTypes.LOAD_BY_VIDEO_ID]: (_, payload) => {
+  [MutationTypes.LOAD_BY_VIDEO_ID]: (state, payload) => {
+    state.playerQueue.currentIndex = state.playerQueue.data.findIndex(
+      (element: PlayListItem | VideoItem) => element.id === payload
+    )
+
     return ((window as any).player as Player).loadVideoById(payload, 0)
   }
 }

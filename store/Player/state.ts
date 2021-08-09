@@ -21,6 +21,7 @@ export interface State {
   videos: VideoItem[]
   playerQueue: {
     type: 'playlist' | 'videos'
+    currentIndex: number
     data: PlayListItem[] | VideoItem[]
   }
   progress: number
@@ -35,6 +36,7 @@ const state = (): State => ({
   videos: [],
   playerQueue: {
     type: 'videos',
+    currentIndex: 0,
     data: []
   },
   progress: 0,

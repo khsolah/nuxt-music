@@ -91,7 +91,7 @@ export enum PlayerActionTypes {
 export interface PlayerActions extends Namespaced<Actions, 'Player'> {}
 
 const actions: ActionTree<State, RootState> & Actions = {
-  [ActionTypes.PLAYER_INIT]: ({ commit, dispatch }, payload) => {
+  [ActionTypes.PLAYER_INIT]: ({ commit, dispatch, getters }, payload) => {
     ;(window as any).player = new (window as any).YT.Player('player', {
       height: '100%',
       width: '100%',
@@ -132,6 +132,15 @@ const actions: ActionTree<State, RootState> & Actions = {
           } else {
             commit(MutationTypes.SET_PLAYER_STATUS, 'pause')
             commit(MutationTypes.CLEAR_INTERVAL, undefined)
+
+            if ((window as any).YT.PlayerState.ENDED === data) {
+              // video end
+              const queue = getters.GET_PLAYER_QUEUE
+              dispatch(
+                ActionTypes.LOAD_BY_VIDEO_ID,
+                queue.data[queue.currentIndex + 1].id
+              )
+            }
           }
         }
       }
@@ -229,17 +238,26 @@ const actions: ActionTree<State, RootState> & Actions = {
       })
   },
   [ActionTypes.FETCH_PLAYER_QUEUE]: async ({ commit, dispatch, getters }) => {
-    const playlistId = getters.GET_CURRENT_VIDEO_INFO?.playlistId
-    const data = playlistId
-      ? await dispatch(ActionTypes.FETCH_PLAYLIST, playlistId)
+    const info = getters.GET_CURRENT_VIDEO_INFO
+    const data = info?.playlistId
+      ? await dispatch(ActionTypes.FETCH_PLAYLIST, info.playlistId)
       : await dispatch(ActionTypes.FETCH_VIDEOS, undefined)
 
+    const currentIndex = data.findIndex(
+      (element: VideoItem | PlayListItem) => element.id === info?.id
+    )
+
     commit(MutationTypes.SET_CURRENT_QUEUE, {
-      type: playlistId ? 'playlist' : 'videos',
+      type: info?.playlistId ? 'playlist' : 'videos',
+      currentIndex,
       data
     })
 
-    return { type: playlistId ? 'playlist' : 'videos', data }
+    return {
+      type: info?.playlistId ? 'playlist' : 'videos',
+      currentIndex,
+      data
+    }
   }
 }
 
