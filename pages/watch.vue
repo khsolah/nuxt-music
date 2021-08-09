@@ -85,7 +85,7 @@
             :to="{
               name: 'watch',
               query: {
-                v: item.snippet.id
+                v: item.id
               }
             }"
             class="
