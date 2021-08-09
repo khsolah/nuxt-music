@@ -124,6 +124,8 @@
 <script lang="ts">
 import Vue from 'vue'
 import { Store } from '~/store'
+import { PlayerGetterTypes } from '~/store/Player/getters'
+import { PlayerMutationTypes } from '~/store/Player/mutations'
 
 export default Vue.extend({
   name: 'Watch',
@@ -132,7 +134,7 @@ export default Vue.extend({
   },
   computed: {
     playerQueue() {
-      return (this.$store as Store).getters['Player/GET_PLAYER_QUEUE']
+      return (this.$store as Store).getters[PlayerGetterTypes.GET_PLAYER_QUEUE]
     }
   },
   activated() {
@@ -141,19 +143,13 @@ export default Vue.extend({
   deactivated() {
     window.removeEventListener('resize', this.setPlayerSlotStyle)
   },
-  mounted() {
-    ;(this.$store as Store).commit(
-      'Player/SET_PLAYER_SLOT_STYLE',
-      this.$refs['player-slot'] as HTMLElement
-    )
-  },
   beforeDestroy() {
     window.removeEventListener('resize', this.setPlayerSlotStyle)
   },
   methods: {
     setPlayerSlotStyle() {
       ;(this.$store as Store).commit(
-        'Player/SET_PLAYER_SLOT_STYLE',
+        PlayerMutationTypes.SET_PLAYER_SLOT_STYLE,
         this.$refs['player-slot'] as HTMLElement
       )
     }
