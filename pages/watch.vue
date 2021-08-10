@@ -141,10 +141,10 @@ export default Vue.extend({
   activated() {
     this.setPlayerSlotStyle()
     window.addEventListener('resize', this.setPlayerSlotStyle)
-    ;(this.$store as Store).dispatch(
-      PlayerActionTypes.FETCH_PLAYER_QUEUE,
-      this.$route.query.list as string | undefined
-    )
+    ;(this.$store as Store).dispatch(PlayerActionTypes.FETCH_PLAYER_QUEUE, {
+      playlistId: this.$route.query.list as string | undefined,
+      videoId: this.$route.query.v as string
+    })
   },
   deactivated() {
     window.removeEventListener('resize', this.setPlayerSlotStyle)

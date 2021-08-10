@@ -70,7 +70,7 @@ export interface Actions {
   }: AugmentedContext) => Promise<VideoItem[]>
   [ActionTypes.FETCH_PLAYER_QUEUE]: (
     { commit }: AugmentedContext,
-    playlistId?: string | null
+    payload: { playlistId?: string | null | undefined; videoId: string }
   ) => Promise<{
     type: 'playlist' | 'videos'
     data: VideoItem[] | PlayListItem[]
@@ -102,7 +102,6 @@ const actions: ActionTree<State, RootState> & Actions = {
         }: {
           target: { playVideo: Function; pauseVideo: Function }
         }) => {
-          ;(window as any).playerReady = true
           target.playVideo()
           ;(
             document.querySelector("div[title='播放'") as HTMLDivElement
@@ -237,24 +236,26 @@ const actions: ActionTree<State, RootState> & Actions = {
         return []
       })
   },
-  [ActionTypes.FETCH_PLAYER_QUEUE]: async ({ commit, dispatch, getters }) => {
-    const info = getters.GET_CURRENT_VIDEO_INFO
-    const data = info?.playlistId
-      ? await dispatch(ActionTypes.FETCH_PLAYLIST, info.playlistId)
+  [ActionTypes.FETCH_PLAYER_QUEUE]: async (
+    { commit, dispatch },
+    { playlistId, videoId }
+  ) => {
+    const data = playlistId
+      ? await dispatch(ActionTypes.FETCH_PLAYLIST, playlistId)
       : await dispatch(ActionTypes.FETCH_VIDEOS, undefined)
 
     const currentIndex = data.findIndex(
-      (element: VideoItem | PlayListItem) => element.id === info?.id
+      (element: VideoItem | PlayListItem) => element.id === videoId
     )
 
     commit(MutationTypes.SET_CURRENT_QUEUE, {
-      type: info?.playlistId ? 'playlist' : 'videos',
+      type: playlistId ? 'playlist' : 'videos',
       currentIndex,
       data
     })
 
     return {
-      type: info?.playlistId ? 'playlist' : 'videos',
+      type: playlistId ? 'playlist' : 'videos',
       currentIndex,
       data
     }
