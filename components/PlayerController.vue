@@ -66,7 +66,10 @@
         role="button"
         aria-label="上一首歌"
         title="上一首歌"
-        @click.stop.prevent="checkoutPlayer"
+        @click.stop.prevent="
+          checkoutPlayer()
+          prevVideo()
+        "
       >
         <Icon name="skip-previous" class="h-full fill-white w-full" />
       </div>
@@ -97,7 +100,10 @@
         role="button"
         aria-label="下一首歌"
         title="下一首歌"
-        @click.stop.prevent=""
+        @click.stop.prevent="
+          checkoutPlayer()
+          nextVideo()
+        "
       >
         <Icon name="skip-next" class="h-full fill-white w-full" />
       </div>
@@ -185,6 +191,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { PlayListItem, VideoItem } from '~/@types'
 import { Store } from '~/store'
 import { PlayerActionTypes } from '~/store/Player/actions'
 import { PlayerGetterTypes } from '~/store/Player/getters'
@@ -195,18 +202,10 @@ export default Vue.extend({
   data() {
     return { playerStyle: {} }
   },
-  async fetch() {
+  fetch() {
     if (!this.$route.query.v) return
 
-    await (this.$store as Store).dispatch(PlayerActionTypes.FETCH_VIDEO_INFO, {
-      v: this.$route.query.v as string,
-      playlistId: this.$route.query.list as string | null | undefined
-    })
-    ;(this.$store as Store).commit(
-      PlayerMutationTypes.SET_DURATIONS,
-      this.info!.contentDetails.duration
-    )
-    ;(this.$store as Store).commit(PlayerMutationTypes.SET_PROGRESS, 0)
+    this.setupPlayer()
   },
   computed: {
     info() {
@@ -227,6 +226,9 @@ export default Vue.extend({
       set(value: number) {
         return (this.$store as Store).dispatch(PlayerActionTypes.SEEK_TO, value)
       }
+    },
+    playerQueue() {
+      return (this.$store as Store).getters[PlayerGetterTypes.GET_PLAYER_QUEUE]
     },
     playerStatus() {
       return (this.$store as Store).getters[PlayerGetterTypes.GET_PLAYER_STATUS]
@@ -253,15 +255,6 @@ export default Vue.extend({
       )
     }
   },
-  mounted() {
-    // load youtube iframe api
-    // LINK https://developers.google.com/youtube/iframe_api_reference
-    ;(window as any).onYouTubeIframeAPIReady = () =>
-      (this.$store as Store).dispatch(
-        PlayerActionTypes.PLAYER_INIT,
-        `${this.$route.query.v}`
-      )
-  },
   methods: {
     togglePlayer() {
       if (this.$route.name === 'watch') {
@@ -284,6 +277,62 @@ export default Vue.extend({
         PlayerActionTypes.PLAYER_INIT,
         (this.$route.query.v as string) || `${this.info?.id}`
       )
+    },
+    async nextVideo() {
+      const { currentIndex, data, type } = this.playerQueue
+      if (currentIndex + 1 > data.length) return
+
+      const id =
+        type === 'playlist'
+          ? (data[currentIndex + 1] as PlayListItem).snippet.resourceId.videoId
+          : (data[currentIndex + 1] as VideoItem).id
+      if (this.$route.name === 'watch') {
+        this.$router.push({
+          name: 'watch',
+          query: { v: id, list: this.$route.query.list }
+        })
+      } else {
+        await (this.$store as Store).dispatch(
+          PlayerActionTypes.LOAD_BY_VIDEO_ID,
+          id
+        )
+        this.setupPlayer()
+      }
+    },
+    async prevVideo() {
+      const { currentIndex, data, type } = this.playerQueue
+      if (currentIndex - 1 < 0) return
+
+      const id =
+        type === 'playlist'
+          ? (data[currentIndex - 1] as PlayListItem).snippet.resourceId.videoId
+          : (data[currentIndex - 1] as VideoItem).id
+      if (this.$route.name === 'watch')
+        this.$router.push({
+          name: 'watch',
+          query: { v: id, list: this.$route.query.list }
+        })
+      else {
+        await (this.$store as Store).dispatch(
+          PlayerActionTypes.LOAD_BY_VIDEO_ID,
+          data[currentIndex - 1].id
+        )
+        this.setupPlayer()
+      }
+    },
+    async setupPlayer() {
+      await (this.$store as Store).dispatch(
+        PlayerActionTypes.FETCH_VIDEO_INFO,
+        {
+          v: this.$route.query.v as string,
+          playlistId: this.$route.query.list as string | null | undefined
+        }
+      )
+      ;(this.$store as Store).commit(
+        PlayerMutationTypes.SET_DURATIONS,
+        this.info!.contentDetails.duration
+      )
+      ;(this.$store as Store).commit(PlayerMutationTypes.SET_PROGRESS, 0)
     }
   }
 })
