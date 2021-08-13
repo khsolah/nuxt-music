@@ -21,6 +21,7 @@
       <ul v-if="!searching" class="flex list-none pl-0">
         <li v-for="item in navData" :key="item.title" class="lg:mx-6">
           <nuxt-link
+            v-if="item.to"
             :to="item.to"
             class="
               flex
@@ -39,13 +40,40 @@
               :name="item.icon"
               class="
                 fill-white
+                md:h-6 md:my-3 md:mx-4 md:w-6 md:block
                 -md:hidden
-                md:block
                 lg:hidden
-                md:w-6 md:h-6 md:mx-4 md:my-3
               "
             />
           </nuxt-link>
+
+          <div
+            v-else
+            class="
+              cursor-pointer
+              flex
+              font-medium
+              h-full
+              text-xl text-white
+              leading-snug
+              opacity-50
+              no-underline
+              items-center
+              hover:opacity-100
+            "
+            @click="$emit('showPopup')"
+          >
+            <span class="-lg:hidden">{{ item.title }}</span>
+            <Icon
+              :name="item.icon"
+              class="
+                fill-white
+                md:h-6 md:my-3 md:mx-4 md:w-6 md:block
+                -md:hidden
+                lg:hidden
+              "
+            />
+          </div>
         </li>
       </ul>
       <div
@@ -67,7 +95,7 @@
       >
         <Icon
           :name="searching ? 'arrow' : 'magnify'"
-          class="my-3 fill-white mx-4 md:w-6 md:h-6"
+          class="my-3 fill-white mx-4 md:h-6 md:w-6"
           @click.native="searching = !searching"
         />
         <span
@@ -87,14 +115,14 @@
             outline-none
             text-white
             w-full
-            lg:text-xl lg:leading-snug lg:w-180 lg:pr-14
+            lg:text-xl lg:leading-snug lg:pr-14 lg:w-180
             xl:w-215
           "
           placeholder="搜尋"
           @keydown.esc="searching = false"
         />
         <Icon
-          v-show="search.length > 0"
+          v-show="search.length > 0 && searching"
           name="close"
           class="
             fill-white
@@ -102,7 +130,7 @@
             right-0
             z-1
             absolute
-            lg:w-6 lg:h-6 lg:mx-4 lg:my-3
+            lg:h-6 lg:my-3 lg:mx-4 lg:w-6
           "
           @click.native="search = ''"
         />
@@ -110,7 +138,6 @@
     </nav>
 
     <a
-      v-show="!accessToken"
       ref="loginLink"
       href="/auth"
       class="
@@ -156,12 +183,12 @@ export default Vue.extend({
         {
           title: '探索',
           icon: 'compass',
-          to: { name: 'explore' }
+          to: null
         },
         {
           title: '媒體庫',
           icon: 'music-box-multiple',
-          to: { name: 'index' }
+          to: null
         }
       ] as NavData[],
       searching: false,
