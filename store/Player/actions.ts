@@ -134,11 +134,25 @@ const actions: ActionTree<State, RootState> & Actions = {
 
             if ((window as any).YT.PlayerState.ENDED === data) {
               // video end
-              const queue = getters.GET_PLAYER_QUEUE
-              dispatch(
-                ActionTypes.LOAD_BY_VIDEO_ID,
-                queue.data[queue.currentIndex + 1].id
-              )
+              const { currentIndex, data, type } = getters.GET_PLAYER_QUEUE
+              let index
+              if (currentIndex === -1) {
+                const currentId = getters.GET_CURRENT_VIDEO_INFO!.id
+                index =
+                  type === 'playlist'
+                    ? (data as PlayListItem[]).findIndex(
+                        item => item.snippet.resourceId.videoId === currentId
+                      )
+                    : (data as VideoItem[]).findIndex(
+                        item => item.id === currentId
+                      )
+              }
+              const id =
+                type === 'playlist'
+                  ? (data[index ? index + 1 : currentIndex - 1] as PlayListItem)
+                      .snippet.resourceId.videoId
+                  : (data[index ? index + 1 : currentIndex - 1] as VideoItem).id
+              dispatch(ActionTypes.LOAD_BY_VIDEO_ID, id)
             }
           }
         }
