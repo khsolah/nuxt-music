@@ -5,6 +5,11 @@
       <Swiper class="lg:mt-4 lg:mb-6" :data="hot" />
     </section>
 
+    <section class="section">
+      <h1 class="title">韓國流行音樂</h1>
+      <Swiper class="lg:mt-4 lg:mb-6" :data="kpop" />
+    </section>
+
     <section v-if="myPlayList" class="section">
       <h2 class="title">我的收藏</h2>
       <Swiper class="lg:mb-6" :data="myPlayList" type="playlist" />
@@ -39,6 +44,7 @@ export default Vue.extend({
   data() {
     return {
       hot: [] as VideoItem[],
+      kpop: [] as VideoItem[],
       iu: [] as PlayListItem[],
       taeyeon: [] as PlayListItem[],
       myPlayList: null as null | PlayList[]
@@ -46,6 +52,7 @@ export default Vue.extend({
   },
   async fetch() {
     this.hot = await this.getUSHotMusic()
+    this.kpop = await this.getKpopMusic()
     this.iu = await this.getIUMusic()
     this.taeyeon = await this.getTaeyeonMusic()
     this.myPlayList = await this.getMyPlayList()
@@ -69,12 +76,23 @@ export default Vue.extend({
         .then(
           ({ data: { items } }: AxiosResponse<{ items: VideoItem[] }>) => items
         )
-        .catch(error => {
-          console.log('[error]: ', error)
-          console.log('[error response]: ', error.response.data)
-
-          return require('@/data/hot/kr.json').items
-        })
+        .catch(() => require('@/data/hot.json').items)
+    },
+    getKpopMusic(): Promise<VideoItem[]> {
+      return this.$axios({
+        url: `/youtube/v3/videos?${qs.stringify({
+          part: 'id,snippet',
+          chart: 'mostPopular',
+          maxResults: 15,
+          videoCategoryId: '10',
+          regionCode: 'KR'
+        })}`,
+        method: 'GET'
+      })
+        .then(
+          ({ data: { items } }: AxiosResponse<{ items: VideoItem[] }>) => items
+        )
+        .catch(() => require('@/data/kpop.json').items)
     },
     getMyPlayList(): Promise<PlayList[] | null> {
       return this.$axios({
