@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // LINK: https://developers.google.com/youtube/v3/guides/auth/server-side-web-apps?hl=zh_TW
 
 // Step 1: Set authorization parameters
@@ -56,6 +57,24 @@ app.get('/token', (req, res) => {
       console.log('[error]: ', error)
       console.log(error.response.data)
     })
+})
+
+app.get('/refresh', async (_, res) => {
+  const token = await axios({
+    baseURL: 'https://oauth2.googleapis.com',
+    url: '/token',
+    method: 'POST',
+    data: {
+      client_id: clientId,
+      client_secret: clientSecret,
+      grant_type: 'refresh_token',
+      refresh_token: process.env.REFRESH
+    }
+  })
+    .then(({ data: { access_token } }) => access_token)
+    .catch(() => null)
+
+  res.json({ token })
 })
 
 export default app
