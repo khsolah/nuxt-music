@@ -1,5 +1,8 @@
 <template>
-  <nuxt-link :to="{ name: 'index' }" class="flex items-center cursor-pointer">
+  <nuxt-link
+    :to="{ name: 'index' }"
+    class="flex items-center cursor-pointer no-underline"
+  >
     <svg
       class="w-9 h-6"
       viewBox="0 0 45 30"
