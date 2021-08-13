@@ -2,6 +2,7 @@ import { Context } from '@nuxt/types'
 import { ActionContext, ActionTree, DispatchOptions } from 'vuex/types/index'
 import { Mutations, MutationTypes } from './mutations'
 import { RootState, State } from './state'
+import { $axios } from '~/utilities/$axios'
 
 interface AugmentedContext
   extends Omit<ActionContext<State, RootState>, 'commit'> {
@@ -19,24 +20,26 @@ export enum ActionTypes {
 export interface Actions {
   [ActionTypes.NUXT_SERVER_INIT]: (
     { commit }: AugmentedContext,
-    payload: { query: Context['query']; $cookies: Context['app']['$cookies'] }
+    payload: { $cookies: Context['app']['$cookies'] }
   ) => void
 }
 
 const actions: ActionTree<State, RootState> & Actions = {
-  [ActionTypes.NUXT_SERVER_INIT]: ({ commit }, { query, $cookies }) => {
-    if (typeof query.access_token === 'string') {
-      // find code on route.query
-      // store this code in both cookies and vuex
-      $cookies.set('accessToken', query.access_token, {
-        expires: new Date(Date.now() + +query.expires_in * 1000)
+  [ActionTypes.NUXT_SERVER_INIT]: async ({ commit }, { $cookies }) => {
+    await $axios({
+      baseURL: process.env.REFERER,
+      url: '/auth/refresh',
+      method: 'GET'
+    })
+      .then(({ data: { token } }) => {
+        commit(MutationTypes.SET_TOKEN, token)
+        $cookies.set('accessToken', token, {
+          expires: new Date(Date.now() + 3500 * 1000)
+        })
       })
-      commit(MutationTypes.SET_TOKEN, query.access_token)
-    } else if ($cookies.get('accessToken')) {
-      // find token data in cookies,
-      // store this token into vuex
-      commit(MutationTypes.SET_TOKEN, $cookies.get('accessToken'))
-    }
+      .catch(error => {
+        console.log(error)
+      })
   }
 }
 
