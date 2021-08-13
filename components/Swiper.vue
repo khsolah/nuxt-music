@@ -101,8 +101,8 @@
                   }}</span
                 >
               </template>
-              <span v-if="item.snippet.videoOwnerChannelTitle">{{
-                item.snippet.videoOwnerChannelTitle
+              <span>{{
+                item.snippet.videoOwnerChannelTitle || item.snippet.channelTitle
               }}</span>
             </span>
           </div>
