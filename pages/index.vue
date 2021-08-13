@@ -68,7 +68,7 @@ export default Vue.extend({
         url: `/youtube/v3/videos?${qs.stringify({
           part: 'id,snippet',
           chart: 'mostPopular',
-          maxResults: 10,
+          maxResults: 15,
           videoCategoryId: '10'
         })}`,
         method: 'GET'
@@ -103,16 +103,10 @@ export default Vue.extend({
         })}`,
         method: 'GET'
       })
-        .then(({ data: { items } }: AxiosResponse<{ items: PlayList[] }>) => {
-          console.log('[get playlist]: ', items)
-          return items
-        })
-        .catch(error => {
-          console.log('[getMyPlayList]:[error]: ', error)
-          console.log('[getMyPlayList]:[error response]: ', error.response)
-
-          return null
-        })
+        .then(
+          ({ data: { items } }: AxiosResponse<{ items: PlayList[] }>) => items
+        )
+        .catch(() => null)
     },
     getIUMusic(): Promise<PlayListItem[]> {
       return this.$axios({
@@ -127,12 +121,7 @@ export default Vue.extend({
           ({ data: { items } }: AxiosResponse<{ items: PlayListItem[] }>) =>
             items
         )
-        .catch(error => {
-          console.log('[error]: ', error)
-          console.log('[error response]: ', error.response)
-
-          return require('@/data/playlist/iu.json').items
-        })
+        .catch(() => require('@/data/playlist/iu.json').items)
     },
     getTaeyeonMusic(): Promise<PlayListItem[]> {
       return this.$axios({
@@ -147,12 +136,7 @@ export default Vue.extend({
           ({ data: { items } }: AxiosResponse<{ items: PlayListItem[] }>) =>
             items
         )
-        .catch(error => {
-          console.log('[error]: ', error)
-          console.log('[error response]: ', error.response)
-
-          return require('@/data/playlist/taeyeon.json').items
-        })
+        .catch(() => require('@/data/playlist/taeyeon.json').items)
     }
   }
 })
