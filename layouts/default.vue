@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Header />
+    <Header @showPopup="popup = true" />
     <Nuxt keep-alive />
     <PlayerController />
     <div
-      v-if="!accessToken"
+      v-show="popup"
       ref="loginPopup"
       class="
         bg-black
         flex
-        bg-opacity-[0.4]
+        bg-opacity-40
         top-0
         right-0
         bottom-0
@@ -27,7 +27,7 @@
           rounded-md
           flex flex-col
           bg-gray-900
-          h-90
+          h-70
           text-white
           max-w-94vw
           p-5
@@ -41,15 +41,12 @@
         <div class="h-15 p-5 top-0 right-0 left-0 absolute">
           <NuxtLogo class="" />
         </div>
-        <span class="font-bold mt-auto text-xl"
-          >歡迎使用 nuxt music，這是由 khsolah 建立的「仿」youtube music 的
-          side-project，在開始前請先登入 youtube 帳戶，以便繼續使用</span
+        <span class="font-bold mt-auto text-xl text-white"
+          >功能尚在開發中，敬請期待！</span
         >
 
-        <div class="mt-auto mb-0 self-end">
-          <a
-            ref="loginLink"
-            href="/auth"
+        <div class="mt-auto mb-0 self-end" @click="popup = false">
+          <span
             class="
               bg-white
               rounded-sm
@@ -64,7 +61,7 @@
               no-underline
               whitespace-nowrap
             "
-            >登入</a
+            >確認</span
           >
         </div>
       </div>
@@ -83,6 +80,11 @@ export default Vue.extend({
     // if true, remove token data
     if (typeof route.query.access_token === 'string') {
       redirect(route.path)
+    }
+  },
+  data() {
+    return {
+      popup: false
     }
   },
   computed: {
