@@ -357,7 +357,9 @@ export default Vue.extend({
       await (this.$store as Store).dispatch(
         PlayerActionTypes.FETCH_VIDEO_INFO,
         {
-          v: this.$route.query.v as string,
+          v:
+            (this.$route.query.v as string | undefined | null) ||
+            (this.info!.id as string),
           playlistId: this.$route.query.list as string | null | undefined
         }
       )
