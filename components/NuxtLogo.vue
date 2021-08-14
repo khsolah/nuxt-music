@@ -14,6 +14,8 @@
         fill="#00DC82"
       />
     </svg>
-    <span class="text-white font-semibold text-xl ml-2 select-none">Music</span>
+    <span class="text-white font-semibold text-xl ml-2 select-none -lg:hidden"
+      >Music</span
+    >
   </nuxt-link>
 </template>
