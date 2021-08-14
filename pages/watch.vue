@@ -65,7 +65,7 @@
             "
           >
             <img
-              :src="item.snippet.thumbnails.default.url"
+              :src="getThumbnail(item.snippet.thumbnails)"
               alt=""
               class="h-8 mr-4 w-8"
             />
@@ -115,7 +115,7 @@
             "
           >
             <img
-              :src="item.snippet.thumbnails.default.url"
+              :src="getThumbnail(item.snippet.thumbnails)"
               alt=""
               class="h-8 mr-4 w-8"
             />
@@ -144,10 +144,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { Thumbnails } from '~/@types'
 import { Store } from '~/store'
 import { PlayerActionTypes } from '~/store/Player/actions'
 import { PlayerGetterTypes } from '~/store/Player/getters'
 import { PlayerMutationTypes } from '~/store/Player/mutations'
+import { getThumbnail } from '~/utilities'
 
 export default Vue.extend({
   name: 'Watch',
@@ -194,6 +196,9 @@ export default Vue.extend({
         PlayerMutationTypes.SET_PLAYER_SLOT_STYLE,
         this.$refs['player-slot'] as HTMLElement
       )
+    },
+    getThumbnail(thumbnails: Thumbnails) {
+      return getThumbnail(thumbnails)
     }
   }
 })

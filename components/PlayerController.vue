@@ -118,7 +118,7 @@
     <div class="inline-flex items-center justify-center">
       <img
         class="h-10 w-auto -lg:hidden"
-        :src="info.snippet.thumbnails.default.url"
+        :src="getThumbnail(info.snippet.thumbnails)"
         alt=""
       />
 
@@ -191,11 +191,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { PlayListItem, VideoItem } from '~/@types'
+import { PlayListItem, Thumbnails, VideoItem } from '~/@types'
 import { Store } from '~/store'
 import { PlayerActionTypes } from '~/store/Player/actions'
 import { PlayerGetterTypes } from '~/store/Player/getters'
 import { PlayerMutationTypes } from '~/store/Player/mutations'
+import { getThumbnail } from '~/utilities'
 
 export default Vue.extend({
   name: 'PlayerController',
@@ -331,6 +332,9 @@ export default Vue.extend({
         this.info!.contentDetails.duration
       )
       ;(this.$store as Store).commit(PlayerMutationTypes.SET_PROGRESS, 0)
+    },
+    getThumbnail(thumbnails: Thumbnails) {
+      return getThumbnail(thumbnails)
     }
   }
 })
