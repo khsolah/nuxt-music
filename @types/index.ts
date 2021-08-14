@@ -1,7 +1,19 @@
-interface Thumbnail {
+export interface Thumbnail {
   url: string
   width: number
   height: number
+}
+
+export enum ThumbnailTypes {
+  DEFAULT = 'default',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  STANDARD = 'standard',
+  MAXRES = 'maxres'
+}
+
+export type Thumbnails = {
+  [K in ThumbnailTypes]?: Thumbnail
 }
 
 export interface VideoItem {
@@ -48,13 +60,7 @@ export interface PlayList {
     channelId: string
     channelTitle: string
     description: string
-    thumbnails: {
-      default?: Thumbnail
-      medium?: Thumbnail
-      high?: Thumbnail
-      standard?: Thumbnail
-      maxres?: Thumbnail
-    }
+    thumbnails: Thumbnails
     title: string
   }
 }
@@ -68,13 +74,7 @@ export interface PlayListItem {
     channelId: string
     title: string
     description: string
-    thumbnails: {
-      default?: Thumbnail
-      medium?: Thumbnail
-      high?: Thumbnail
-      standard?: Thumbnail
-      maxres?: Thumbnail
-    }
+    thumbnails: Thumbnails
     channelTitle: string
     playlistId: string
     position: number
@@ -118,13 +118,7 @@ export interface SearchResult {
     channelId: string
     title: string
     description: string
-    thumbnails: {
-      default?: Thumbnail
-      medium?: Thumbnail
-      high?: Thumbnail
-      standard?: Thumbnail
-      maxres?: Thumbnail
-    }
+    thumbnails: Thumbnails
     channelTitle: string
     liveVroadcaseContent: string
     publishTime: string
