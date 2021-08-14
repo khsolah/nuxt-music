@@ -1,4 +1,4 @@
-interface thumbnail {
+interface Thumbnail {
   url: string
   width: number
   height: number
@@ -21,11 +21,11 @@ export interface VideoItem {
       description: string
     }
     thumbnails: {
-      default?: thumbnail
-      medium?: thumbnail
-      high?: thumbnail
-      standard?: thumbnail
-      maxres?: thumbnail
+      default?: Thumbnail
+      medium?: Thumbnail
+      high?: Thumbnail
+      standard?: Thumbnail
+      maxres?: Thumbnail
     }
     title: string
     tags: string[]
@@ -49,11 +49,11 @@ export interface PlayList {
     channelTitle: string
     description: string
     thumbnails: {
-      default?: thumbnail
-      medium?: thumbnail
-      high?: thumbnail
-      standard?: thumbnail
-      maxres?: thumbnail
+      default?: Thumbnail
+      medium?: Thumbnail
+      high?: Thumbnail
+      standard?: Thumbnail
+      maxres?: Thumbnail
     }
     title: string
   }
@@ -69,11 +69,11 @@ export interface PlayListItem {
     title: string
     description: string
     thumbnails: {
-      default?: thumbnail
-      medium?: thumbnail
-      high?: thumbnail
-      standard?: thumbnail
-      maxres?: thumbnail
+      default?: Thumbnail
+      medium?: Thumbnail
+      high?: Thumbnail
+      standard?: Thumbnail
+      maxres?: Thumbnail
     }
     channelTitle: string
     playlistId: string
@@ -104,4 +104,29 @@ export interface Player {
     endSeconds?: number
   ) => void
   seekTo: (seconds: number) => void
+}
+
+export interface SearchResult {
+  kind: string
+  etag: string
+  id: {
+    kind: string
+    videoId: string
+  }
+  snippet: {
+    publishedAt: string
+    channelId: string
+    title: string
+    description: string
+    thumbnails: {
+      default?: Thumbnail
+      medium?: Thumbnail
+      high?: Thumbnail
+      standard?: Thumbnail
+      maxres?: Thumbnail
+    }
+    channelTitle: string
+    liveVroadcaseContent: string
+    publishTime: string
+  }
 }
