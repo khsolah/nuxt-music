@@ -1,7 +1,9 @@
+import { Thumbnails, ThumbnailTypes } from '~/@types'
+
 const iso8601DurationRegex =
   /(-)?P(?:([.,\d]+)Y)?(?:([.,\d]+)M)?(?:([.,\d]+)W)?(?:([.,\d]+)D)?T(?:([.,\d]+)H)?(?:([.,\d]+)M)?(?:([.,\d]+)S)?/
 
-const convertISO8601Durations = (duration: string) => {
+export const convertISO8601Durations = (duration: string) => {
   const matches = duration.match(iso8601DurationRegex)
 
   const minutes = matches?.[7] === undefined ? 0 : +matches[7]
@@ -15,4 +17,5 @@ const convertISO8601Durations = (duration: string) => {
   }
 }
 
-export default convertISO8601Durations
+export const getThumbnail = (thumbnails: Thumbnails): string =>
+  thumbnails[Object.keys(thumbnails)[0] as ThumbnailTypes]!.url
