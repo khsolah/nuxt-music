@@ -48,8 +48,9 @@
             />
           </nuxt-link>
 
-          <div
+          <a
             v-else
+            href="/auth"
             class="
               cursor-pointer
               flex
@@ -63,7 +64,6 @@
               hover:opacity-100
             "
             :class="{ '-md:hidden': searching }"
-            @click="$emit('showPopup')"
           >
             <span class="-lg:hidden">{{ item.title }}</span>
             <Icon
@@ -74,7 +74,7 @@
                 md:hidden
               "
             />
-          </div>
+          </a>
         </li>
       </ul>
       <div
@@ -187,7 +187,7 @@ export default Vue.extend({
         {
           title: '探索',
           icon: 'compass',
-          to: null
+          to: { name: 'explore' }
         },
         {
           title: '媒體庫',
