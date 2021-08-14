@@ -13,8 +13,14 @@
   >
     <!-- 影片 -->
     <section
+      id="player-slot"
       ref="player-slot"
-      class="flex-grow flex items-center justify-center"
+      class="
+        flex-grow flex
+        items-center
+        justify-center
+        -lg:flex-shrink-0 -lg:h-56vw -lg:w-full
+      "
     ></section>
 
     <!-- 播放列表 -->
@@ -22,12 +28,11 @@
       class="
         flex
         text-white
-        max-w-200
-        w-[36%]
         justify-center
         items-start
         overflow-y-scroll
-        lg:ml-12
+        lg:ml-12 lg:max-w-200 lg:w-[36%]
+        -lg:w-full
         xl:ml-14
         3xl:ml-16
       "
@@ -56,6 +61,7 @@
               no-underline
               items-center
               lg:h-14
+              -lg:h-57px
             "
           >
             <img
@@ -65,10 +71,17 @@
             />
             <div class="flex-col inline-flex">
               <span
-                class="font-medium text-sm mb-1 line-clamp-1 2xl:text-base"
+                class="
+                  font-medium
+                  text-sm
+                  mb-1
+                  leading-18px
+                  line-clamp-1
+                  2xl:text-base
+                "
                 >{{ item.snippet.title }}</span
               >
-              <span class="text-xs line-clamp-1">{{
+              <span class="text-xs leading-18px line-clamp-1">{{
                 item.snippet.videoOwnerChannelTitle
               }}</span>
             </div>
@@ -98,6 +111,7 @@
               no-underline
               items-center
               lg:h-14
+              -lg:h-57px
             "
           >
             <img
@@ -107,10 +121,17 @@
             />
             <div class="flex-col inline-flex">
               <span
-                class="font-medium text-sm mb-1 line-clamp-1 2xl:text-base"
+                class="
+                  font-medium
+                  text-sm
+                  mb-1
+                  leading-18px
+                  line-clamp-1
+                  2xl:text-base
+                "
                 >{{ item.snippet.title }}</span
               >
-              <span class="text-xs line-clamp-1">{{
+              <span class="text-xs leading-18px line-clamp-1">{{
                 item.snippet.channelTitle
               }}</span>
             </div>
@@ -181,6 +202,10 @@ export default Vue.extend({
 
   @media (min-width: 936px) {
     height: calc(100vh - 64px - 72px);
+  }
+
+  @media (max-width: 936px) {
+    height: calc(100vh - 64px);
   }
 }
 
