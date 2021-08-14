@@ -172,18 +172,6 @@ export default Vue.extend({
   deactivated() {
     window.removeEventListener('resize', this.setPlayerSlotStyle)
   },
-  mounted() {
-    // load youtube iframe api
-    // LINK https://developers.google.com/youtube/iframe_api_reference
-    ;(window as any).onYouTubeIframeAPIReady = () => {
-      setTimeout(() => {
-        ;(this.$store as Store).dispatch(
-          PlayerActionTypes.PLAYER_INIT,
-          `${this.$route.query.v}`
-        )
-      }, 400)
-    }
-  },
   updated() {
     this.setPlayerSlotStyle()
   },

@@ -1,6 +1,6 @@
 <template>
   <aside
-    v-if="info"
+    v-show="info"
     class="
       bg-black
       flex
@@ -33,159 +33,161 @@
     >
       <div id="player"></div>
     </div>
-    <input
-      id="progress"
-      v-model="progress"
-      type="range"
-      name="progress"
-      class="
-        border-none
-        cursor-pointer
-        outline-none
-        h-1
-        w-full
-        transition-all
-        -top-2px
-        transition-300
-        appearance-none
-        absolute
-        overflow-hidden
-      "
-      step="1"
-      min="0"
-      :max="durations.time"
-      :style="`background-image: linear-gradient(to right, #f00 0%, #f00 ${
-        (progress * 100) / durations.time
-      }%, #bdbdbd ${(progress * 100) / durations.time}%)`"
-      @click.stop="checkoutPlayer"
-    />
-    <!-- left controls -->
-    <div class="flex-shrink-0 inline-flex items-center justify-center">
-      <div
-        class="cursor-pointer h-10 ml-2 p-2 w-10"
-        role="button"
-        aria-label="上一首歌"
-        title="上一首歌"
-        @click.stop.prevent="
-          checkoutPlayer()
-          prevVideo()
+    <template v-if="info">
+      <input
+        id="progress"
+        v-model="progress"
+        type="range"
+        name="progress"
+        class="
+          border-none
+          cursor-pointer
+          outline-none
+          h-1
+          w-full
+          transition-all
+          -top-2px
+          transition-300
+          appearance-none
+          absolute
+          overflow-hidden
         "
-      >
-        <Icon name="skip-previous" class="h-full fill-white w-full" />
-      </div>
-      <div
-        v-show="playerStatus === 'pause'"
-        ref="play"
-        class="cursor-pointer h-12 ml-2 p-2 w-12"
-        role="button"
-        aria-label="播放"
-        title="播放"
+        step="1"
+        min="0"
+        :max="durations.time"
+        :style="`background-image: linear-gradient(to right, #f00 0%, #f00 ${
+          (progress * 100) / durations.time
+        }%, #bdbdbd ${(progress * 100) / durations.time}%)`"
         @click.stop="checkoutPlayer"
-      >
-        <Icon name="play" class="h-full fill-white w-full" />
-      </div>
-      <div
-        v-show="playerStatus === 'play'"
-        ref="pause"
-        class="cursor-pointer h-12 ml-2 p-2 w-12"
-        role="button"
-        aria-label="暫停"
-        title="暫停"
-        @click.stop="checkoutPlayer"
-      >
-        <Icon name="pause" class="h-full fill-white w-full" />
-      </div>
-      <div
-        class="cursor-pointer h-10 ml-2 p-2 w-10"
-        role="button"
-        aria-label="下一首歌"
-        title="下一首歌"
-        @click.stop.prevent="
-          checkoutPlayer()
-          nextVideo()
-        "
-      >
-        <Icon name="skip-next" class="h-full fill-white w-full" />
-      </div>
-      <span class="font-normal mr-4 text-xs ml-2 text-gray-400 -lg:hidden">
-        {{ (currentTime.minutes > 10 ? '' : '0') + currentTime.minutes }}:{{
-          (currentTime.seconds > 10 ? '' : '0') + currentTime.seconds
-        }}&nbsp;/&nbsp;{{ durations.timeString }}
-      </span>
-    </div>
-
-    <!-- middle controls -->
-    <div class="inline-flex items-center justify-center">
-      <img
-        class="h-10 w-auto -lg:hidden"
-        :src="getThumbnail(info.snippet.thumbnails)"
-        alt=""
       />
-
-      <div class="flex flex-col flex-1 mr-2 text-white ml-4">
-        <span class="font-medium line-clamp-1 lg:text-sm 2xl:text-base">{{
-          info ? info.snippet.title : ''
-        }}</span>
-        <span class="text-xs line-clamp-1">{{
-          info ? info.snippet.channelTitle : ''
-        }}</span>
-      </div>
-
-      <div class="flex flex-shrink-0 -lg:hidden">
+      <!-- left controls -->
+      <div class="flex-shrink-0 inline-flex items-center justify-center">
         <div
-          class="h-10 mr-2 p-2 w-10"
+          class="cursor-pointer h-10 ml-2 p-2 w-10"
           role="button"
-          title="喜歡"
-          aria-label="喜歡"
-          @click.stop=""
-        >
-          <Icon
-            name="thumb-up-outline"
-            class="cursor-pointer h-full fill-white w-full"
-          />
-        </div>
-        <div
-          class="h-10 p-2 w-10"
-          role="button"
-          title="不喜歡"
-          aria-label="不喜歡"
-          @click.stop=""
-        >
-          <Icon
-            name="thumb-down-outline"
-            class="cursor-pointer h-full fill-white w-full"
-          />
-        </div>
-      </div>
-    </div>
-
-    <!-- right controls -->
-    <div class="mr-1 inline-flex items-center justify-center">
-      <div
-        class="cursor-pointer h-10 p-2 w-10"
-        :aria-label="
-          $route.name === 'watch' ? '關閉播放器頁面' : '開啟播放器頁面'
-        "
-        role="button"
-        @click.stop="togglePlayer"
-      >
-        <Icon
-          name="play"
-          class="
-            h-full
-            fill-white
-            w-full
-            transform
-            transition-transform
-            duration-300
+          aria-label="上一首歌"
+          title="上一首歌"
+          @click.stop.prevent="
+            checkoutPlayer()
+            prevVideo()
           "
-          :class="{
-            'rotate-90': $route.name === 'watch',
-            '-rotate-90': $route.name !== 'watch'
-          }"
-        />
+        >
+          <Icon name="skip-previous" class="h-full fill-white w-full" />
+        </div>
+        <div
+          v-show="playerStatus === 'pause'"
+          ref="play"
+          class="cursor-pointer h-12 ml-2 p-2 w-12"
+          role="button"
+          aria-label="播放"
+          title="播放"
+          @click.stop="checkoutPlayer"
+        >
+          <Icon name="play" class="h-full fill-white w-full" />
+        </div>
+        <div
+          v-show="playerStatus === 'play'"
+          ref="pause"
+          class="cursor-pointer h-12 ml-2 p-2 w-12"
+          role="button"
+          aria-label="暫停"
+          title="暫停"
+          @click.stop="checkoutPlayer"
+        >
+          <Icon name="pause" class="h-full fill-white w-full" />
+        </div>
+        <div
+          class="cursor-pointer h-10 ml-2 p-2 w-10"
+          role="button"
+          aria-label="下一首歌"
+          title="下一首歌"
+          @click.stop.prevent="
+            checkoutPlayer()
+            nextVideo()
+          "
+        >
+          <Icon name="skip-next" class="h-full fill-white w-full" />
+        </div>
+        <span class="font-normal mr-4 text-xs ml-2 text-gray-400 -lg:hidden">
+          {{ (currentTime.minutes > 10 ? '' : '0') + currentTime.minutes }}:{{
+            (currentTime.seconds > 10 ? '' : '0') + currentTime.seconds
+          }}&nbsp;/&nbsp;{{ durations.timeString }}
+        </span>
       </div>
-    </div>
+
+      <!-- middle controls -->
+      <div class="inline-flex items-center justify-center">
+        <img
+          class="h-10 w-auto -lg:hidden"
+          :src="getThumbnail(info.snippet.thumbnails)"
+          alt=""
+        />
+
+        <div class="flex flex-col flex-1 mr-2 text-white ml-4">
+          <span class="font-medium line-clamp-1 lg:text-sm 2xl:text-base">{{
+            info ? info.snippet.title : ''
+          }}</span>
+          <span class="text-xs line-clamp-1">{{
+            info ? info.snippet.channelTitle : ''
+          }}</span>
+        </div>
+
+        <div class="flex flex-shrink-0 -lg:hidden">
+          <div
+            class="h-10 mr-2 p-2 w-10"
+            role="button"
+            title="喜歡"
+            aria-label="喜歡"
+            @click.stop=""
+          >
+            <Icon
+              name="thumb-up-outline"
+              class="cursor-pointer h-full fill-white w-full"
+            />
+          </div>
+          <div
+            class="h-10 p-2 w-10"
+            role="button"
+            title="不喜歡"
+            aria-label="不喜歡"
+            @click.stop=""
+          >
+            <Icon
+              name="thumb-down-outline"
+              class="cursor-pointer h-full fill-white w-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- right controls -->
+      <div class="mr-1 inline-flex items-center justify-center">
+        <div
+          class="cursor-pointer h-10 p-2 w-10"
+          :aria-label="
+            $route.name === 'watch' ? '關閉播放器頁面' : '開啟播放器頁面'
+          "
+          role="button"
+          @click.stop="togglePlayer"
+        >
+          <Icon
+            name="play"
+            class="
+              h-full
+              fill-white
+              w-full
+              transform
+              transition-transform
+              duration-300
+            "
+            :class="{
+              'rotate-90': $route.name === 'watch',
+              '-rotate-90': $route.name !== 'watch'
+            }"
+          />
+        </div>
+      </div>
+    </template>
   </aside>
 </template>
 
