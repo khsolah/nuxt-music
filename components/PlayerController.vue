@@ -203,7 +203,7 @@ import { getThumbnail } from '~/utilities'
 export default Vue.extend({
   name: 'PlayerController',
   data() {
-    return { playerStyle: {} }
+    return { playerStyle: {}, lastPage: 'index' as 'index' | 'explore' }
   },
   fetch() {
     if (!this.$route.query.v) return
@@ -244,6 +244,7 @@ export default Vue.extend({
   },
   watch: {
     async $route() {
+      this.setLastPage()
       if (
         !this.$route.query.v ||
         (this.info !== null && this.info.id === this.$route.query.v)
@@ -258,10 +259,41 @@ export default Vue.extend({
       )
     }
   },
+  mounted() {
+    // load youtube iframe api
+    // LINK https://developers.google.com/youtube/iframe_api_reference
+    this.setLastPage()
+    ;(window as any).onYouTubeIframeAPIReady = () => {
+      setTimeout(async () => {
+        if (typeof this.$route.query.v !== 'string') return
+        await (this.$store as Store).dispatch(
+          PlayerActionTypes.FETCH_VIDEO_INFO,
+          {
+            v: this.$route.query.v,
+            playlistId: this.$route.query.list as string | null
+          }
+        )
+        ;(this.$store as Store).dispatch(
+          PlayerActionTypes.PLAYER_INIT,
+          `${this.$route.query.v}`
+        )
+      }, 400)
+    }
+  },
   methods: {
+    setLastPage() {
+      if (this.$route.name === 'watch') return
+      switch (this.$route.name) {
+        case 'explore':
+          this.lastPage = 'explore'
+          break
+        default:
+          this.lastPage = 'index'
+      }
+    },
     togglePlayer() {
       if (this.$route.name === 'watch') {
-        this.$router.go(-1)
+        this.$router.push({ name: this.lastPage })
       } else {
         this.$router.push({
           name: 'watch',
