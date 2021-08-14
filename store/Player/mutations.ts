@@ -1,7 +1,7 @@
 import { MutationTree } from 'vuex/types/index'
 import { Namespaced } from '..'
 import { State } from './state'
-import convertISO8601Durations from '~/utilities/convertDurations'
+import { convertISO8601Durations } from '~/utilities'
 import { Player, PlayListItem, VideoItem } from '~/@types'
 
 export enum MutationTypes {
