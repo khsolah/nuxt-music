@@ -15,7 +15,7 @@
       xl:h-16
     "
   >
-    <NuxtLogo />
+    <NuxtLogo class="relative z-99" :class="{ '-md:hidden': searching }" />
 
     <nav class="flex w-full right-0 absolute justify-center md:py-2">
       <ul v-if="!searching" class="flex list-none pl-0">
@@ -34,15 +34,15 @@
               items-center
               hover:opacity-100
             "
+            :class="{ '-md:hidden': searching }"
           >
             <span class="-lg:hidden">{{ item.title }}</span>
             <Icon
               :name="item.icon"
               class="
                 fill-white
-                md:h-6 md:my-3 md:mx-4 md:w-6 md:block
-                -md:hidden
-                lg:hidden
+                -md:h-6 -md:my-3 -md:mx-4 -md:w-6 -md:block
+                md:hidden
               "
             />
           </nuxt-link>
@@ -61,6 +61,7 @@
               items-center
               hover:opacity-100
             "
+            :class="{ '-md:hidden': searching }"
             @click="$emit('showPopup')"
           >
             <span class="-lg:hidden">{{ item.title }}</span>
@@ -68,9 +69,8 @@
               :name="item.icon"
               class="
                 fill-white
-                md:h-6 md:my-3 md:mx-4 md:w-6 md:block
-                -md:hidden
-                lg:hidden
+                -md:h-6 -md:my-3 -md:mx-4 -md:w-6 -md:block
+                md:hidden
               "
             />
           </div>
@@ -85,17 +85,17 @@
           border-1
           relative
           items-center
-          -md:hidden
+          z-99
         "
         :class="{
-          'bg-[#212121] !border-[#333]': searching,
+          'bg-[#212121] !border-[#333] -md:w-89vw': searching,
           'opacity-50 hover:opacity-100': !searching
         }"
         @click.stop=""
       >
         <Icon
           :name="searching ? 'arrow' : 'magnify'"
-          class="my-3 fill-white mx-4 md:h-6 md:w-6"
+          class="py-3 fill-white px-4 h-12 w-14"
           @click.native="searching = !searching"
         />
         <span
@@ -106,7 +106,8 @@
         >
         <input
           v-show="searching"
-          v-model="search"
+          ref="searchInput"
+          v-model="searchText"
           type="text"
           class="
             bg-transparent
@@ -120,9 +121,10 @@
           "
           placeholder="搜尋"
           @keydown.esc="searching = false"
+          @keydown.enter="search"
         />
         <Icon
-          v-show="search.length > 0 && searching"
+          v-show="searchText.length > 0 && searching"
           name="close"
           class="
             fill-white
@@ -132,7 +134,7 @@
             absolute
             lg:h-6 lg:my-3 lg:mx-4 lg:w-6
           "
-          @click.native="search = ''"
+          @click.native="searchText = ''"
         />
       </div>
     </nav>
@@ -154,6 +156,7 @@
         items-center
         no-underline
       "
+      :class="{ '-md:hidden': searching }"
       >登入</a
     >
   </header>
@@ -192,7 +195,7 @@ export default Vue.extend({
         }
       ] as NavData[],
       searching: false,
-      search: ''
+      searchText: ''
     }
   },
   computed: {
@@ -200,10 +203,26 @@ export default Vue.extend({
       return (this.$store as Store).getters.GET_TOKEN
     }
   },
+  watch: {
+    searching(newValue) {
+      if (newValue)
+        this.$nextTick(() =>
+          (this.$refs.searchInput as HTMLInputElement).focus()
+        )
+    }
+  },
   mounted() {
     window.addEventListener('click', () => {
       this.searching = false
     })
+  },
+  methods: {
+    search() {
+      if (this.searchText === '') return
+
+      this.$router.push({ name: 'search', query: { q: this.searchText } })
+      this.searching = false
+    }
   }
 })
 </script>
