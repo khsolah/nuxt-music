@@ -182,6 +182,9 @@ export default Vue.extend({
       }, 400)
     }
   },
+  updated() {
+    this.setPlayerSlotStyle()
+  },
   beforeDestroy() {
     window.removeEventListener('resize', this.setPlayerSlotStyle)
   },
