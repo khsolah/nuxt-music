@@ -205,8 +205,7 @@ const actions: ActionTree<State, RootState> & Actions = {
         })
         return items[0]
       })
-      .catch(error => {
-        console.log('[info error]: ', error)
+      .catch(() => {
         commit(MutationTypes.SET_CURRENT_VIDEO_INFO, null)
         return null
       })
@@ -223,11 +222,8 @@ const actions: ActionTree<State, RootState> & Actions = {
         commit(MutationTypes.SET_PLAYLIST, items)
         return items
       })
-      .catch(error => {
-        console.log('[error]: ', error)
-        console.log('[error.response]', error.response)
-        return []
-      })
+      .catch(() =>  []
+      )
   },
   [ActionTypes.FETCH_VIDEOS]: ({ commit }) => {
     return $axios({
@@ -244,11 +240,7 @@ const actions: ActionTree<State, RootState> & Actions = {
         commit(MutationTypes.SET_VIDEOS, items)
         return items
       })
-      .catch(error => {
-        console.log('[get videos error]: ', error)
-        console.log('[error response]: ', error.response)
-        return []
-      })
+      .catch(() => [])
   },
   [ActionTypes.FETCH_PLAYER_QUEUE]: async (
     { commit, dispatch },

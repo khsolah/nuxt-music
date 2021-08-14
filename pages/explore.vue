@@ -118,10 +118,6 @@ export default Vue.extend({
   name: 'Explore',
   async beforeRouteLeave({ name, query: { list, v } }, _, next) {
     if (name !== 'watch' || (name === 'watch' && v)) return next()
-    console.log('[else]')
-    console.log('name: ', name)
-    console.log('list: ', list)
-    console.log('v:', v)
 
     const videoId = await this.getVideoId(`${list}`)
     next({ name: `${name}`, query: { list, v: videoId } })

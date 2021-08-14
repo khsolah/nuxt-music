@@ -39,24 +39,17 @@ app.get('/token', (req, res) => {
       grant_type: 'authorization_code',
       redirect_uri: redirectUri
     })
+  }).then(response => {
+    res.redirect(
+      `${state}${state.includes('?') ? '&' : '?'}${qs.stringify({
+        access_token: response.data.access_token,
+        refresh_token: response.data.refresh_token,
+        expires_in: response.data.expires_in,
+        scope: response.data.scope,
+        token_type: response.data.token_type
+      })}`
+    )
   })
-    .then(response => {
-      console.log('[response]: ', response)
-
-      res.redirect(
-        `${state}${state.includes('?') ? '&' : '?'}${qs.stringify({
-          access_token: response.data.access_token,
-          refresh_token: response.data.refresh_token,
-          expires_in: response.data.expires_in,
-          scope: response.data.scope,
-          token_type: response.data.token_type
-        })}`
-      )
-    })
-    .catch(error => {
-      console.log('[error]: ', error)
-      console.log(error.response.data)
-    })
 })
 
 app.get('/refresh', async (_, res) => {

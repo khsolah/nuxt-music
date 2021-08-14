@@ -30,16 +30,12 @@ const actions: ActionTree<State, RootState> & Actions = {
       baseURL: process.env.REFERER,
       url: '/auth/refresh',
       method: 'GET'
+    }).then(({ data: { token } }) => {
+      commit(MutationTypes.SET_TOKEN, token)
+      $cookies.set('accessToken', token, {
+        expires: new Date(Date.now() + 3500 * 1000)
+      })
     })
-      .then(({ data: { token } }) => {
-        commit(MutationTypes.SET_TOKEN, token)
-        $cookies.set('accessToken', token, {
-          expires: new Date(Date.now() + 3500 * 1000)
-        })
-      })
-      .catch(error => {
-        console.log(error)
-      })
   }
 }
 
