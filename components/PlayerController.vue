@@ -27,8 +27,8 @@
         w-80
         duration-500
         fixed
-        -lg:hidden
       "
+      :class="{ '-lg:hidden': $route.name !== 'watch' }"
       :style="$route.name === 'watch' ? playerSlotStyle : ''"
     >
       <div id="player"></div>
