@@ -258,9 +258,7 @@ export default Vue.extend({
   methods: {
     togglePlayer() {
       if (this.$route.name === 'watch') {
-        this.$router.push({
-          name: 'index'
-        })
+        this.$router.go(-1)
       } else {
         this.$router.push({
           name: 'watch',
