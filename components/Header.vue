@@ -13,6 +13,7 @@
       items-center
       justify-between
       xl:h-16
+      bg-black
     "
   >
     <NuxtLogo class="relative z-99" :class="{ '-md:hidden': searching }" />
