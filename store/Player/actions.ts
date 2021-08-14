@@ -182,7 +182,7 @@ const actions: ActionTree<State, RootState> & Actions = {
     })
   },
   [ActionTypes.LOAD_BY_VIDEO_ID]: ({ commit, dispatch }, payload) => {
-    if (!(window as any).player.loadVideoById)
+    if (!(window as any).player || !(window as any).player.loadVideoById)
       return dispatch(ActionTypes.PLAYER_INIT, payload)
 
     commit(MutationTypes.LOAD_BY_VIDEO_ID, payload)
